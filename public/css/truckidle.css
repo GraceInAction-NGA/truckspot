@@ -1,0 +1,31 @@
+#name_form{
+	float:left;
+}
+
+#name_input{
+	width: 33%;
+}
+
+ #date_form{
+ 	float: left;
+ }
+
+#date_input{
+	width: 33%;
+}
+
+#duration_input{
+	width: 33%;
+}
+
+#nearest_input{
+	width: 33%;
+}
+
+#description_input{
+	width: 33%;
+}
+ 
+ body{
+    background-color: blue;
+}
