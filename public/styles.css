@@ -1,0 +1,12 @@
+main {
+	background: #2CC9A4;
+}
+
+main.idle {
+	background: #2D9CDB;
+}
+
+main.sound {
+	background: #EB5757;
+}
+
