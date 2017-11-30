@@ -1,31 +1,80 @@
+
+ h3{
+ 	color: currentColor;
+ 	font-style: italic;
+
+ }
+body{
+	color: red;
+
+}
+form{
+
+	padding: 25px;
+	display: block;
+	position: relative;
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.input_form {
+	width: 100%;
+}
+
+@media only screen and ( min-width: 768px){
+
+
 #name_form{
-	float:left;
+	
 }
 
 #name_input{
-	width: 33%;
 }
 
  #date_form{
- 	float: left;
+ 	
  }
 
 #date_input{
-	width: 33%;
+}
+#duration_form{
+	
 }
 
 #duration_input{
-	width: 33%;
 }
 
 #nearest_input{
-	width: 33%;
 }
 
-#description_input{
-	width: 33%;
+#nearest_form{
+	
 }
- 
- body{
-    background-color: blue;
+#description_input{
+}
+#description_form{
+	
+}
+.input_form{
+	float: left;
+	clear: both;
+	width: 50%;
+}
+ .ui-btn{
+ 	float: left;
+ 	clear: both;
+ 	width: 300px;
+ }
+
+form{
+	width: 50%;
+	padding: 25px;
+	display: block;
+	position: relative;
+	float: left;
+	box-sizing: border-box;
+
+}
+}
 }
