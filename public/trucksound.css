@@ -1,0 +1,28 @@
+#name_input input.ui-input-text{
+	width:90%;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#name_input label{
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+#date_input input.ui-input-text{
+	margin-top: 10px;
+
+
+}
+
+#duration_input{
+	width: 50%;
+}
+
+#nearestaddress_input{
+	width: 90%;
+}
+
+#description_input{
+	width: 90%;
+}
