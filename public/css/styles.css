@@ -1,39 +1,13 @@
-main {
-	background: $yellow-bright;
-}
-
-main.idle {
+div.idle {
 	background: #2D9CDB;
 }
 
-main.sound {
+div.sound {
 	background: #EB5757;
 }
-button.ui-btn {	
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-a.button {
-	text-decoration: none;
-	color: white;
-  width: 200px;
-  height: 100px;
-  background: #3498DB;
-  background-color: #3498DB;
-  position: relative;
-  margin: 30px;
-  top: 100px;
-  padding: 16px;
-  font-size: 50px;
-  border-radius: 10px;
-  box-shadow: 0px 15px 0px 0px darken(#3498DB, 5%), 0px 0px 20px 0px #bbb;
-
-  transition: all 0.2s;
-}
-
-a.button:active {
-  top: 108px;
-  box-shadow: 0px 7px 0px 0px darken(#3498DB, 5%);
+#text-box {
+    padding: 25px;
+    background-color: #C4C4C4;
+    margin-bottom: 25px;
 }
