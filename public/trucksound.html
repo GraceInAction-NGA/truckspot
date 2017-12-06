@@ -9,14 +9,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+  <link rel="stylesheet" type="text/css" href="trucksound.css">
 
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" ></script>
 
-<script type="text/javascript" src="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="trucksound.css">
 
 </head> 
 
@@ -26,43 +29,46 @@
 
 <h3> American Truck Audio</h3>
 
-<form> 
-<div class="ui-grid-a">
-  <div class="ui-block-a" id="name_input">
+<div class="container">
+<form>
+<div class="form-group">
+<div class="row"> 
+  
     <label for="text-1">Name:</label>
-    <input type="text" name="fname" size= "20"><br/>
+    <input type="text" class="form-control " name="name" size= "20">
+</div>
+<div class="row"> 
+    <label for="text-1">Date:</label>
+    <input type="text" class="form-control" name="Date" size= "20">
+</div>
+</div><!--row -->
+
+ 
+    <div class="row">
+    <label for="text-1">Duration:</label>
+    <input type="text" class="form-control name="Duration" size= "20"><br/>
+    </div>
+    
+    <div class="row"> 
+     <label for="text-1">Nearest Address:</label>
+    <input type="text" class="form-control name="NearestAddress" size= "20"><br/>
   </div>
 
-   <div class="ui-block-b">
-    <label for="text-1">Date:</label>
-    <input type="text" name="Date" size= "20"> <br/>
-    </div>
-</div>
-
-<br/>
-  <div id="duration_input">
-    <label for="text-1">Duration:</label>
-    <input type="text" name="Duration" size= "20"><br/>
-    </div>
-
-   <div id="nearestaddress_input">
-    <label for="text-1">Nearest Address:</label>
-    <input type="text" name="NearestAddress" size= "20"><br/>
-    </div>
-
-   <div id="description_input">
+  <div class="row"> 
     <label for="text-1">Description:</label>
-   <textarea rows="4" cols="50" form= "Description"> 
-   </textarea>
-   </div>
+   <textarea rows="4" class="form-control cols="50" form= "Description"></textarea> 
+  </div>
 
-   <a href="#" class="ui-btn ui-corner-all"></a>
-  <button class="ui-btn ui-corner-all">Upload Audio</button>
-
-  <a href="#" class="ui-btn ui-corner-all"></a>
-  <button class="ui-btn ui-corner-all">Submit</button>
-
+   
+   <div class="row">
+    <button type="button" class="btn btn-success">Submit</button>
+    </div>
+    
+  
+</div>
+</div><!-- form group -->
 </form>
+</div>
 
 
 
