@@ -9,7 +9,7 @@ main.idle {
 main.sound {
 	background: #EB5757;
 }
-button.ui-btn {	
+button.btn-dark{	
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
