@@ -11,7 +11,7 @@
 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="trucksound.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <script
   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="" crossorigin="anonymous"></script>
@@ -26,8 +26,10 @@
 
 
 <body> 
-
-<h3> American Truck Audio</h3>
+<header>
+  <h1 id="logo" >Truck Spot</h1>
+</header>
+<h3 id="top">American Truck Audio</h3>
 
 <div class="container">
 <form>
@@ -35,33 +37,33 @@
 <div class="row"> 
   
     <label for="text-1">Name:</label>
-    <input type="text" class="form-control " name="name" size= "20">
+    <input type="text" class="form-control " name="name" size= "20" id="name">
 </div>
 <div class="row"> 
     <label for="text-1">Date:</label>
-    <input type="text" class="form-control" name="Date" size= "20">
+    <input type="date" class="form-control" name="Date" size= "20" id="date">
 </div>
 </div><!--row -->
 
  
     <div class="row">
     <label for="text-1">Duration:</label>
-    <input type="text" class="form-control name="Duration" size= "20"><br/>
+    <input type="number" class="form-control" name="Duration" size= "20" id="duration"><br/>
     </div>
     
     <div class="row"> 
      <label for="text-1">Nearest Address:</label>
-    <input type="text" class="form-control name="NearestAddress" size= "20"><br/>
+    <input type="text" class="form-control" name="NearestAddress" size= "20" id="nearestaddress"><br/>
   </div>
 
   <div class="row"> 
     <label for="text-1">Description:</label>
-   <textarea rows="4" class="form-control cols="50" form= "Description"></textarea> 
+   <textarea rows="4" class="form-control" cols="50" form= "Description" id="description"></textarea> 
   </div>
 
    
    <div class="row">
-    <button type="button" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-success" onclick="onSubmitClicked()">Submit</button>
     </div>
     
   
@@ -75,6 +77,7 @@
 
 
 
-
+<script type="text/javascript" src="javascript/trucksound.js"></script>
 </body>
 </html>
+

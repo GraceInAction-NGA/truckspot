@@ -6,10 +6,18 @@ margin-bottom: 5px;
 }
 
 body {
-   background-image: url("https://images3.alphacoders.com/149/149257.jpg");
+	background-image: url("images/truckbackround.jpg");
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+
    
 }
 
+label {
 
+    background-color: rgba(241, 241, 241, 0.57);
+    padding: 5px;
+}
 
 
