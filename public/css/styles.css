@@ -1,13 +1,64 @@
-div.idle {
-	background: #2D9CDB;
+
+
+.form-control{
+margin-bottom: 5px;
+
 }
 
-div.sound {
-	background: #EB5757;
+body {
+  background-image: url("../images/truckbackround.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+header {
+  margin-bottom: 26px;
+}
+header h1#logo {
+  background-image: url("../images/truckspot-logo.png");
+  background-repeat: no-repeat;
+  text-indent: -999px;
+  height: 50px;
+  margin-left: 20px;
+}
+h3#top {
+  margin-left: -14px;
+  color: #8c3030;
+}
+div.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgba(241, 241, 241, 0.4);
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+}
+label {
+
+    background-color: rgba(241, 241, 241, 0.4);
+    padding: 5px;
+    color: #27ae60;
 }
 
 #text-box {
     padding: 25px;
     background-color: #C4C4C4;
     margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#text-box h3 {
+  color: #8c3030;
+  margin-top: 0;
+}
+
+.btn-success{
+  background-color: #27ae60;
+}
+
+.btn-primary{
+  color: #27ae60;
+  border-color: #27ae60;
+  background-color: white;
+  border-width: medium;
+  font-weight: bold;
 }
