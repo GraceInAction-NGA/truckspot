@@ -38,3 +38,17 @@ label {
 }
 
 
+div.idle {
+	background: #2D9CDB;
+}
+
+div.sound {
+	background: #EB5757;
+}
+
+#text-box {
+    padding: 25px;
+    background-color: #C4C4C4;
+    margin-bottom: 25px;
+}
+
