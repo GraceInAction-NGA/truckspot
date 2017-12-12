@@ -29,6 +29,8 @@ div.container {
   padding-left: 25px;
   padding-right: 25px;
   background-color: rgba(241, 241, 241, 0.4);
+  margin-bottom: 35px;
+  padding-bottom: 25px;
 }
 label {
 
@@ -37,18 +39,26 @@ label {
     color: #27ae60;
 }
 
-
-div.idle {
-	background: #2D9CDB;
-}
-
-div.sound {
-	background: #EB5757;
-}
-
 #text-box {
     padding: 25px;
     background-color: #C4C4C4;
     margin-bottom: 25px;
+    margin-top: 25px;
 }
 
+#text-box h3 {
+  color: #8c3030;
+  margin-top: 0;
+}
+
+.btn-success{
+  background-color: #27ae60;
+}
+
+.btn-primary{
+  color: #27ae60;
+  border-color: #27ae60;
+  background-color: white;
+  border-width: medium;
+  font-weight: bold;
+}
