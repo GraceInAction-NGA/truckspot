@@ -22,16 +22,19 @@ header h1#logo {
   margin-left: 20px;
 }
 h3#top {
-  margin-left: 12px;
+  margin-left: -14px;
+  color: #8c3030;
 }
 div.container {
   padding-left: 25px;
   padding-right: 25px;
+  background-color: rgba(241, 241, 241, 0.4);
 }
 label {
 
-    background-color: rgba(241, 241, 241, 0.57);
+    background-color: rgba(241, 241, 241, 0.4);
     padding: 5px;
+    color: #27ae60;
 }
 
 
