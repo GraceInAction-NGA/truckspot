@@ -28,7 +28,7 @@ h3#top {
 div.container {
   padding-left: 25px;
   padding-right: 25px;
-  background-color: rgba(241, 241, 241, 0.4);
+  background-color: rgba(39, 174, 96, 0.21);
   margin-bottom: 35px;
   padding-bottom: 25px;
 }
@@ -41,7 +41,7 @@ label {
 
 #text-box {
     padding: 25px;
-    background-color: #C4C4C4;
+    background-color: #a2a29f;
     margin-bottom: 25px;
     margin-top: 25px;
 }
