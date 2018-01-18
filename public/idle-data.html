@@ -8,8 +8,9 @@
 	
     <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+  
 
   <script
   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="" crossorigin="anonymous"></script>
@@ -20,11 +21,18 @@
 
 </head> 
 
-<body> 
-  <h3>Truck Spot</h3>
+<body>
+<header>
+  <h1 id="logo" >Truck Spot</h1>
+</header>
+<div class="container">
+  <div id="text-box"> 
+  <h3>Truck Idle Data</h3>
 
 	<button type="button" class="btn btn-primary" id="stop" onclick="onBtnVideoClicked()" >Video</button>
     <button type="button" class="btn btn-primary" id="upload" onclick="onBtnAudioClicked()" >Audio</button>
+  </div>
+</div>
 
 	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 	<script type="text/javascript" src="javascript/config.js"></script>
