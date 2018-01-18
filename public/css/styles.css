@@ -69,3 +69,10 @@ button.btn-dark{
   border-width: medium;
   font-weight: bold;
 }
+
+
+.btn {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
