@@ -39,6 +39,12 @@ label {
     color: #27ae60;
 }
 
+
+button.btn-dark{	
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
 #text-box {
     padding: 25px;
     background-color: #C4C4C4;
