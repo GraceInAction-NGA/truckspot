@@ -82,3 +82,8 @@ label {
 .btn {
   margin-top: 15px;
 }
+div#info ul li {
+      text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
