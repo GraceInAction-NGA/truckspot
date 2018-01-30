@@ -13,9 +13,13 @@ body {
   background-color: #F88379;
   background-color: #82b1d2;*/
   background-color: #EA967A;
+font-family: 'Montserrat', sans-serif;
 }
 p{
   font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+
 }
 header {
   margin-bottom: 26px;
@@ -57,7 +61,9 @@ button.btn-dark{
     margin-bottom: 25px;
     margin-top: 25px;
 }
-
+h3 {
+  font-weight: 600;
+}
 #text-box h3 {
   color: #8c3030;
   margin-top: 0;
