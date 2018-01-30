@@ -6,10 +6,16 @@ margin-bottom: 5px;
 }
 
 body {
-  background-image: url("../images/truckbackround.jpg");
+  /*background-image: url("../images/truckbackround.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #F88379;
+  background-color: #82b1d2;*/
+  background-color: #EA967A;
+}
+p{
+  font-size: 16px;
 }
 header {
   margin-bottom: 26px;
@@ -28,7 +34,7 @@ h3#top {
 div.container {
   padding-left: 25px;
   padding-right: 25px;
-  background-color: rgba(241, 241, 241, 0.4);
+  background-color: rgba(255, 255, 255, 0.21);
   margin-bottom: 35px;
   padding-bottom: 25px;
 }
@@ -47,7 +53,7 @@ button.btn-dark{
 
 #text-box {
     padding: 25px;
-    background-color: #C4C4C4;
+    background-color: #19b3ff75;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -55,6 +61,8 @@ button.btn-dark{
 #text-box h3 {
   color: #8c3030;
   margin-top: 0;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .btn-success{
@@ -74,4 +82,5 @@ button.btn-dark{
   width: 100%;
   margin-bottom: 20px;
 }
+
 
