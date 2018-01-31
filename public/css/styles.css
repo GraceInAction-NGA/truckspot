@@ -1,36 +1,56 @@
-
-
-.form-control{
-margin-bottom: 5px;
-
-}
-
 body {
-  /*background-image: url("../images/truckbackround.jpg");
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #F88379;
-  background-color: #82b1d2;*/
   background-color: #EA967A;
-font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
 p{
   font-size: 16px;
   font-weight: 300;
   font-style: italic;
-
 }
+
 header {
   margin-bottom: 26px;
+  overflow: hidden;
 }
+
 header h1#logo {
   background-image: url("../images/truckspot-logo.png");
   background-repeat: no-repeat;
   text-indent: -999px;
   height: 50px;
   margin-left: 20px;
+  display: inline-block;
+  margin-right: 0;
+  padding-right: 0;
+  width: 40%;
 }
+
+ul#nav {
+  float: right;
+  margin-right: 30px;
+  margin-top: 41px;
+}
+
+ul#nav li {
+  list-style: none;
+  float: left;
+  margin-right: 14px;
+}
+
+ul#nav li:last-child {
+  margin-right: 0;
+}
+
+ul#nav li a {
+  color: #a14a76;
+  font-weight: bold;
+}
+
+ul#nav li a:hover {
+  color: #ffc7a9;
+}
+
 h3#top {
   margin-left: -14px;
   color: #8c3030;
@@ -38,22 +58,21 @@ h3#top {
 div.container {
   padding-left: 25px;
   padding-right: 25px;
-  background-color: rgba(255, 255, 255, 0.21);
+  background-color: #ffc7a9;
   margin-bottom: 35px;
   padding-bottom: 25px;
 }
 label {
-
     background-color: rgba(241, 241, 241, 0.4);
     padding: 5px;
-    color: #27ae60;
+    color: #b5674e;
 }
 
 
 button.btn-dark{	
 	text-align: center;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto;}
 
 #text-box {
     padding: 25px;
@@ -81,12 +100,21 @@ h3 {
   background-color: white;
   border-width: medium;
   font-weight: bold;
+  box-shadow: 10px #000000;
 }
 
+.btn-primary:active {
+  box-shadow: none;
+}
 
 .btn {
   width: 100%;
   margin-bottom: 20px;
 }
 
+
+.form-control{
+margin-bottom: 5px;
+
+}
 
