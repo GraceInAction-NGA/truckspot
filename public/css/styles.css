@@ -54,10 +54,21 @@ button.btn-dark{
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+}
+.btn {
+  -webkit-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.4);
+box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.4);
+border-width: 0;
+}
+
+.btn-primary  {
+  border-width: 0;
+}
 
 #text-box {
     padding: 25px;
-    background-color: #19b3ff75;
+    background-color: #92b0c8;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -77,9 +88,7 @@ h3 {
 
 .btn-primary{
   color: #27ae60;
-  border-color: #27ae60;
   background-color: white;
-  border-width: medium;
   font-weight: bold;
 }
 
