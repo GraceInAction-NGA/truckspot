@@ -65,7 +65,7 @@ div.container {
 label {
     background-color: rgba(241, 241, 241, 0.4);
     padding: 5px;
-    color: #b5674e;
+    color: #9a4124; 
 }
 
 
@@ -88,12 +88,13 @@ border-width: 0;
 .btn-primary  {
   border-width: 0;
 }
-.btn-primary:active{
-  background-color: #204B57;
+.btn-primary:active:hover{
+  background-color: #92b0c8;
+  border-color: #92b0c8;
 } 
 #text-box {
     padding: 25px;
-    background-color: #92b0c8;
+    background-color: #fbe9e7;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -108,7 +109,7 @@ h3 {
 }
 
 .btn-success{
-  background-color: #27ae60;
+  background-color: #98999C;
 }
 
 .btn {
@@ -118,8 +119,8 @@ h3 {
 }
 
 .btn-primary{
-  color: #27ae60;
-  background-color: white;
+  color: #ffffff;
+  background-color: #98999C;
   font-weight: bold;
   box-shadow: 0px 4px 6px 0px rgba(68, 68, 68, 0.6);
 }
