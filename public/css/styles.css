@@ -27,14 +27,12 @@ header h1#logo {
 }
 
 ul#nav {
-  float: right;
   margin-right: 30px;
   margin-top: 41px;
 }
 
 ul#nav li {
   list-style: none;
-  float: left;
   margin-right: 14px;
 }
 
@@ -134,3 +132,16 @@ margin-bottom: 5px;
 
 }
 
+@media (min-width: 768px /*@screen-sm-min*/) { 
+  ul#nav {
+    float: right;
+  }
+
+  ul#nav li {
+    float: left;
+  }
+
+
+
+
+}
