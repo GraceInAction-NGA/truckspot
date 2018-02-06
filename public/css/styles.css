@@ -43,12 +43,12 @@ ul#nav li:last-child {
 }
 
 ul#nav li a {
-  color: #a14a76;
+  color: #8e4141;
   font-weight: bold;
 }
 
 ul#nav li a:hover {
-  color: #ffc7a9;
+  color: #f9c4a8;
 }
 
 h3#top {
