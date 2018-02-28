@@ -23,7 +23,7 @@ header h1#logo {
   display: inline-block;
   margin-right: 0;
   padding-right: 0;
-  width: 40%;
+  width: 100%;
 }
 
 ul#nav {
@@ -139,7 +139,16 @@ margin-bottom: 5px;
 
 }
 
+div#text-box video{
+  width: 640px;
+  max-width: 100%;
+}
+
 @media (min-width: 768px /*@screen-sm-min*/) { 
+  header h1#logo {
+    width: 40%;
+  }
+
   ul#nav {
     float: right;
   }
