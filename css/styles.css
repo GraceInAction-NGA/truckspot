@@ -47,6 +47,10 @@ div.container {
   background-color: rgba(241, 241, 241, 0.4);
   margin-bottom: 35px;
   padding-bottom: 25px;
+
+}
+div #pic {
+  background-image: url("../images/semitrucksmall.jpg");
 }
 label {
 
@@ -86,4 +90,5 @@ div#info ul li {
       text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+
 }
