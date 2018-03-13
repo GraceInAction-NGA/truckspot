@@ -142,6 +142,11 @@ color:#45A095;
 background-color: #ffffff;
 }
 
+.btn-secondary:hover{
+color:#ffffff;
+background-color: #7AB8A1;
+}
+
 .form-control{
 margin-bottom: 5px;
 
