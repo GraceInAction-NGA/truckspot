@@ -75,6 +75,7 @@ border-width: 0;
     background-color: #91D2D0;
     margin-bottom: 25px;
     margin-top: 25px;
+     border: 3px solid #45A095;
 }
 h3 {
   font-weight: 600;
@@ -121,6 +122,9 @@ h3 {
   font-weight: bold;
   box-shadow: 0px 4px 6px 0px rgba(68, 68, 68, 0.6);
 }
+.home.btn-primary {
+  height:50px;
+}
 
 
 .btn-primary:hover {
@@ -133,6 +137,10 @@ h3 {
   box-shadow: none;
 }
 
+.btn-secondary{
+color:#45A095;
+background-color: #ffffff;
+}
 
 .form-control{
 margin-bottom: 5px;
@@ -142,6 +150,7 @@ margin-bottom: 5px;
 div#text-box video{
   width: 640px;
   max-width: 100%;
+
 }
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
