@@ -38,12 +38,26 @@
 <div class="container">
   <div id="text-box"> 
 
+<div class="row">
+	<button type="button" class="btn home btn-primary padding-0" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
+</div>
 
-	<button type="button" class="btn btn-primary" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
-    <button type="button" class="btn btn-primary" id="upload" onclick="onBtnAudioClicked()" >Record truck audio</button>
-    <button type="button" class="btn btn-primary" id="stop" onclick="onBtnVideoClicked()" >Tutorial</button>
-    <button type="button" class="btn btn-primary" id="upload" onclick="onBtnAudioClicked()" >About</button>
-    <button type="button" class="btn btn-primary" id="upload" onclick="onBtnDataClicked()" >Data</button>
+<div class="row">
+    <button type="button" class="btn home btn-primary padding-0" id="upload" onclick="onBtnAudioClicked()" >Record truck audio</button>
+</div>
+
+<div class="row">
+  <div class="col-xs-4 padding-0-left">
+    <button type="button" class="btn btn-secondary" id="stop" onclick="onBtnVideoClicked()" >Tutorial</button>
+</div>
+  <div class="col-xs-4 padding-0">
+    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAudioClicked()" >About</button>
+  </div>
+  <div class="col-xs-4 padding-0-right">
+    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAudioClicked()" >Data</button>
+  </div>
+</div>
+
 </div>
 </div>
 	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
