@@ -95,6 +95,9 @@ h3 {
   background-color: #7AB8A1;
   box-shadow: none;
 }
+.btn-primary:active {
+  background-color: #7AB8A1;
+  }
 
 .btn-success:active {
   background-color: #7AB8A1;
