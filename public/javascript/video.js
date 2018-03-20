@@ -215,7 +215,7 @@ function errorCallback(error){
   console.log('navigator.getUserMedia error: ', error); 
 }
 
-function onUploadClicked(){
+function onVideoUploadClicked(){
 
   var storageRef = firebase.storage().ref('sweet_gifs/' + formData.get("fname"));
   

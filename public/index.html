@@ -41,14 +41,29 @@
     <h3>Report now and make a difference.</h3></div>
 </div>
 
-
 <div class="container">
   <div id="text-box"> 
-	<button type="button" class="btn btn-primary" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
-    <button type="button" class="btn btn-primary" id="upload" onclick="onBtnAudioClicked()" >Record truck audio</button>
-    <button type="button" class="btn btn-primary" id="stop" onclick="onBtnVideoClicked()" >Tutorial</button>
-    <button type="button" class="btn btn-primary" id="upload" onclick="onBtnAudioClicked()" >About</button>
-    <button type="button" class="btn btn-primary" id="upload" onclick="onBtnAudioClicked()" >Data</button>
+
+<div class="row">
+	<button type="button" class="btn home btn-primary padding-0" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
+</div>
+
+<div class="row">
+    <button type="button" class="btn home btn-primary padding-0" id="upload" onclick="onBtnAudioClicked()" >Record truck audio</button>
+</div>
+
+<div class="row">
+  <div class="col-xs-4 padding-0-left">
+    <button type="button" class="btn btn-secondary" id="stop" onclick="onBtnVideoClicked()" >Tutorial</button>
+</div>
+  <div class="col-xs-4 padding-0">
+    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAudioClicked()" >About</button>
+  </div>
+  <div class="col-xs-4 padding-0-right">
+    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAudioClicked()" >Data</button>
+  </div>
+</div>
+
     <ul>
       <li> Logos of participating organizations</li>
       <li>A Video</li>
@@ -57,11 +72,12 @@
       <li>Infographics</li>
       <li>Map</li>
     </ul>
+
 </div>
 </div>
 	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 	<script type="text/javascript" src="javascript/config.js"></script>
-	<script type="text/javascript" src="javascript/index.js"></script>
+	<script type="text/javascript" src="javascript/button.js"></script>
 
 </body>
 </html>
