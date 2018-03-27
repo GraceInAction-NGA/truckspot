@@ -12,6 +12,8 @@ p{
 header {
   margin-bottom: 26px;
   overflow: hidden;
+  background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
+
 }
 
 header h1#logo {
@@ -232,6 +234,12 @@ div#text-box video{
 }
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
+  header {
+    margin-bottom: 0;
+  }
+  .hidden-md-up {
+    display: none;
+  }
   header h1#logo {
     width: 40%;
   }
@@ -252,12 +260,12 @@ ul#nav li:last-child {
 }
 
 ul#nav li a {
-  color: #8e4141;
+  color: #F7B6A3;
   font-weight: bold;
 }
 
 ul#nav li a:hover {
-  color: #f9c4a8;
+  color: #8e4141;
 }
 
   ul#nav li {
@@ -268,16 +276,18 @@ ul#nav li a:hover {
     float: left;
     margin-right: 14px;
     margin-bottom: 10px;
-    margin-right: 15px;
+    margin-right: 25px;
     height: auto;
     box-shadow: none;
     width: auto;
+    font-size: 30px;
 
 
   }
    ul#nav li:last-child {
     margin-right: 0;
     margin-bottom: 0;
+
   }
   div#pic{
     background: url(../images/app-background-image-truckL.jpg) center bottom no-repeat;
