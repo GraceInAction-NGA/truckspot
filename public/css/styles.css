@@ -219,7 +219,10 @@ ul#data a:hover li {
 div#groups img{
   max-height: 199px;
   width: auto;
-  max-width: 290px;
+  max-width: 100%;
+margin: 0 auto 15px auto;
+display: block;
+
 }
 
 
@@ -301,6 +304,25 @@ ul#nav li a:hover {
     margin-right: auto; 
     margin-left: auto;
 }
+div#groups .organization{
+   display: flex;
+   height: 200px;
+
+}
+
+div#groups .vertical{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 auto;
+
+}
+div#groups img {
+  margin-bottom: 0;
+  max-height: 199px;
+
+
+}
 
 }
 @media (min-width: 992px /*@screen-md-min*/){
@@ -312,5 +334,6 @@ div#pic div#slogan {
 div#pic div#slogan {
     width:1170px;
   }
+
 
 }
