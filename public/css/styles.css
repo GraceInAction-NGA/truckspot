@@ -8,12 +8,14 @@ p{
   font-weight: 300;
   font-style: italic;
 }
+div#paragraph{
+  text-indent: 50px;
+}
 
 header {
   margin-bottom: 26px;
-  overflow: hidden;
-  background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
-
+ overflow: hidden;
+ min-height: 350px;
 }
 
 header h1#logo {
@@ -44,9 +46,9 @@ div.container {
   padding-bottom: 25px;
 }
 div#pic {
-  background: url(../images/app-background-image-truckSm.jpg) center bottom no-repeat;
+  background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
   background-size: cover;
-  min-height: 220px;
+  min-height: 350px;
   padding: 25px;
 }
 div#pic h2, div#pic h3 {
@@ -292,7 +294,7 @@ ul#nav li a:hover {
   div#pic{
     background: url(../images/app-background-image-truckL.jpg) center bottom no-repeat;
     background-attachment: fixed;
-    min-height: 350px; 
+   
     background-size: cover;
 }
   div#pic div#slogan{
