@@ -24,3 +24,18 @@ function onBtnDataClicked (){
 
 	window.location="data.html";
 }
+
+function onBtnAboutClicked (){
+
+	window.location="about.html";
+}
+
+function onBtnDataClicked (){
+
+	window.location="data.html";
+}
+
+function onBtnTutorialClicked (){
+
+	window.location="tutorial.html";
+}
