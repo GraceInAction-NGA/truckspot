@@ -23,8 +23,33 @@
 
 <body> 
   <header>
-  <a href="index.html"><h1 id="logo">Truck Spot</h1></a>
-  <!--<ul id=nav>
+    <div class="container">
+      <div id="pic" class="img-fluid">
+        <div class="row">
+
+          <div class="col-lg-6 col-xl-6 col-md-6">
+              <a href="index.html">
+                <h1 id="logo">Truck Spot</h1>
+              </a>
+              <div id="slogan"> 
+                <h2>Spot a truck. Stop a truck.</h2>
+                <h3>Report now and make a difference.</h3>
+            </div><!--slogan-->
+          </div>
+
+          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xs hidden-sm">
+            <div class="dropdown">
+              <ul id=nav>
+                <li><a href="audio.html">Home</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="about.html">About</a></li>
+              </ul>
+            </div>
+          </div>
+        
+      </div><!--row-->
+
+   <!--<ul id=nav>
     <li><a href="audio.html">Audio</a></li>
     <li><a href="audio-data.html">Audio Data</a></li>
     <li><a href="data.html">Data</a></li>
@@ -34,19 +59,24 @@
     <li><a href="videodetails.html">Video Details</a></li>
     <li><a href="about.html">About</a></li>
   </ul>-->
-  <div class="dropdown">
-  <ul id=nav>
-    <li><a href="audio.html">Home</a></li>
-    <li><a href="data.html">Data</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-</div>
+  <!--  <div class="dropdown">
+      <ul id=nav>
+        <li><a href="audio.html">Home</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>-->
+
+ 
+  </div><!--container-->
+</div><!--#pic-->
 </header>
-<div id="pic" class="img-fluid">
+<!--<div id="pic" class="img-fluid">
   <div id="slogan"> 
     <h2>Spot a truck. Stop a truck.</h2>
-    <h3>Report now and make a difference.</h3></div>
-</div>
+    <h3>Report now and make a difference.</h3>
+    </div>
+</div>-->
 
 <div class="container">
   <div id="text-box"> 
@@ -59,7 +89,7 @@
     <button type="button" class="btn home btn-primary padding-0" id="upload" onclick="onBtnAudioClicked()" >Record truck audio</button>
 </div>
 
-<div class="row">
+<div class="row hidden-lg hidden-md  hidden-xl">
   <div class="col-xs-4 padding-0-left">
     <button type="button" class="btn btn-secondary" id="stop" onclick="onBtnTutorialClicked()" >Tutorial</button>
 </div>
