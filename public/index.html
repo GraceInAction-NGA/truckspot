@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500i,600,700|Raleway:400,600" rel="stylesheet">
 
   <script
   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="" crossorigin="anonymous"></script>
@@ -23,48 +23,65 @@
 
 <body> 
   <header>
-  <a href="index.html"><h1 id="logo">Truck Spot</h1></a>
-  <!--<ul id=nav>
-    <li><a href="audio.html">Audio</a></li>
-    <li><a href="audio-data.html">Audio Data</a></li>
-    <li><a href="data.html">Data</a></li>
-    <li><a href="idle-data.html">Idle Data</a></li>
-    <li><a href="truckidle.html">Truck Idle</a></li>
-    <li><a href="video.html">Video</a></li>
-    <li><a href="videodetails.html">Video Details</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>-->
-  <div class="dropdown">
-  <ul id=nav>
-    <li><a href="audio.html">Home</a></li>
-    <li><a href="data.html">Data</a>
-      <ul>
-        <li><a href="idle-data.html">Idle Data</a></li>
-        <li><a href="audio-data.html">Audio Data</a></li>
-      </ul>
-    </li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-</div>
+      <div id="pic" class="img-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-xl-6 col-md-6">
+              <a href="index.html">
+                <h1 id="logo">Truck Spot</h1>
+              </a>
+              <div id="mobile-nav" class="btn-group">
+              <div  class="dropdown hidden-sm hidden-md hidden-lg hidden-xl"> 
+                  <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" dropdown-toggle-split" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Menu 
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="audio.html">Home</a></li>
+                    <li><a class="dropdown-item" href="data.html">Data</a></li>
+                    <li><a class="dropdown-item" href="idle-data.html"> Idle Data</a></li>
+                    <li><a class="dropdown-item" href="audio-data.html">Audio Data</a></li>
+                    <li><a class="dropdown-item" href="about.html">About</a></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-lg-6 col-xl-6 col-md-6">
+            <!--Jessica's menu here-->
+             <div class="dropdown">
+              <ul id=nav>
+                <li><a href="audio.html">Home</a></li>
+                <li><a href="data.html">Data</a>
+                <ul>
+               <li><a href="idle-data.html">Idle Data</a></li>
+                <li><a href="audio-data.html">Audio Data</a></li>
+              </ul>
+              </li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+        </div><!-- dropdown-->
+            </div>
+              <div id="slogan"> 
+                <h2>Spot a truck. Stop a truck.</h2>
+                <h3>Report now and make a difference.</h3>
+            </div><!--slogan-->
+      </div><!--row-->
+</div><!--#pic-->
+
 </header>
-<div id="pic" class="img-fluid">
-  <div id="slogan"> 
-    <h2>Spot a truck. Stop a truck.</h2>
-    <h3>Report now and make a difference.</h3></div>
-</div>
+
 
 <div class="container">
   <div id="text-box"> 
 
 <div class="row">
-	<button type="button" class="btn home btn-primary padding-0 hidden-lg hidden-md  hidden-xl" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
+	<button type="button" class="btn home btn-primary padding-0 hidden-lg hidden-sm hidden-md  hidden-xl" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
 </div>
 
-<div class="row hidden-lg hidden-md  hidden-xl">
+<div class="row hidden-lg hidden-md hidden-sm  hidden-xl">
     <button type="button" class="btn home btn-primary padding-0" id="upload" onclick="onBtnAudioClicked()" >Record truck audio</button>
 </div>
 
-<div class="row">
+<div class="row hidden-lg hidden-md hidden-sm hidden-xl">
   <div class="col-xs-4 padding-0-left">
     <button type="button" class="btn btn-secondary" id="stop" onclick="onBtnTutorialClicked()" >Tutorial</button>
 </div>
@@ -77,8 +94,9 @@
 </div>
 
 <h3>Quote from Simone</h3>
-  <p>We care because we breathe it. We want to improve air quality in the Detroit community and with your help by using the truckSPOT, you’ll be able to report incidents of idling trucks thats are disturbing our peaceful and clean environment. With your reports you’ll be able to see real time data collected by the community.</p>
-  <p>Polluted air has no boundaries of where it travels and will pollute causing long term damages to people's health. You can make a change.</p>
+  <p id="aboutus">We care because we breathe it. We want to improve air quality in the Detroit community and with your help by using the truckSPOT, you’ll be able to report incidents of idling trucks thats are disturbing our peaceful and clean environment. With your reports you’ll be able to see real time data collected by the community.</p>
+
+  <p id="quote">Polluted air has no boundaries of where it travels and will pollute causing long term damages to people's health. You can make a change.</p>
 
 <h3>PUT MAP HERE</h3>
     <h3>Coalition of  community  groups including:</h3>
