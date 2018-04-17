@@ -1,7 +1,7 @@
 body {
   background-color: #EA967A;
   font-family: 'Montserrat', sans-serif;
-}
+ }
 
 p{
   font-size: 16px;
@@ -15,6 +15,15 @@ div#paragraph{
 header {
   margin-bottom: 26px;
  overflow: hidden;
+
+  background: url(../images/app-background-image-truckSm.jpg) center bottom no-repeat;
+  background-size: cover;
+  min-height: 220px;
+  padding: 25px;
+}
+div#pic {
+ margin-left: auto;
+ margin-right: auto;
 }
 
 #interior header {
@@ -22,26 +31,57 @@ header {
   background-size: cover;
 }
 
+ul.nav li.dropdown-menu:hover > ul.dropdown-menu {
+  display:block;
+}
+
+
+div#pic .col-lg-6, div#pic .col-xl-6, div#pic .col-md-6{
+  padding-left: 0;
+  padding-right: 0;
+}
 header h1#logo {
   background-image: url("../images/TruckSpotLogo3.png");
   background-repeat: no-repeat;
   text-indent: -999px;
   height: 50px;
-  margin-left: 20px;
   display: inline-block;
   margin-right: 0;
   padding-right: 0;
   width: 100%;
+  opacity: 0.5px;
 }
 ul#nav {
   display: none;
 }
+div#mobile-nav{
+  float: right;
+}
+div#mobile-nav .dropdown-item{
 
+    display: block;
+    width: 100%;
+    padding: 3px 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #292b2c;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
 
+}
+div#pic div#slogan{
+  clear: both;
+  margin-top: 50px;
+  float:left;
+
+}
 h3#top {
   margin-left: -14px;
   color: #8c3030;
 }
+
 div.container {
   padding-left: 25px;
   padding-right: 25px;
@@ -55,8 +95,8 @@ div#pic {
   min-height: 350px;
   padding: 25px;
 }
+
 div#pic h2, div#pic h3 {
-  text-align: right;
   color: white;
   margin-top: 0;
 
@@ -68,9 +108,17 @@ div#pic h3{
 font-size: 19.5px;
 font-weight: normal;
 }
+ 
 img.img-fluid {
   max-width: 100%;
   height:auto;
+}
+div.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #F7B6A3;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
 }
 label {
     background-color: rgba(241, 241, 241, 0.4);
@@ -110,6 +158,22 @@ border-width: 0;
 }
 h3 {
   font-weight: 600;
+
+}
+p#aboutus{
+font-family: 'Raleway', sans-serif;
+font-weight: bold;
+font-style: normal;
+font-size: 20px;
+text-indent: 7px
+
+}
+p#quote{
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight:bold;
+  font-size: 20px;
+  text-indent: 10px;
 }
 #text-box h3 {
   color: #8c3030;
@@ -249,22 +313,27 @@ div#text-box video{
 @media (min-width: 768px /*@screen-sm-min*/) { 
   header {
     margin-bottom: 0;
+    background: url(../images/app-background-image-truckL.jpg) center bottom no-repeat;
+    background-attachment: fixed;
+    min-height: 350px; 
+    background-size: cover;
   }
   .hidden-md-up {
     display: none;
   }
   header h1#logo {
-    width: 40%;
+    
   }
 
   ul#nav {
     float: right;
     display: block;
+    position: relative;
+    z-index: 9999;
   }
 
   ul#nav {
   margin-right: 30px;
-  margin-top: 41px;
 }
 
 
@@ -304,10 +373,12 @@ ul#nav li a:hover {
   ul#nav li ul{
     opacity: 0;
     z-index: 9999;
-    position: relative;
+    position: fixed;
   }
   ul#nav li:hover ul{
     opacity: 1;
+    right: 86px;
+    
     -webkit-transition: opacity .25s ease .1s;
     -moz-transition: opacity .25s ease .1s;
     -o-transition: opacity .25s ease .1s;
@@ -323,11 +394,15 @@ ul#nav li a:hover {
     -o-transition: height .25s ease .1s;
     -ms-transition: height .25s ease .1s;
     transition: height .25s ease .1s;
+    background-color: #9F6150;
   }
   ul#nav li:hover ul li {
     height: 42px;
     overflow: visible;
+    padding: 0px 4px 6px;
+    border-bottom: 4px solid #F7B6A3;
   }
+
   div#pic{
     background: url(../images/app-background-image-truckL.jpg) center bottom no-repeat;
     background-attachment: fixed;
@@ -335,10 +410,11 @@ ul#nav li a:hover {
     background-size: cover;
 }
   div#pic div#slogan{
+
     width: 750px;
     padding-right: 25px;
     margin-right: auto; 
-    margin-left: auto;
+   
 }
 div#groups .organization{
    display: flex;
@@ -362,12 +438,12 @@ div#groups img {
 
 }
 @media (min-width: 992px /*@screen-md-min*/){
-div#pic div#slogan {
+div#pic {
     width:970px;
   }
 }
 @media (min-width: 1200px /*@screen-lg-min*/){
-div#pic div#slogan {
+div#pic {
     width:1170px;
   }
 
