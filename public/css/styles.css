@@ -8,9 +8,14 @@ p{
   font-weight: 300;
   font-style: italic;
 }
+div#paragraph{
+  text-indent: 50px;
+}
 
 header {
   margin-bottom: 26px;
+ overflow: hidden;
+
   background: url(../images/app-background-image-truckSm.jpg) center bottom no-repeat;
   background-size: cover;
   min-height: 220px;
@@ -19,7 +24,11 @@ header {
 div#pic {
  margin-left: auto;
  margin-right: auto;
+}
 
+#interior header {
+  background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
+  background-size: cover;
 }
 
 ul.nav li.dropdown-menu:hover > ul.dropdown-menu {
@@ -72,6 +81,21 @@ h3#top {
   margin-left: -14px;
   color: #8c3030;
 }
+
+div.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #F7B6A3;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+}
+div#pic {
+  background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
+  background-size: cover;
+  min-height: 350px;
+  padding: 25px;
+}
+
 div#pic h2, div#pic h3 {
   color: white;
   margin-top: 0;
@@ -281,6 +305,10 @@ div#text-box video{
   max-width: 100%;
 
 }
+#mapid{
+  max-width: 100%;
+  height: 600px;
+}
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
   header {
@@ -376,6 +404,13 @@ ul#nav li a:hover {
   }
 
   div#pic{
+    background: url(../images/app-background-image-truckL.jpg) center bottom no-repeat;
+    background-attachment: fixed;
+   
+    background-size: cover;
+}
+  div#pic div#slogan{
+
     width: 750px;
     padding-right: 25px;
     margin-right: auto; 
