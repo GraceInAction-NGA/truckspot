@@ -300,6 +300,8 @@ div#text-box video{
   ul#nav {
     float: right;
     display: block;
+    position: relative;
+    z-index: 9999;
   }
 
   ul#nav {
@@ -343,10 +345,12 @@ ul#nav li a:hover {
   ul#nav li ul{
     opacity: 0;
     z-index: 9999;
-    position: relative;
+    position: fixed;
   }
   ul#nav li:hover ul{
     opacity: 1;
+    right: 86px;
+    
     -webkit-transition: opacity .25s ease .1s;
     -moz-transition: opacity .25s ease .1s;
     -o-transition: opacity .25s ease .1s;
@@ -362,10 +366,13 @@ ul#nav li a:hover {
     -o-transition: height .25s ease .1s;
     -ms-transition: height .25s ease .1s;
     transition: height .25s ease .1s;
+    background-color: #9F6150;
   }
   ul#nav li:hover ul li {
     height: 42px;
     overflow: visible;
+    padding: 0px 4px 6px;
+    border-bottom: 4px solid #F7B6A3;
   }
 
   div#pic{
