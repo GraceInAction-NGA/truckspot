@@ -1,5 +1,4 @@
 function onSubmitClicked() {
-	console.log("hello!");
 	var name=document.getElementById('name').value;
 	console.log(name);
 

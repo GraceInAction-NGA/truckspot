@@ -15,7 +15,11 @@ div#paragraph{
 header {
   margin-bottom: 26px;
  overflow: hidden;
- min-height: 350px;
+}
+
+#interior header {
+  background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
+  background-size: cover;
 }
 
 header h1#logo {
@@ -221,7 +225,10 @@ ul#data a:hover li {
 div#groups img{
   max-height: 199px;
   width: auto;
-  max-width: 290px;
+  max-width: 100%;
+margin: 0 auto 15px auto;
+display: block;
+
 }
 
 
@@ -233,6 +240,10 @@ div#text-box video{
   width: 640px;
   max-width: 100%;
 
+}
+#mapid{
+  max-width: 100%;
+  height: 600px;
 }
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
@@ -271,10 +282,9 @@ ul#nav li a:hover {
 }
 
   ul#nav li {
-    
-  list-style: none;
-  text-align: center;
-  height: 28px;
+    list-style: none;
+    text-align: center;
+    height: 28px;
     float: left;
     margin-right: 14px;
     margin-bottom: 10px;
@@ -291,6 +301,33 @@ ul#nav li a:hover {
     margin-bottom: 0;
 
   }
+  ul#nav li ul{
+    opacity: 0;
+    z-index: 9999;
+    position: relative;
+  }
+  ul#nav li:hover ul{
+    opacity: 1;
+    -webkit-transition: opacity .25s ease .1s;
+    -moz-transition: opacity .25s ease .1s;
+    -o-transition: opacity .25s ease .1s;
+    -ms-transition: opacity .25s ease .1s;
+    transition: opacity .25s ease .1s;
+  }
+  ul#nav li ul li {
+    float: none;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height .25s ease .1s;
+    -moz-transition: height .25s ease .1s;
+    -o-transition: height .25s ease .1s;
+    -ms-transition: height .25s ease .1s;
+    transition: height .25s ease .1s;
+  }
+  ul#nav li:hover ul li {
+    height: 42px;
+    overflow: visible;
+  }
   div#pic{
     background: url(../images/app-background-image-truckL.jpg) center bottom no-repeat;
     background-attachment: fixed;
@@ -303,6 +340,25 @@ ul#nav li a:hover {
     margin-right: auto; 
     margin-left: auto;
 }
+div#groups .organization{
+   display: flex;
+   height: 200px;
+
+}
+
+div#groups .vertical{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 auto;
+
+}
+div#groups img {
+  margin-bottom: 0;
+  max-height: 199px;
+
+
+}
 
 }
 @media (min-width: 992px /*@screen-md-min*/){
@@ -314,5 +370,6 @@ div#pic div#slogan {
 div#pic div#slogan {
     width:1170px;
   }
+
 
 }

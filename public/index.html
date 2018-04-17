@@ -47,28 +47,51 @@
     <li><a href="videodetails.html">Video Details</a></li>
     <li><a href="about.html">About</a></li>
   </ul>-->
+<<<<<<< HEAD
+=======
+  <div class="dropdown">
+  <ul id=nav>
+    <li><a href="audio.html">Home</a></li>
+    <li><a href="data.html">Data</a>
+      <ul>
+        <li><a href="idle-data.html">Idle Data</a></li>
+        <li><a href="audio-data.html">Audio Data</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</div>
+>>>>>>> 53b0a2e6eb6385d7690c0647db553ea575e3dd7d
 </header>
 
 <div class="container">
   <div id="text-box"> 
 
+<<<<<<< HEAD
 <div class="row hidden-md hidden-lg hidden-xl">
 	<button type="button" class="btn home btn-primary padding-0" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
 </div>
 
 <div class="row d-md-none d-lg-none d-lg-block hidden-md hidden-lg hidden-xl">
+=======
+<div class="row">
+	<button type="button" class="btn home btn-primary padding-0 hidden-lg hidden-md  hidden-xl" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
+</div>
+
+<div class="row hidden-lg hidden-md  hidden-xl">
+>>>>>>> 53b0a2e6eb6385d7690c0647db553ea575e3dd7d
     <button type="button" class="btn home btn-primary padding-0" id="upload" onclick="onBtnAudioClicked()" >Record truck audio</button>
 </div>
 
 <div class="row">
   <div class="col-xs-4 padding-0-left">
-    <button type="button" class="btn btn-secondary" id="stop" onclick="onBtnVideoClicked()" >Tutorial</button>
+    <button type="button" class="btn btn-secondary" id="stop" onclick="onBtnTutorialClicked()" >Tutorial</button>
 </div>
   <div class="col-xs-4 padding-0">
-    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAudioClicked()" >About</button>
+    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAboutClicked()" >About</button>
   </div>
   <div class="col-xs-4 padding-0-right">
-    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAudioClicked()" >Data</button>
+    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnDataClicked()" >Data</button>
   </div>
 </div>
 
@@ -79,16 +102,21 @@
 <h3>PUT MAP HERE</h3>
     <h3>Coalition of  community  groups including:</h3>
   <div id="groups" class="row">
-    <div class="col-sm-4">
-      <h4>Radical production</h4>
+    <div class="col-sm-4 organization">
+      <div class="vertical">
+       <img src="images/RP Logo 2.png"> 
+      </div>
+      
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 organization">
+       <div class="vertical">
       <img src="images/DHDC_logo.png">
-       <h4>Detroit Hispanic Development Corporation (DHDC)</h4>
     </div>
-    <div class="col-sm-4">  
+    </div>
+    <div class="col-sm-4 organization">
+     <div class="vertical">  
       <img src="images/SDCDC_logo.png">
-        <h4>Southwest Detroit Community Benefits Coalition (SDCBC)</h4> 
+    </div>
     </div>
   </div>
 
