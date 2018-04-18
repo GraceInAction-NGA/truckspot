@@ -5,7 +5,7 @@ body {
 
 p{
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
   font-style: italic;
 }
 div#paragraph{
@@ -162,22 +162,19 @@ h3 {
 
 }
 p#aboutus{
-font-weight: bold;
-font-style: normal;
-font-size: 20px;
+font-weight: 300;
+font-style: italic;
+font-size: 18px;
 text-indent: 7px
 
 }
 div#quote{
-  font-style: italic;
-  font-weight:900;
-  font-size: 20px;
   text-indent: 10px;
   margin-bottom: 44px;
   margin-top: 44px;
   border:double;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 19px;
 }
 #text-box h3 {
   color: #8c3030;
