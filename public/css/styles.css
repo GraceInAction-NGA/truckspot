@@ -131,13 +131,13 @@ border-width: 0;
     margin-bottom: 25px;
     margin-top: 25px;
      border: 3px solid #45A095;
+     text-align: center;
 }
 h3 {
   font-weight: 600;
 
 }
 p#aboutus{
-font-family: 'Raleway', sans-serif;
 font-weight: bold;
 font-style: normal;
 font-size: 20px;
@@ -145,11 +145,14 @@ text-indent: 7px
 
 }
 p#quote{
-  font-family: 'Lato', sans-serif;
-  font-style: normal;
-  font-weight:bold;
+  font-style: italic;
+  font-weight:900;
   font-size: 20px;
   text-indent: 10px;
+  text-transform: uppercase;
+  margin-bottom: 44px;
+  margin-top: 44px;
+  border:double;
 }
 #text-box h3 {
   color: #8c3030;
