@@ -5,7 +5,7 @@ body {
 
 p{
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
   font-style: italic;
 }
 div#paragraph{
@@ -155,25 +155,26 @@ border-width: 0;
     margin-bottom: 25px;
     margin-top: 25px;
      border: 3px solid #45A095;
+     text-align: center;
 }
 h3 {
   font-weight: 600;
 
 }
 p#aboutus{
-font-family: 'Raleway', sans-serif;
-font-weight: bold;
-font-style: normal;
-font-size: 20px;
+font-weight: 300;
+font-style: italic;
+font-size: 18px;
 text-indent: 7px
 
 }
-p#quote{
-  font-family: 'Lato', sans-serif;
-  font-style: normal;
-  font-weight:bold;
-  font-size: 20px;
+div#quote{
   text-indent: 10px;
+  margin-bottom: 44px;
+  margin-top: 44px;
+  border:double;
+  padding-top: 10px;
+  padding-bottom: 19px;
 }
 #text-box h3 {
   color: #8c3030;
