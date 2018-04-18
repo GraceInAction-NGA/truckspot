@@ -318,6 +318,11 @@ div#text-box video{
     min-height: 350px; 
     background-size: cover;
   }
+#interior header{
+  min-height:100px
+}
+
+
   .hidden-md-up {
     display: none;
   }
