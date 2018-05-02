@@ -16,11 +16,17 @@ header {
   margin-bottom: 26px;
  overflow: hidden;
 
-  background: url(../images/app-background-image-truckSm.jpg) center bottom no-repeat;
+ /*background: url(../images/app-background-image-truckL.jpg) center bottom no-repeat;*/
   background-size: cover;
   min-height: 220px;
-  padding: 25px;
+  /*padding: 25px;*/
 }
+
+ h1#logo{
+  padding-right: 25px;
+ }
+
+ 
 div#pic {
  margin-left: auto;
  margin-right: auto;
@@ -336,6 +342,7 @@ div#text-box video{
     display: block;
     position: relative;
     z-index: 9999;
+    margin-top: 20px;
   }
 
   ul#nav {
@@ -348,12 +355,12 @@ ul#nav li:last-child {
 }
 
 ul#nav li a {
-  color: #F7B6A3;
+  color: #cef5f4;
   font-weight: bold;
 }
 
 ul#nav li a:hover {
-  color: #8e4141;
+  color: #48a99e;
 }
 
   ul#nav li {
