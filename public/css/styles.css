@@ -3,10 +3,11 @@ body {
   font-family: 'Montserrat', sans-serif;
  }
 
-p{
+p#boldparagraph{
   font-size: 16px;
   font-weight: 600;
   font-style: italic;
+  padding-bottom: 25px;
 }
 div#paragraph{
   text-indent: 50px;
@@ -165,16 +166,24 @@ p#aboutus{
 font-weight: 300;
 font-style: italic;
 font-size: 18px;
-text-indent: 7px
-
+text-indent: 7px;
 }
+
+p#statement{
+font-weight: 300;
+font-style: italic;
+font-size: 18px;
+text-indent: 7px;
+margin-bottom: 25px
+}
+
 div#quote{
   text-indent: 10px;
   margin-bottom: 44px;
   margin-top: 44px;
-  border:double;
-  padding-top: 10px;
-  padding-bottom: 19px;
+  border:5px solid #45A095;
+  padding:15px 95px 5px;
+  
 }
 #text-box h3 {
   color: #8c3030;
@@ -287,6 +296,11 @@ ul#data li{
 ul#data a:hover li {
   background-color: blue;
 }
+div#groups{
+margin-top: 25px
+}
+
+
 div#groups img{
   max-height: 199px;
   width: auto;
@@ -309,6 +323,8 @@ div#text-box video{
 #mapid{
   max-width: 100%;
   height: 600px;
+  margin-bottom: 70px;
+  border: 5px solid #45A095
 }
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
@@ -334,7 +350,7 @@ div#text-box video{
   ul#nav {
     float: right;
     display: block;
-    position: relative;
+    position: relative; 
     z-index: 9999;
   }
 
@@ -424,7 +440,6 @@ ul#nav li a:hover {
 }
 div#groups .organization{
    display: flex;
-   height: 200px;
 
 }
 
@@ -437,7 +452,7 @@ div#groups .vertical{
 }
 div#groups img {
   margin-bottom: 0;
-  max-height: 199px;
+  max-height: 97px;
 
 
 }
