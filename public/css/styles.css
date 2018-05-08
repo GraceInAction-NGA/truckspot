@@ -295,11 +295,6 @@ display: block;
 
 }
 
-
-
-
-
-
 div#text-box video{
   width: 640px;
   max-width: 100%;
@@ -308,6 +303,14 @@ div#text-box video{
 #mapid{
   max-width: 100%;
   height: 600px;
+}
+
+#info{
+  border-top: 3px solid #45a095;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: center;
+
 }
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
