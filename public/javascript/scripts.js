@@ -7,7 +7,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
-var polygon = L.polygon([
+var polygon1 = L.polygon([
     [42.276321, -83.155054],
     [42.329253, -83.195649],
     [42.331381, -83.095079],
@@ -15,13 +15,37 @@ var polygon = L.polygon([
     [42.273419, -83.134356]
 ]).addTo(mymap);
 
-var circle = L.circle([42.325853, -83.134617], {
+var polygon2 = L.polygon([
+    [42.31661, -83.13447],
+    [42.33041, -83.14445],
+    [42.33088, -83.11998],
+    [42.30943, -83.10222],
+]).addTo(mymap);
+polygon2.bindPopup("Train-Truck Intermodal");
+polygon2.setStyle({
+    fillColor:'green',
+    color:'green'
+});
+
+var polygon3 = L.polygon([
+    [42.29858, -83.12256],
+    [42.30294, -83.12671],
+    [42.30643, -83.11593],
+    [42.30243, -83.11267],
+]).addTo(mymap);
+polygon3.bindPopup("Truck HotSpot");
+polygon3.setStyle({
+    fillColor:'purple',
+    color:'purple'
+});
+
+var circle = L.circle([42.28315, -83.11226], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 500
+    radius: 1050
 }).addTo(mymap);
-circle.bindPopup("CSX Intermodal");
+circle.bindPopup("Zug Island");
 
 var redIcon = L.icon({
     iconUrl: 'images/RedIcon.png',
@@ -43,4 +67,14 @@ var blueIcon = L.icon({
     iconAnchor:   [22, 94],})
 var marker = L.marker([42.290376, -83.128845], {icon: blueIcon}).addTo(mymap);
 marker.bindPopup("Southwest Detroit Community Benefits Coalition");
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+}
+
+mymap.on('click', onMapClick);
 

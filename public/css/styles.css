@@ -316,11 +316,6 @@ display: block;
 
 }
 
-
-
-
-
-
 div#text-box video{
   width: 640px;
   max-width: 100%;
@@ -331,6 +326,14 @@ div#text-box video{
   height: 600px;
   margin-bottom: 70px;
   border: 5px solid #45A095
+}
+
+#info{
+  border-top: 3px solid #45a095;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: center;
+
 }
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
