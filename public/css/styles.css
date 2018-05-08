@@ -162,7 +162,7 @@ border-width: 0;
     margin-bottom: 25px;
     margin-top: 25px;
      border: 3px solid #45A095;
-     text-align: center;
+     text-align: left;
 }
 h3 {
   font-weight: 600;
@@ -329,11 +329,38 @@ div#text-box video{
 }
 
 #info{
-  border-top: 3px solid #45a095;
-  margin-top: 20px;
-  padding-top: 20px;
-  text-align: center;
+  border-top: 5px solid #45A095;
+}
 
+#info ul{
+  list-style: none;
+  padding-left: 0; 
+}
+#info ul li{
+  display: inline-block;
+  margin-bottom: 25px;
+   
+}
+#info ul li div{
+  display: flex;
+  align-items: center;
+}
+
+#info p{
+  width:75%;
+  float: left;
+  padding-right: 12px;
+}
+
+#info img{
+ width: 25%;
+ float: left;
+ max-height: 100px
+}
+
+#info h3{
+  margin-top: 0;
+  color: #45A095;
 }
 
 @media (min-width: 768px /*@screen-sm-min*/) { 
@@ -463,20 +490,22 @@ div#groups .vertical{
 div#groups img {
   margin-bottom: 0;
   max-height: 97px;
-
-
 }
+
+
 
 }
 @media (min-width: 992px /*@screen-md-min*/){
 div#pic {
     width:970px;
   }
+
+  #info{
+  border-left: 5px solid #45A095;
+}
 }
 @media (min-width: 1200px /*@screen-lg-min*/){
 div#pic {
     width:1170px;
   }
-
-
 }
