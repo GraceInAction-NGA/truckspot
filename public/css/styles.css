@@ -3,6 +3,11 @@ body {
   font-family: 'Montserrat', sans-serif;
  }
 
+ .container-fluid {
+  padding-right:0px;
+  padding-left: 0px;
+  }
+
 p#boldparagraph{
   font-size: 16px;
   font-weight: 600;
@@ -40,6 +45,7 @@ div#pic {
 
 ul.nav li.dropdown-menu:hover > ul.dropdown-menu {
   display:block;
+  text-align: right;
 }
 
 
@@ -64,11 +70,23 @@ ul#nav {
 div#mobile-nav{
   float: right;
 }
+div#mobile-nav .dropdown-toggle{
+  background-color: #92aee6;
+  margin-bottom: 0;
+  color: black;
+}
+div#mobile-nav .dropdown-menu{
+  min-width: 75.5px;
+  left: -20px;
+}
+div#mobile-nav .dropdown-menu li{
+  float: none;
+}
 div#mobile-nav .dropdown-item{
 
     display: block;
     width: 100%;
-    padding: 3px 1.5rem;
+    padding: 13px 21px;
     clear: both;
     font-weight: 400;
     color: #292b2c;
@@ -76,7 +94,6 @@ div#mobile-nav .dropdown-item{
     white-space: nowrap;
     background: 0 0;
     border: 0;
-
 }
 div#pic div#slogan{
   clear: both;
@@ -433,10 +450,10 @@ ul#nav li a:hover {
     opacity: 0;
     z-index: 9999;
     position: fixed;
+    padding-left: 0;
   }
   ul#nav li:hover ul{
     opacity: 1;
-    right: 86px;
     
     -webkit-transition: opacity .25s ease .1s;
     -moz-transition: opacity .25s ease .1s;
@@ -460,6 +477,9 @@ ul#nav li a:hover {
     overflow: visible;
     padding: 0px 4px 6px;
     border-bottom: 4px solid #F7B6A3;
+  }
+  ul#nav li ul li a:hover{
+    text-decoration: none;
   }
 
   div#pic{
