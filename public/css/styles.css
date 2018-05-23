@@ -151,6 +151,11 @@ label {
     color: #9a4124; 
 }
 
+label span{
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 12px;
+
 button.btn-dark{	
 	text-align: center;
 	margin-left: auto;
