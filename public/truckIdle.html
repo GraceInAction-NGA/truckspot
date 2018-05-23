@@ -66,36 +66,42 @@
       <form>
 
       <div class="row">
-    	<label for="textinput-1">Name:</label>
-    	<input type="text" class="form-control" name="textinput-1" id="name_input" size="35" placeholder="Name" value="">
-    </div>
+        <div class="col-xs-6 form-group">
+    	   <label for="textinput-1">Name <span>(optional)</span></label>
+    	   <input type="text" class="form-control" name="textinput-1" id="name_input" size="35" placeholder="Optional" value="">
+      </div>
 
     
-      <div class="row">
-      <label for="date-1">Date</label>
-     	<input type="date" class="form-control" data-clear-btn="false" name="date-1" id="date_input" placeholder="MM/DD/YYYY" value="">
-    </div>
+        <div class="col-xs-6 form-group"> 
+          <label for="date-1">Date</label>
+     	    <input type="date" class="form-control" data-clear-btn="false" name="date-1" id="date_input" placeholder="MM/DD/YYYY" value="">
+        </div>
+      </div>
  
-      <div class="row">
-      <label for="textinput-1">Duration:</label>
-      <input type="number" class="form-control" name="textinput-1" id="duration_input" placeholder="Duration" value="">
-    </div><br/>
+      <div class="form-group">
+      <label for="textinput-1">Duration</label>
+      <input type="number" class="form-control" name="textinput-1" id="duration_input" placeholder="Length of time of truck idling" value="">
+    </div>
 
    
-      <div class="row"> 
-    <label for="textinput-1">Nearest Address:</label>
-    <input type="text" class="form-control" name="textinput-1" id="nearest_input" placeholder="Address" value="">
-    </div><br/>
+      <div class="form-group"> 
+    <label for="textinput-1">Nearest Address</label>
+    <input type="text" class="form-control" name="textinput-1" id="nearest_input" placeholder="Look around for nearest street address" value="">
+    </div>
 
    
-      <div class="row">
-    <label for="textarea-1">Description:</label>
-    <textarea rows="4" name="textarea-1" class="form-control" cols="50" placeholder="Click Here To Type" id="description_input"></textarea>
-    </div><br/>
-    
+      <div class="form-group">
+    <label for="textarea-1">Description</label>
+    <textarea rows="4" name="textarea-1" class="form-control" cols="50" placeholder="Try to get company information on truck door" id="description_input"></textarea>
+    </div>
+
+    <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Choose video from your camera</p>
+  </div>
     
   <button type="button" class="btn btn-primary" id="video" onclick="onBtnVideoRecordClicked()" >Upload Video</button>
-  <button type="button" class="btn btn-primary" id="video" onclick="onBtnVideoFormSubmitClicked()" >Submit</button>
   </form>
 </div>
 </div>
