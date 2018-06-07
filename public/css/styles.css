@@ -24,6 +24,10 @@ header {
   /*padding: 25px;*/
 }
 
+#interior header{
+  min-height:100px;
+}
+
  header h1#logo {
    background-image: url("../images/TruckSpotLogo3.png");
    background-repeat: no-repeat;
@@ -369,6 +373,19 @@ div#text-box video{
   color: #45A095;
 }
 
+form .field {
+  margin-bottom: 15px;
+}
+
+form .col-sm-6 {
+  padding-left: 0;
+}
+
+form .field select {
+  clear: both;
+  display: block;
+}
+
 @media (min-width: 576px) {
     #info img#elephant{
       width: 85px;
@@ -396,7 +413,6 @@ div#text-box video{
     background-size: cover;
   }
 #interior header{
-  min-height:100px;
   background-position: center bottom;
 }
   .hidden-md-up {
