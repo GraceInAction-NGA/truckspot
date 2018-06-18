@@ -86,7 +86,11 @@ div#mobile-nav .dropdown-toggle{
 }
 div#mobile-nav .dropdown-menu{
   min-width: 75.5px;
-  left: -20px;
+  left: inherit;
+  top: 59px;
+  right: 9px;
+  position: fixed;
+
 }
 div#mobile-nav .dropdown-menu li{
   float: none;
@@ -384,6 +388,16 @@ form .col-sm-6 {
 form .field select {
   clear: both;
   display: block;
+}
+
+form input#upload-media {
+  display: inline-block;
+}
+
+h4.alert {
+  text-align: center;
+  border: 3px solid #45A095;
+  padding: 15px;
 }
 
 @media (min-width: 576px) {
