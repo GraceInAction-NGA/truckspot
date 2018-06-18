@@ -12,7 +12,11 @@ function onBtnVideoRecordClicked (){
 
 	window.location="video.html";
 }
-function onBtnVideoFormSubmitClicked (){
+function onBtnIdleFormSubmitClicked (){
+
+	window.location="idle-data.html";
+}
+function onBtnAudioFormSubmitClicked (){
 
 	window.location="idle-data.html";
 }
