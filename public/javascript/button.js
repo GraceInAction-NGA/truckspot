@@ -1,45 +1,45 @@
 
 function onBtnVideoClicked (){
-
-	window.location="truckidle.html";
+  window.location="truckidle.html";
 }
 
 function onBtnAudioClicked() {
 
-	window.location="trucksound.html";
+  window.location="trucksound.html";
 }
 function onBtnVideoRecordClicked (){
 
-	window.location="video.html";
+  window.location="video.html";
 }
-function onBtnIdleFormSubmitClicked (){
+//function onBtnIdleFormSubmitClicked (){
+//
+////  window.location="idle-data.html";
+//}
+//function onBtnAudioFormSubmitClicked (){
+//
+////  window.location="idle-data.html";
+//}
 
-	window.location="idle-data.html";
-}
-function onBtnAudioFormSubmitClicked (){
-
-	window.location="idle-data.html";
-}
 function onBtnAudioRecordClicked (){
 
-	window.location="audio.html";
+  window.location="audio.html";
 }
 function onBtnDataClicked (){
 
-	window.location="data.html";
+  window.location="data.html";
 }
 
 function onBtnAboutClicked (){
 
-	window.location="about.html";
+  window.location="about.html";
 }
 
 function onBtnDataClicked (){
 
-	window.location="data.html";
+  window.location="data.html";
 }
 
 function onBtnTutorialClicked (){
 
-	window.location="tutorial.html";
+  window.location="tutorial.html";
 }

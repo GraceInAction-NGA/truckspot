@@ -1,142 +1,141 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<title>Truck Spot</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Latest compiled and minified CSS -->
+<head>
+  <title>Truck Spot</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
-  integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
-  crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
 
-    <!-- Latest compiled and minified JavaScript -->
-	<script
-	 src="http://code.jquery.com/jquery-3.3.1.min.js"
-	 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	 crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
-   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
-   crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
 
 </head>
 
 <body>
   <header>
 
-      <div id="pic" class="img-fluid">
-        <div class="row">
-          <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
-            <div id="mobile-nav" class="btn-group">
-              <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
-                  <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div id="pic" class="img-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+          <div id="mobile-nav" class="btn-group">
+            <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
+              <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Menu
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="index.html">Home</a></li>
-                    <li><a class="dropdown-item" href="data.html">Data</a></li>
-                    <li><a class="dropdown-item" href="about.html">About</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <a href="index.html">
-                <h1 id="logo">Truck Spot</h1>
-              </a>
-
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="data.html">Data</a></li>
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
-            <!--Jessica's menu here-->
-             <div class="dropdown">
-              <ul id=nav>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="data.html">Data</a>
+          <a href="index.html">
+            <h1 id="logo">Truck Spot</h1>
+          </a>
+
+        </div>
+
+        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+          <!--Jessica's menu here-->
+          <div class="dropdown">
+            <ul id=nav>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="data.html">Data</a>
                 <ul>
-               <li><a href="idle-data.html">Idle Data</a></li>
-                <li><a href="audio-data.html">Audio Data</a></li>
-              </ul>
+                  <li><a href="idle-data.html">Idle Data</a></li>
+                  <li><a href="audio-data.html">Audio Data</a></li>
+                </ul>
               </li>
               <li><a href="about.html">About</a></li>
             </ul>
-        </div><!-- dropdown-->
-            </div>
-              <div id="slogan">
-                <h2>Spot a truck. Stop a truck.</h2>
-                <h3>Report now and make a difference.</h3>
-            </div><!--slogan-->
-      </div><!--row-->
-</div><!--#pic-->
+          </div>
+          <!-- dropdown-->
+        </div>
+        <div id="slogan">
+          <h2>Spot a truck. Stop a truck.</h2>
+          <h3>Report now and make a difference.</h3>
+        </div>
+        <!--slogan-->
+      </div>
+      <!--row-->
+    </div>
+    <!--#pic-->
 
-</header>
+  </header>
 
 
-<div class="container">
-  <div id="text-box">
-    
-<div class="row">
-	<button type="button" class="btn home btn-primary padding-0 hidden-lg hidden-sm hidden-md  hidden-xl" id="stop" onclick="onBtnVideoClicked()" >Report a truck idler</button>
-</div>
+  <div class="container">
+    <div id="text-box">
 
-<div class="row hidden-lg hidden-md hidden-sm  hidden-xl">
+      <div class="row">
+        <button type="button" class="btn home btn-primary padding-0 hidden-lg hidden-sm hidden-md  hidden-xl" id="stop" onclick="onBtnVideoClicked()">Report a truck idler</button>
+      </div>
 
-    <button type="button" class="btn home btn-primary padding-0" id="upload" onclick="onBtnAudioClicked()" >Report a loud truck</button>
-</div>
+      <div class="row hidden-lg hidden-md hidden-sm  hidden-xl">
 
-<div class="row hidden-lg hidden-md hidden-sm hidden-xl">
-  <div class="col-xs-6 padding-0">
-    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAboutClicked()" >ABOUT</button>
-  </div>
-  <div class="col-xs-6 padding-0-right">
-    <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnDataClicked()" >DATA</button>
-  </div>
-</div>
-  <p id="aboutus">We care because we breathe it. We want to improve air quality in the Detroit community and with your help by using truckSPOT, you can report incidents of idling trucks thats are disturbing our peaceful and clean environment. With your reports you’ll be able to see real time data collected by the community.</p>
+        <button type="button" class="btn home btn-primary padding-0" id="upload" onclick="onBtnAudioClicked()">Report a loud truck</button>
+      </div>
 
- <div id="quote">
-	 <span>&ldquo;</span>
-	 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.<br/>-Firstname Lastname</p>
- </div>
+      <div class="row hidden-lg hidden-md hidden-sm hidden-xl">
+        <div class="col-xs-6 padding-0">
+          <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnAboutClicked()">ABOUT</button>
+        </div>
+        <div class="col-xs-6 padding-0-right">
+          <button type="button" class="btn btn-secondary" id="upload" onclick="onBtnDataClicked()">DATA</button>
+        </div>
+      </div>
+      <p id="aboutus">We care because we breathe it. We want to improve air quality in the Detroit community and with your help by using truckSPOT, you can report incidents of idling trucks thats are disturbing our peaceful and clean environment. With your reports you’ll be able to see real time data collected by the community.</p>
 
-   <p id="statement"> Polluted air has no boundaries of where it travels and will pollute causing long term damages to people's health. You can make a change.</p>
+      <div id="quote">
+        <span>&ldquo;</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.<br/>-Firstname Lastname</p>
+      </div>
 
-  <div id="mapid"></div>
-    <h3>Coalition of  community  groups:</h3>
-  <div id="groups" class="row">
-    <div class="col-sm-4 organization">
-      <div class="vertical">
-       <img src="images/RP Logo 2.png">
+      <p id="statement"> Polluted air has no boundaries of where it travels and will pollute causing long term damages to people's health. You can make a change.</p>
+
+      <div id="mapid"></div>
+      <h3>Coalition of community groups:</h3>
+      <div id="groups" class="row">
+        <div class="col-sm-4 organization">
+          <div class="vertical">
+            <img src="images/RP Logo 2.png">
+          </div>
+
+        </div>
+        <div class="col-sm-4 organization">
+          <div class="vertical">
+            <img src="images/DHDC_logo.png">
+          </div>
+        </div>
+        <div class="col-sm-4 organization">
+          <div class="vertical">
+            <img src="images/SDCDC_logo.png">
+          </div>
+        </div>
       </div>
 
     </div>
-    <div class="col-sm-4 organization">
-       <div class="vertical">
-      <img src="images/DHDC_logo.png">
-    </div>
-    </div>
-    <div class="col-sm-4 organization">
-     <div class="vertical">
-      <img src="images/SDCDC_logo.png">
-    </div>
-    </div>
   </div>
 
-</div>
-</div>
-
-	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-	<script type="text/javascript" src="javascript/config.js"></script>
-	<script type="text/javascript" src="javascript/button.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script type="text/javascript" src="javascript/config.js"></script>
+  <script type="text/javascript" src="javascript/button.js"></script>
   <script type="text/javascript" src="javascript/scripts.js"></script>
 
 </body>
+
 </html>

@@ -136,9 +136,9 @@ label span{
   font-size: 12px;
 }
 button.btn-dark{
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
@@ -545,7 +545,18 @@ div#groups img {
 
 }
 
-
+/* Loading Screen */
+#loadingScreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #EA967A;
+  text-align: center;
+  padding-top: 5em;
+  display: none;
+}
 
 @media (min-width: 992px /*@screen-md-min*/){
 div#pic {
