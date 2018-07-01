@@ -24,6 +24,10 @@ header {
   /*padding: 25px;*/
 }
 
+#interior header{
+  min-height:100px;
+}
+
  header h1#logo {
    background-image: url("../images/TruckSpotLogo3.png");
    background-repeat: no-repeat;
@@ -82,7 +86,11 @@ div#mobile-nav .dropdown-toggle{
 }
 div#mobile-nav .dropdown-menu{
   min-width: 75.5px;
-  left: -20px;
+  left: inherit;
+  top: 59px;
+  right: 9px;
+  position: fixed;
+
 }
 div#mobile-nav .dropdown-menu li{
   float: none;
@@ -128,9 +136,9 @@ label span{
   font-size: 12px;
 }
 button.btn-dark{
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
@@ -277,11 +285,12 @@ padding-right:
 .form-control{
 margin-bottom: 5px;
 
+}
+
 .reports .btn-primary {
   font-size: 9px;
 }
 
-}
 video {
   background: #222;
   margin: 10px auto;
@@ -373,6 +382,29 @@ div#text-box video{
   color: #45A095;
 }
 
+form .field {
+  margin-bottom: 15px;
+}
+
+form .col-sm-6 {
+  padding-left: 0;
+}
+
+form .field select {
+  clear: both;
+  display: block;
+}
+
+form input#upload-media {
+  display: inline-block;
+}
+
+h4.alert {
+  text-align: center;
+  border: 3px solid #45A095;
+  padding: 15px;
+}
+
 @media (min-width: 576px) {
     #info img#elephant{
       width: 85px;
@@ -400,7 +432,6 @@ div#text-box video{
     background-size: cover;
   }
 #interior header{
-  min-height:100px;
   background-position: center bottom;
 }
   .hidden-md-up {
@@ -524,7 +555,18 @@ div#groups img {
 
 }
 
-
+/* Loading Screen */
+#loadingScreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #EA967A;
+  text-align: center;
+  padding-top: 5em;
+  display: none;
+}
 
 @media (min-width: 992px /*@screen-md-min*/){
 div#pic {
