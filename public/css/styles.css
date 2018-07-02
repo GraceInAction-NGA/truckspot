@@ -286,6 +286,11 @@ padding-right:
 margin-bottom: 5px;
 
 }
+
+.reports .btn-primary {
+  font-size: 9px;
+}
+
 video {
   background: #222;
   margin: 10px auto;
@@ -517,9 +522,14 @@ h4.alert {
     margin-right: auto;
 
 }
+
+
+div#groups h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
 div#groups .organization{
    display: flex;
-
 }
 
 div#groups .vertical{
