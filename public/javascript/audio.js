@@ -17,7 +17,7 @@
     if(getBrowser() == "Chrome"){
     var constraints = {"audio": false, "video": { "mandatory": { "minWidth": 320, "maxWidth": 320, "minHeight": 240,"maxHeight": 240 }, "optional": [] } };
     }else if(getBrowser() == "Firefox"){
-      var constraints = {audio: true,video: { width: { min: 320, ideal: 320, max: 1280 }, height: { min: 240, ideal: 240, max: 720 }}}; 
+      var constraints = {audio: true,video: { width: { min: 320, ideal: 320, max: 1280 }, height: { min: 240, ideal: 240, max: 720 }}};
     }
 
 
@@ -33,7 +33,7 @@
   var chunks = [];
   var count = 0;
   var formData= new FormData();
-  
+
   function startRecording(stream) {
   if (typeof MediaRecorder.isTypeSupported == 'function'){
     /*
@@ -212,13 +212,13 @@ function onPauseResumeClicked(){
 }
 
 function errorCallback(error){
-  console.log('navigator.getUserMedia error: ', error); 
+  console.log('navigator.getUserMedia error: ', error);
 }
 
 function onUploadClicked(){
 
   var storageRef = firebase.storage().ref('sweet_gifs/' + formData.get("fname"));
-  
+
   var task = storageRef.put(formData.get("data"));
   task.on('state_changed',
 
@@ -233,13 +233,13 @@ function onUploadClicked(){
     function complete(){
        console.log("complete");
     }
-  ); 
+  );
 }
 
-function onBtnVideoClicked(){
-  window.location="index.html";
-}
+//function onBtnVideoClicked(){
+//  window.location="index.html";
+//}
 
 //function onBtnAudioClicked(){
- // window.location=audio.html;
+// window.location=audio.html;
 //}
