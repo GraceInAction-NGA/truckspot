@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([42.300292, -83.137200], 13);
+var mymap = L.map('mapid').setView([42.30791, -83.13578], 13);
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -14,6 +14,7 @@ var polygon1 = L.polygon([
     [42.316513, -83.077132],
     [42.273419, -83.134356]
 ]).addTo(mymap);
+polygon1.bindPopup("<h4>Main Focus of TruckSpot</h4><p>This is where we are mainly focusing to collect truck data.</p>")
 
 var polygon2 = L.polygon([
     [42.31661, -83.13447],
@@ -21,7 +22,7 @@ var polygon2 = L.polygon([
     [42.33088, -83.11998],
     [42.30943, -83.10222],
 ]).addTo(mymap);
-polygon2.bindPopup("Train-Truck Intermodal");
+polygon2.bindPopup("<h4>Train-Truck Intermodal</h4><p>This is where several freight companies load and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates.</p>");
 polygon2.setStyle({
     fillColor:'green',
     color:'green'
@@ -33,7 +34,7 @@ var polygon3 = L.polygon([
     [42.30643, -83.11593],
     [42.30243, -83.11267],
 ]).addTo(mymap);
-polygon3.bindPopup("Truck HotSpot");
+polygon3.bindPopup("<h4>Truck HotSpot</h4><p>This is where a freight company loand and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates.</p>");
 polygon3.setStyle({
     fillColor:'purple',
     color:'purple'
@@ -45,7 +46,7 @@ var circle = L.circle([42.28315, -83.11226], {
     fillOpacity: 0.5,
     radius: 1050
 }).addTo(mymap);
-circle.bindPopup("Zug Island");
+circle.bindPopup("<h4>Zug Island</h4><p> This is a heavily industrialized island that causes a lot pollution.</p>");
 
 var redIcon = L.icon({
     iconUrl: 'images/RedIcon.png',
