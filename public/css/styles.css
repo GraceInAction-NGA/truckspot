@@ -574,8 +574,9 @@ div#pic {
   }
 
 #info img#people{
- width: 70px;
+ width: auto;
  margin: 0 auto;
+ max-height: 105px;
 }
 
 

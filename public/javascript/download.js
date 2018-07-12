@@ -26,7 +26,7 @@ function download(path) {
       if (key != "count") {
         var report = reports[key];
         var id = key.replace("report", "");
-        var $button = '<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary report" id="'+id+'"> ' + report.nearest_address + ' </button>'
+        var $button = '<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary report" id="'+id+'"> ' + report.date + ' ' + report.nearest_address + ' </button>'
         $(".reports").prepend($button);
         $('#'+id).data('data', report);
       }
