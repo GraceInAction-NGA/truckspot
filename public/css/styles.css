@@ -29,7 +29,7 @@ header {
 }
 
  header h1#logo {
-   background-image: url("../images/TruckSpotLogo3.png");
+   background-image: url("../images/TruckSpotLogo.png");
    background-repeat: no-repeat;
    text-indent: -999px;
    height: 50px;
@@ -286,6 +286,11 @@ padding-right:
 margin-bottom: 5px;
 
 }
+
+.reports .btn-primary {
+  font-size: 9px;
+}
+
 video {
   background: #222;
   margin: 10px auto;
@@ -327,7 +332,7 @@ div#text-box video{
 #mapid{
   max-width: 100%;
   height: 600px;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
   border: 5px solid #45A095
 }
 
@@ -369,7 +374,13 @@ div#text-box video{
 #info img{
  width: 25%;
  float: left;
- max-height: 100px
+ max-height: 100px;
+ margin: 0 auto;
+}
+
+#info img#people{
+  max-width: 50px;
+
 }
 
 #info h3{
@@ -403,17 +414,14 @@ h4.alert {
 @media (min-width: 576px) {
     #info img#elephant{
       width: 85px;
-      margin: 0 auto;
     }
 
     #info img#people{
       width: 41px;
-      margin: 0 auto;
     }
 
     #info img#fiesta{
       width: 85px;
-      margin: 0 auto;
     }
 
 }
@@ -421,7 +429,7 @@ h4.alert {
 @media (min-width: 768px /*@screen-sm-min*/) {
   header {
     background: url(../images/app-background-image-truckL.jpg) center center no-repeat;
-    margin-bottom: 0;
+    margin-bottom: 25px;
     background-attachment: fixed;
     min-height: 350px;
     background-size: cover;
@@ -441,7 +449,7 @@ h4.alert {
     float: right;
     display: block;
     position: relative;
-    z-index: 9999;
+    z-index: 0;
     margin-top: 20px;
   }
 
@@ -461,16 +469,15 @@ h4.alert {
     margin-right: 0;
     margin-bottom: 0;
   }
-
   ul#nav li a {
     color: #cef5f4;
     font-weight: bold;
+    z-index: -1;
   }
 
   ul#nav li a:hover {
     color: #48a99e;
   }
-
   ul#nav li ul{
     opacity: 0;
     z-index: 9999;
@@ -517,9 +524,14 @@ h4.alert {
     margin-right: auto;
 
 }
+
+
+div#groups h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
 div#groups .organization{
    display: flex;
-
 }
 
 div#groups .vertical{
@@ -531,8 +543,8 @@ div#groups .vertical{
 }
 div#groups img {
   margin-bottom: 0;
-  max-height: 97px;
-  }
+/*  max-height: 97px;
+*/  }
 
   #info{
   border-left: 5px solid #45A095;
@@ -564,7 +576,6 @@ div#pic {
   }
 
 #info img#people{
- width: 70px;
  margin: 0 auto;
 }
 
