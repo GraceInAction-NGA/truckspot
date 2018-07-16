@@ -73,46 +73,47 @@
     <div class="container">
       <div id="text-box">
         <h3 id="top">American Truck Idle</h3>
-        <form role="form">
-          <div class="row">
-            <div class="col-sm-6 field form-group">
+
+        <form role="form" class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="field form-group col-sm-6">
              <label for="name">Name:</label>
              <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
             </div>
 
-            <div class="col-sm-6 field form-group">
+            <div class="field form-group col-sm-6">
               <label for="date">Date</label>
-              <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="">
+              <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-sm-6 field form-group">
-              <label for="duration">Duration:</label>
-              <select name="duration_range" id="duration">
-                <option value="0-5">0-5 Minutes</option>
-                <option value="5-10">5-10 Minutes</option>
-                <option value="10-15">10-15 Minutes</option>
-                <option value="over15">More than 15 minutes</option>
-              </select>
-            </div>
-
-            <div class="col-sm-6 field form-group">
-              <label for="nearestAddress">Nearest Address:</label> <span id="finding">Finding address</span>
-              <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="">
-            </div>
+          <div class="field form-group">
+            <label for="duration">Duration:</label>
+            <select name="duration_range" class="form-control" id="duration" required>
+              <option value="0-5">0-5 Minutes</option>
+              <option value="5-10">5-10 Minutes</option>
+              <option value="10-15">10-15 Minutes</option>
+              <option value="over15">More than 15 minutes</option>
+            </select>
           </div>
 
-          <div class="row field form-group">
+          <div class="field form-group">
+            <label for="nearestAddress">Nearest Address:</label> <span id="finding">Finding address</span>
+            <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+<!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
+          </div>
+
+          <div class="field form-group">
             <label for="description">Description:</label>
-            <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description"></textarea>
+            <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
           </div>
 
-          <div class="row field form-group">
-            <label for="audioMedia"><span class="glyphicon glyphicon-upload"></span> Image Upload:</label>
-            <input type="file" name="media" id="upload-media">
+          <div class="field form-group">
+            <label for="audio-media"><span class="glyphicon glyphicon-upload"></span> Image Upload:</label>
+            <input type="file" class="form-control-file" name="media" id="upload-media">
             <p class="help-block">Select a picture or video from your phone of the offending truck</p>
           </div>
+
           <button type="button" class="btn btn-primary" id="video" onclick="onBtnIdleFormSubmitClicked()" >Submit</button>
         </form>
       </div>
@@ -124,20 +125,26 @@
 
   <!-- Firebase Config -->
   <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-  <script>
-//    // Initialize Firebase
-//    var config = {
-//      apiKey: "AIzaSyBRypIzyl38XXbHloKeow9n8oSbWHxOSZo",
-//      authDomain: "truckstop-a27e6.firebaseapp.com",
-//      databaseURL: "https://truckstop-a27e6.firebaseio.com",
-//      projectId: "truckstop-a27e6",
-//      storageBucket: "",
-//      messagingSenderId: "498032762100"
-//    };
-//    firebase.initializeApp(config);
-
-
-  </script>
+ <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
   <!-- End Firebase Config -->
 
 <script type="text/javascript" src="javascript/button.js"></script>

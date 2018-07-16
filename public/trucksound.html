@@ -70,48 +70,49 @@
     <div id="text-box">
 
       <h3 id="top">American Truck Audio</h3>
-      <form role="form">
-        <div class="row">
-          <div class="col-sm-6 field form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
+
+      <form role="form" class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="field form-group col-sm-6">
+             <label for="name">Name:</label>
+             <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
+            </div>
+
+            <div class="field form-group col-sm-6">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
+            </div>
           </div>
 
-          <div class="col-sm-6 field form-group">
-            <label for="date">Date</label>
-            <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-6 field form-group">
+          <div class="field form-group">
             <label for="duration">Duration:</label>
-            <select name="duration_range" id="duration">
-                <option value="0-5">0-5 Minutes</option>
-                <option value="5-10">5-10 Minutes</option>
-                <option value="10-15">10-15 Minutes</option>
-                <option value="over15">More than 15 minutes</option>
-              </select>
+            <select name="duration_range" class="form-control" id="duration" required>
+              <option value="0-5">0-5 Minutes</option>
+              <option value="5-10">5-10 Minutes</option>
+              <option value="10-15">10-15 Minutes</option>
+              <option value="over15">More than 15 minutes</option>
+            </select>
           </div>
 
-          <div class="col-sm-6 field form-group">
+          <div class="field form-group">
             <label for="nearestAddress">Nearest Address:</label> <span id="finding">Finding address</span>
-            <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="">
+            <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+<!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
           </div>
-        </div>
 
-        <div class="row field form-group">
-          <label for="description">Description:</label>
-          <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description"></textarea>
-        </div>
+          <div class="field form-group">
+            <label for="description">Description:</label>
+            <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
+          </div>
 
-        <div class="row field form-group">
-          <label for="audioMedia"><span class="glyphicon glyphicon-upload"></span> Image Upload:</label>
-          <input type="file" id="upload-media">
-          <p class="help-block">Select a picture or video from your phone of the offending truck</p>
-        </div>
-        <button type="button" class="btn btn-primary" id="video" onclick="onBtnAudioFormSubmitClicked()">Submit</button>
-      </form>
+          <div class="field form-group">
+            <label for="audio-media"><span class="glyphicon glyphicon-upload"></span> Image Upload:</label>
+            <input type="file" class="form-control-file" name="media" id="upload-media">
+            <p class="help-block">Select a picture or video from your phone of the offending truck</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="video" onclick="onBtnIdleFormSubmitClicked()" >Submit</button>
+        </form>
     </div>
   </div>
 

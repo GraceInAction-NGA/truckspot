@@ -21,6 +21,7 @@ function download(path) {
   var recentReports = database.ref('/'+path).orderByChild('time_stamp').once("value").then(function(snapshot){
     reports = snapshot.val();
     $("#loading").remove();
+    console.log(reports);
     // Populates list with reports and stores data within element
     for (var key in reports) {
       if (key != "count") {

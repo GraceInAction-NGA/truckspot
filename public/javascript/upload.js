@@ -57,6 +57,29 @@ function upload(path, redirectPath) {
     // Get data from form
     var formData = $("form").serializeArray();
 
+    var isValid = true;
+    // Check Data
+    for (var i = 0; i < formData.length; i++) {
+      if (formData[i].name == "date" && formData[i].value == "") {
+        isValid = false;
+        $("input[name='date'").parent().addClass("has-error");
+      } else if (formData[i].name == "duration_range" && formData[i].value == "") {
+        isValid = false;
+        $("input[name='duration_range'").parent().addClass("has-error");
+      } else if (formData[i].name == "nearest_address" && formData[i].value == "") {
+        isValid = false;
+        $("input[name='nearest_address'").parent().addClass("has-error");
+      } else if (formData[i].name == "description" && formData[i].value == "") {
+        isValid = false;
+        $("textarea[name='description'").parent().addClass("has-error");
+      }
+    }
+
+    if (!isValid) {
+      $("#loadingScreen").hide();
+      return false;
+    }
+
     // Increment number of reports uploaded
     database.ref("/" + path + "/count").set(count + 1);
 
@@ -72,13 +95,13 @@ function upload(path, redirectPath) {
     console.log(mediaFiles);
     var isMediaUploaded = false;
     var isDataUploaded = false;
+    data["time_stamp"] = firebase.database.ServerValue.TIMESTAMP
     // Check if Media exists
     if (mediaFiles.length != 0) {
       // Upload Media
       var task = storage.ref("/" + path + "/report" + count + "/" + mediaFiles[0].name).put(mediaFiles[0]);
       data["file_name"] = mediaFiles[0].name;
       data["file_type"] = mediaFiles[0].type;
-      data["time_stamp"] = firebase.database.ServerValue.TIMESTAMP
       task.on("state_changed", function(snapshot){
         console.log(snapshot);
         if (snapshot.bytesTransferred == snapshot.totalBytes) {
