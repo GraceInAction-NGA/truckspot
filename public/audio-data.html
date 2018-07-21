@@ -63,12 +63,21 @@
           <!-- dropdown-->
         </div>
         <!-- pic-->
+      </div>
+    </div>
   </header>
   <div class="container">
     <div id="text-box">
-      <h3>Truck Spot Audio Data</h3>
-      <p id="loading"> Loading data </p>
-      <div class="reports">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Truck Spot Audio Data</h3>
+          <div id="loading">
+            <img src="images/Ellipsis-2s-200px.svg">
+            <!-- https://loading.io/spinner/ellipsis/-discuss-ellipsis-preloader -->
+          </div>
+          <div class="reports">
+          </div>
+        </div>
       </div>
     </div>
     <!-- Modal -->
@@ -97,7 +106,10 @@
 
   <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
   <script type="text/javascript" src="javascript/download.js"></script>
-  <script> download("loud_truck");</script>
+  <script>
+    download("loud_truck");
+
+  </script>
 
 </body>
 

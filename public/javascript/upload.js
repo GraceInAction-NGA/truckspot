@@ -103,7 +103,8 @@ function upload(path, redirectPath) {
       data["file_name"] = mediaFiles[0].name;
       data["file_type"] = mediaFiles[0].type;
       task.on("state_changed", function(snapshot){
-        console.log(snapshot);
+        var newGraph = new ldBar(".ldBar");
+        newGraph.set((snapshot.bytesTransferred/snapshot.totalBytes)*100);
         if (snapshot.bytesTransferred == snapshot.totalBytes) {
           isMediaUploaded = true;
         }
@@ -115,6 +116,8 @@ function upload(path, redirectPath) {
       });
     } else {
       isMediaUploaded = true;
+      var newGraph = new ldBar(".ldBar");
+        newGraph.set(100);
     }
     // Upload Data
     database.ref("/" + path + "/report" + count).set(data, function(err){

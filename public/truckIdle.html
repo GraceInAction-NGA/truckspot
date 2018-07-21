@@ -17,6 +17,8 @@
   integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
   crossorigin=""/>
 
+  <link rel="stylesheet" type="text/css" href="css/loading-bar.css"/>
+
     <!-- Latest compiled and minified JavaScript -->
   <script
    src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -24,6 +26,8 @@
    crossorigin="anonymous"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="javascript/loading-bar.min.js"></script>
 
 </head>
 
@@ -119,8 +123,15 @@
       </div>
     </div>
   <div id="loadingScreen">
-    <h1> Saving your information!</h1>
-    <h2> Please wait... </h2>
+    <h3> Uploading your information</h3>
+<!--    <h2> Please wait... </h2>-->
+    <div
+      class="ldBar label-center"
+      style="width:50%;height:50%;margin:auto"
+      data-value="0"
+      data-preset="circle"
+      data-stroke="#91D2D0"
+    ></div>
   </div>
 
   <!-- Firebase Config -->
