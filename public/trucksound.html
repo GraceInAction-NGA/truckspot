@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
-  <link rel="stylesheet" type="text/css" href="css/loading-bar.css"/>
+  <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -67,6 +67,8 @@
           <!-- dropdown-->
         </div>
         <!-- pic-->
+      </div>
+    </div>
   </header>
   <div class="container">
     <div id="text-box">
@@ -74,63 +76,56 @@
       <h3 id="top">American Truck Audio</h3>
 
       <form role="form" class="needs-validation" novalidate>
-          <div class="form-row">
-            <div class="field form-group col-sm-6">
-             <label for="name">Name:</label>
-             <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
-            </div>
-
-            <div class="field form-group col-sm-6">
-              <label for="date">Date</label>
-              <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
-            </div>
+        <div class="form-row">
+          <div class="field form-group col-sm-6">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
           </div>
 
-          <div class="field form-group">
-            <label for="duration">Duration:</label>
-            <select name="duration_range" class="form-control" id="duration" required>
+          <div class="field form-group col-sm-6">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
+          </div>
+        </div>
+
+        <div class="field form-group">
+          <label for="duration">Duration:</label>
+          <select name="duration_range" class="form-control" id="duration" required>
               <option value="0-5">0-5 Minutes</option>
               <option value="5-10">5-10 Minutes</option>
               <option value="10-15">10-15 Minutes</option>
               <option value="over15">More than 15 minutes</option>
             </select>
-          </div>
+        </div>
 
-          <div class="field form-group">
-            <label for="nearestAddress">Nearest Address:</label> <span id="finding">Finding address</span>
-            <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
-<!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
-          </div>
+        <div class="field form-group">
+          <label for="nearestAddress">Nearest Address:</label> <span id="finding">Finding address</span>
+          <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+          <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
+        </div>
 
-          <div class="field form-group">
-            <label for="description">Description:</label>
-            <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
-          </div>
+        <div class="field form-group">
+          <label for="description">Description:</label>
+          <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
+        </div>
 
-          <div class="field form-group">
-            <label for="audio-media"><span class="glyphicon glyphicon-upload"></span> Image Upload:</label>
-            <input type="file" class="form-control-file" name="media" id="upload-media">
-            <p class="help-block">Select a picture or video from your phone of the offending truck</p>
-          </div>
+        <div class="field form-group">
+          <label for="audio-media"><span class="glyphicon glyphicon-upload"></span> Image Upload:</label>
+          <input type="file" class="form-control-file" name="media" id="upload-media">
+          <p class="help-block">Select a picture or video from your phone of the offending truck</p>
+        </div>
 
-          <button type="button" class="btn btn-primary" id="video" onclick="onBtnIdleFormSubmitClicked()" >Submit</button>
-        </form>
+        <button type="button" class="btn btn-primary" id="video" onclick="onBtnAudioFormSubmitClicked()">Submit</button>
+      </form>
     </div>
   </div>
 
-    <div id="loadingScreen">
+  <div id="loadingScreen">
     <h3> Uploading your information</h3>
-    <div
-      class="ldBar label-center"
-      style="width:50%;height:50%;margin:auto"
-      data-value="0"
-      data-preset="circle"
-      data-stroke="#91D2D0"
-    ></div>
+    <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-  <script type="text/javascript" src="javascript/trucksound.js"></script>
   <script type="text/javascript" src="javascript/button.js"></script>
   <script type="text/javascript" src="javascript/upload.js"></script>
 
