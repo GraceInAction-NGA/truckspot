@@ -6,8 +6,10 @@
 
   <title>Truck Audio</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
   <meta name="mobile-web-app-capable" content="yes">
+
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'/>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -73,23 +75,25 @@
   <div class="container">
     <div id="text-box">
 
-      <h3 id="top">American Truck Audio</h3>
+      <h3 id="top">American Truck Loud</h3>
 
       <form role="form" class="needs-validation" novalidate>
         <div class="form-row">
           <div class="field form-group col-sm-6">
-            <label for="name">Name:</label>
+            <label for="name">Name</label>
             <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
           </div>
 
           <div class="field form-group col-sm-6">
             <label for="date">Date</label>
+            <p class="error-block">Enter a date</p>
             <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
           </div>
         </div>
 
         <div class="field form-group">
-          <label for="duration">Duration:</label>
+          <label for="duration">Duration</label>
+          <p class="error-block">Enter a duration</p>
           <select name="duration_range" class="form-control" id="duration" required>
               <option value="0-5">0-5 Minutes</option>
               <option value="5-10">5-10 Minutes</option>
@@ -99,30 +103,46 @@
         </div>
 
         <div class="field form-group">
-          <label for="nearestAddress">Nearest Address:</label> <span id="finding">Finding address</span>
+          <label for="nearestAddress">Nearest Address</label>
+          <span id="finding" class="help-block">Finding address</span>
+          <p class="error-block">Enter a valid address: Addressee Street, City, State Zip</p>
           <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
           <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
         </div>
 
         <div class="field form-group">
-          <label for="description">Description:</label>
+          <label for="description">Description</label>
+          <p class="error-block">Enter a description</p>
           <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
         </div>
-
         <div class="field form-group">
-          <label for="audio-media"><span class="glyphicon glyphicon-upload"></span> Image Upload:</label>
-          <input type="file" class="form-control-file" name="media" id="upload-media">
-          <p class="help-block">Select a picture or video from your phone of the offending truck</p>
+          <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Media Upload</label>
+          <p class="help-block">Select or capture media from your phone</p>
+          <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> Select or Capture Media</label>
+          <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
         </div>
+
+<!--
+        <div class="field form-group">
+          <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Media Upload</label>
+          <p class="help-block">Select or capture media from your phone</p>
+          <input type="file" class="form-control-file" name="media" id="upload-media">
+        </div>
+-->
 
         <button type="button" class="btn btn-primary" id="video" onclick="onBtnAudioFormSubmitClicked()">Submit</button>
       </form>
     </div>
   </div>
 
-  <div id="loadingScreen">
-    <h3> Uploading your information</h3>
-    <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>
+  <div id="loadingScreen" class="row">
+    <div class="col-xs-12">
+      <h3> Uploading your information</h3>
+      <!--    <h2> Please wait... </h2>-->
+    </div>
+    <div class="col-xs-12">
+      <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>
+    </div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>

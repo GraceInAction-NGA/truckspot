@@ -31,7 +31,8 @@ function download(path) {
         var $button = '<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary report" id="'+id+'"> ' + report.nearest_address + ' </button>'
         var address = report.nearest_address.split(",");
         console.log(address);
-        var $address = '<p id="streetName">'+address[0]+'</p><p>'+address[1]+','+ address[2]+'</p>';
+        var $address = '<p id="streetName">'+address[0]+'</p>';
+//        var $address = '<p id="streetName">'+address[0]+'</p><p>'+address[1]+','+ address[2]+'</p>';
         var $button = '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary report" id="'+id+'"> ' + $address + ' </button></div>'
         $(".reports").prepend($button);
         $('#'+id).data('data', report);
