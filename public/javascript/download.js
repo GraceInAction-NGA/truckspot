@@ -95,12 +95,16 @@ function download(path, startKey) {
       // Populate Modal with data from the report clicked on
       var id = $(this)[0].id;
       var data = $(this).data('data');
-      $(".modal-title").text(data.nearest_address);
-      $("#date").text("Date: " + data.date);
-      $("#duration_range").text("Duration Range: " + data.duration_range);
-      $("#nearest_address").text("Nearest Address: " + data.nearest_address);
-      $("#name").text("Name: " + data.name);
-      $("#description").text("Description: " + data.description);
+      var name = "";
+      if (data.name == "") {name = "N/P"}
+      else {name = data.name};
+
+      $(".modal-title").text(data.nearest_address.split(",")[0]);
+      $("#date").text(data.date);
+      $("#duration_range").text(data.duration_range);
+      $("#nearest_address").text(data.nearest_address);
+      $("#name").text(name);
+      $("#description").text(data.description);
       $("#media").remove();
       // check media exists
       var media = null;
@@ -169,6 +173,7 @@ $(function () {
     firstKey = null;
     $("#loading").show();
     download(globPath, fk);
+    $(this).blur();
   });
 
   // Display next reports
@@ -179,5 +184,6 @@ $(function () {
     lastKey = null;
     $("#loading").show();
     download(globPath, lk);
+    $(this).blur();
   });
 });

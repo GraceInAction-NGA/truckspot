@@ -474,6 +474,18 @@ h4.alert {
 }
 
 /* Data Lists */
+.reports .btn {
+  height: auto;
+  box-shadow: none;
+  padding: 2em 0em;
+  margin-bottom: 2em;
+
+  margin-bottom: 0.5em;
+/*  background: transparent;*/
+/*  border-top: 1px dotted black;*/
+/*  border-radius: 0px;*/
+}
+
 .reports p {
   margin: 0;
   font-weight: normal;
@@ -503,11 +515,35 @@ h4.alert {
   z-index: 9999;
 }
 
+.modal h5 {
+  margin-bottom: 0.1em;
+}
+
+.modal .btn {
+/*  box-shadow:0px 5px 7px 0px rgba(0, 0, 0, 0.4);*/
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  margin: 0em;
+}
 /* Truncates text inside of buttons */
 .btn {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  box-shadow: none;
+}
+
+#nextBtn.btn, #lastBtn.btn {
+  margin: 1em 0em 0em;
+}
+
+#nextBtn.btn-secondary:hover, #lastBtn.btn-secondary:hover  {
+  background: white;
+  color: #45A095;
+}
+
+#nextBtn.btn-secondary:active, #lastBtn.btn-secondary:active  {
+  background: #45A095;
+  color: white;
 }
 
 @media (min-width: 576px) {
