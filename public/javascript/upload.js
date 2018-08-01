@@ -19,8 +19,18 @@ var database = firebase.database();
 var storage = firebase.storage();
 
 // Get Date (MM/DD/YYYY)
-var date = new Date();
-$("#date").val(date.getFullYear() + "-" + ("0" + date.getMonth()).slice(-2) + "-" + ("0" + date.getDate()).slice(-2));
+var date = new Date().toISOString().split("T");
+
+// Correctly format date on Safari Browsers
+var vendor = window.navigator.vendor;
+var isSafari = vendor.includes("Apple");
+if (isSafari) {
+  var dateParts = date[0].split("-");
+  var safariDate = dateParts[1] + "/" + dateParts[2] + "/" + dateParts[0];
+  $("#date").val(safariDate);
+} else {
+  $("#date").val(date[0]);
+}
 
 // Get Geolocation (lat, long)
 var pos = null;

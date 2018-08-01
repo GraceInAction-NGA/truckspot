@@ -1,11 +1,11 @@
-var mymap = L.map('mapid').setView([42.30791, -83.13578], 13);
+var mymap = L.map('mapid').setView([42.30791, -83.13578], 12);
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		id: 'mapbox.streets'
-	}).addTo(mymap);
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+      '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    id: 'mapbox.streets'
+  }).addTo(mymap);
 
 var polygon1 = L.polygon([
     [42.276321, -83.155054],
@@ -50,21 +50,21 @@ circle.bindPopup("<h4>Zug Island</h4><p> This is a heavily industrialized island
 
 var redIcon = L.icon({
     iconUrl: 'images/RedIcon.png',
-    iconSize:     [32, 45], 
+    iconSize:     [32, 45],
     iconAnchor:   [22, 94],})
 var redIconMarker = L.marker([42.305597, -83.130343], {icon: redIcon}).addTo(mymap);
 redIconMarker.bindPopup("Grace In Action");
 
 var greenIcon = L.icon({
     iconUrl: 'images/Greenicon.png',
-    iconSize:     [32, 45], 
+    iconSize:     [32, 45],
     iconAnchor:   [22, 94],})
 var greenMarker = L.marker([42.326561, -83.063704], {icon: greenIcon}).addTo(mymap);
 greenMarker.bindPopup("Detroit Hispanic Development Corporation");
 
 var blueIcon = L.icon({
     iconUrl: 'images/BlueIcon.png',
-    iconSize:     [32, 45], 
+    iconSize:     [32, 45],
     iconAnchor:   [22, 94],})
 var marker = L.marker([42.290376, -83.128845], {icon: blueIcon}).addTo(mymap);
 marker.bindPopup("Southwest Detroit Community Benefits Coalition");

@@ -4,7 +4,8 @@
 <head>
   <title>Truck Spot Idle Data</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'/>  <meta name="mobile-web-app-capable" content="yes">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -80,26 +81,37 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-3 col-xs-4">
+          <button id="lastBtn" class="btn btn-secondary" disabled>Last</button>
+        </div>
+        <div class="col-md-6 col-xs-4 text-center">
+          <small class="pagination"> </small>
+        </div>
+        <div class="col-md-3 col-xs-4">
+          <button id="nextBtn" class="btn btn-secondary">Next</button>
+        </div>
+      </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel report">Report</h4>
-          </div>
-          <div class="modal-body">
-            <p id="date"></p>
-            <p id="duration_range"></p>
-            <p id="nearest_address"></p>
-            <p id="name"></p>
-            <p id="description"></p>
-            <p id="description"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel report">Report</h4>
+        </div>
+        <div class="modal-body">
+          <p id="date"></p>
+          <p id="duration_range"></p>
+          <p id="nearest_address"></p>
+          <p id="name"></p>
+          <p id="description"></p>
+          <p id="description"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -109,6 +121,7 @@
   <script type="text/javascript" src="javascript/download.js"></script>
   <script>
     download("idle_truck");
+
   </script>
 </body>
 
