@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Truck Spot</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="interior" class="about">
+  <header>
+    <div id="pic">
+      <div class="row">
+        <div class="col-lg-4 col-xs-12">
+          <div id="mobile-nav" class="btn-group">
+            <div class="dropdown hidden-lg">
+              <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menú
+                </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="data.html">Datos</a></li>
+                <li><a class="dropdown-item" href="about.html">Acerca de TruckSpot</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="index.html">
+            <h1 id="logo">Truck Spot</h1>
+          </a>
+
+        </div>
+
+        <div class="col-lg-8 hidden-xs hidden-md hidden-sm">
+          <!--Jessica's menu here-->
+          <div class="dropdown">
+            <ul id=nav>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="data.html">Datos</a>
+                <ul>
+                  <li><a href="idle-data.html">Datos de Camiónes Inactivos</a></li>
+                  <li><a href="audio-data.html">Datos de Camiónes Ruidosos</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">Acerca de TruckSpot</a></li>
+            </ul>
+          </div>
+          <!-- dropdown-->
+        </div>
+        <!-- pic-->
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="text-box">
+      <div class="row">
+        <div class="col-sm-8">
+          <h3>Acerca de TruckSPOT</h3>
+          <p>El Puente Ambassador, el cruce fronterizo internacional más activo del norte de América, ve aproximadamente 10,000 camiones cruzar todos los días. En 2020, hay un segundo puente público programado para ser construido conectando a Detroit y Windsor. Se espera que el nuevo puente aumente el tráfico de camiones en un 125 por ciento. Esto resultaría en 22,500 camiones cruzando entre ambos puentes. Este gran aumento en el tráfico de camiones causará un gran aumento de contaminación, lo que tendrá un impacto negativo en la salud de muchos residentes que viven cerca del cruce.</p>
+          <p>En Febrero del 2017, los jóvenes de Radical Productions les hizo un cuestionario a los residentes del suroeste de Detroit y descubrieron que uno de los principales problemas que afectaba a sus vecinos era la contaminación y el tráfico, en particular los camiones que pasaban por el cruce. Estaremos trabajando conjunto a Southwest Detroit Community Benefits Coalition (SWDCBC) y Detroit Hispanic Development Corporation (DHDC), para resolver estos problemas.</p>
+          <p>Una de las principales preocupaciones sobre el tráfico de camiones es la marcha en vacío. Esto es cuando los camiones permanecen estacionarios con el motor encendido, liberando contaminantes que crean riesgos de salud para los residentes. Lo cual es ilegal, si se hace por un tiempo suficientemente largo. La marcha en vacío del camión también contribuye a la contaminación acústica que afecta negativamente la calidad de vida de los residentes. Nuestra aplicación permite los usuarios hacer grabaciones de video de marcha en vacío del camión y medir cuánto tiempo permanecen en este estado, y la ubicación del camión. Estos registros se pueden utilizar para informar a los responsables de las políticas sobre los problemas que enfrentan las comunidades.</p>
+          <p>Nuestro objetivo incluye que los miembros de la comunidad puedan ayudar a cumplir la ordenanza de inactividad a través de la documentación pública y la recopilación de infracciones, que serán accesibles inmediatamente después de la publicación y en curso. Con la base de datos habrá una recopilación sustancial de datos que demuestran la necesidad de aumentar la aplicación de la ley a fines del otoño e invierno de 2018. Nuestros resultados anticipados incluyen una mayor asociación entre organizaciones que trabajan para mitigar el tráfico y la contaminación, o menos contaminación y tráfico en la área, y que los datos recopilados provocarán una mayor aplicación por parte del cumplimiento del tráfico de Detroit. En general, esperamos que esta aplicación contribuya a cambiar el rumbo de los camiones a marcha vacia en lugares más seguros.</p>
+        </div>
+
+        <div id="info" class="col-sm-4 organization">
+          <ul>
+            <li>
+              <h3>14,891 Toneladas</h3>
+              <div>
+                <p>Emisiones de Óxido de nitrógeno creadas por camiones que usan diesel en el condado de Wayne igualan al peso de 12,000 subcompacto Ford Fiestas.</p><img src="images/fiesta.png" id="fiesta">
+              </div>
+            </li>
+            <li>
+              <h3>752 Toneladas</h3>
+              <div>
+                <p>Emisiones de diesel en las carreteras del condado de Wayne igualan al peso de 125 elefantes o 5 Ballenas Azules.</p><img src="images/elephant.png" id="elephant">
+              </div>
+            </li>
+            <li>
+              <h3>125%</h3>
+              <div>
+                <p>Hay un aumento esperado de tráfico de camiones con la construcción de un nuevo puente. La altura promedia de una persona es 5 pies y 10 pulgadas, si aumentamos la altura por 125%, el nuevo promedio sería 7 pies y 4 pulgadas</p><img src="images/growing-person.gif" id="people">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="javascript/index.js"></script>
+
+</body>
+</html>

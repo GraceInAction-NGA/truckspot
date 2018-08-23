@@ -4,7 +4,8 @@
 <head>
   <title>Truck Spot</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'/>  <meta name="mobile-web-app-capable" content="yes">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,59 +13,23 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
-
 </head>
 
 <body>
   <header>
-
     <div id="pic" class="img-fluid">
       <div class="row">
-        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
-          <div id="mobile-nav" class="btn-group">
-            <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
-              <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Menu
-                  </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Home</a></li>
-                <li><a class="dropdown-item" href="data.html">Data</a></li>
-                <li><a class="dropdown-item" href="about.html">About</a></li>
-              </ul>
-            </div>
-          </div>
-
+        <div class="col-xs-12">
           <a href="index.html">
             <h1 id="logo">Truck Spot</h1>
           </a>
-
         </div>
 
-        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
-          <!--Jessica's menu here-->
-          <div class="dropdown">
-            <ul id=nav>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="data.html">Data</a>
-                <ul>
-                  <li><a href="idle-data.html">Idle Data</a></li>
-                  <li><a href="audio-data.html">Audio Data</a></li>
-                </ul>
-              </li>
-              <li><a href="about.html">About</a></li>
-            </ul>
-          </div>
-          <!-- dropdown-->
-        </div>
-        <div id="slogan">
+        <div id="slogan" class="col-xs-12">
           <h2>Spot a truck. Stop a truck.</h2>
           <h3>Report now and make a difference.</h3>
         </div>
@@ -73,93 +38,31 @@
       <!--row-->
     </div>
     <!--#pic-->
-
   </header>
 
 
   <div class="container">
     <div id="text-box">
-
-      <div id="mobileInterface" class="row hidden-lg hidden-md hidden-sm">
-        <div class="col-xs-12">
-          <button type="button" class="btn home btn-primary" id="stop" onclick="onBtnVideoClicked()">
-            Report a truck idler
-          </button>
-        </div>
-        <div class="col-xs-12">
-          <button type="button" class="btn home btn-primary" id="upload" onclick="onBtnAudioClicked()">
-            Report a loud truck
-          </button>
-        </div>
-        <div class="col-xs-6">
-          <button type="button" class="btn btn-secondary" onclick="onBtnAboutClicked()">
-            About
-          </button>
-        </div>
-        <div class="col-xs-6">
-          <button type="button" class="btn btn-secondary" onclick="onBtnDataClicked()">
-            Data
-          </button>
-        </div>
-      </div>
-
       <div class="row">
         <div class="col-xs-12">
-          <h3>We care because we breathe it</h3>
-          <p id="aboutus">We want to improve air quality in the Detroit community and with your help by using truckSPOT, you can report incidents of idling trucks thats are disturbing our peaceful and clean environment. With your reports you’ll be able to see real time data collected by the community.</p>
-        </div>
-
-        <!--
-        <div id="quote">
-          <span>&ldquo;</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.<br/>-Firstname Lastname</p>
-        </div>
--->
-        <div class="col-xs-12">
-          <p id="statement"> Polluted air has no boundaries of where it travels and will continue causing long term damage to people's health. You can make a change.</p>
+          <h1> Select a Language</h1>
+          <h1>Selecciona un Idioma </h1>
         </div>
       </div>
-
       <div class="row">
-        <div class="col-xs-12">
-          <h3>Area of Interest</h3>
+        <div class="col-sm-6 col-xs-12">
+          <a href="en/index.html" type="button" class="btn home btn-primary">
+            English
+          </a>
         </div>
-        <div class="col-xs-12">
-          <div id="mapid"></div>
-          <p> Click on the shapes to know more about them</p>
+        <div class="col-sm-6 col-xs-12">
+          <a href="sp/index.html" type="button" class="btn home btn-primary">
+            Espanol
+          </a>
         </div>
       </div>
 
-      <div id="groups" class="row">
-        <div class="col-sm-12">
-          <h3>Coalition of community groups</h3>
-        </div>
-        <div class="col-md-3 col-sm-12 col-xs-12">
-          <a href="http://www.graceinactiondetroit.org/radical-productions/">
-            <img src="images/RP Logo 2.png">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-12">
-          <a href="https://michiganenvironmentaljusticecoalition.wordpress.com/">
-            <img src="images/michigan environemental justice coalition logo.png">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-12">
-          <a href="http://www.michigannightlight.com/organizations/sdcbc.aspx">
-            <img src="images/SDCDC_logo.png">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-12">
-          <a href="https://www.sierraclub.org/michigan/environmental-justice">
-            <img src="images/sierra club.png">
-          </a>
-        </div>
-      </div>
     </div>
   </div>
-
-  <script type="text/javascript" src="javascript/button.js"></script>
-  <script type="text/javascript" src="javascript/map.js"></script>
-
 </body>
 </html>
