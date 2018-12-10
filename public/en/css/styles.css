@@ -145,10 +145,22 @@ label {
   color: #9a4124;
 }
 
+div#address{
+  clear:both;
+}
+
+option{
+  padding-bottom: 20px;
+}
+
 label span {
   font-style: italic;
   opacity: 0.8;
   font-size: 12px;
+}
+
+div#checkbox-group div label{
+ background-color: transparent;
 }
 
 button.btn-dark {
@@ -436,6 +448,8 @@ form .field select {
 form input#upload-media {
   display: inline-block;
 }
+
+
 
 h4.alert {
   text-align: center;

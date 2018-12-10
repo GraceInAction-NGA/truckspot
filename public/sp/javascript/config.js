@@ -1,9 +1,9 @@
-//  var config = {
-//    apiKey: "AIzaSyA9ZEazOIgNSLetEEofe87l7TDOvgLWgls",
-//    authDomain: "storagetest-3c2eb.firebaseapp.com",
-//    databaseURL: "https://storagetest-3c2eb.firebaseio.com",
-//    projectId: "storagetest-3c2eb",
-//    storageBucket: "storagetest-3c2eb.appspot.com",
-//    messagingSenderId: "1003649997549"
-//  };
-//  firebase.initializeApp(config);
+var config = {
+    apiKey: "AIzaSyB76deIRJeidJplvMe9RLGbXZkJDTNMJWw",
+    authDomain: "truckspot-gia-48209.firebaseapp.com",
+    databaseURL: "https://truckspot-gia-48209.firebaseio.com",
+    projectId: "truckspot-gia-48209",
+    storageBucket: "truckspot-gia-48209.appspot.com",
+    messagingSenderId: "729839815071"
+  };
+  firebase.initializeApp(config);
