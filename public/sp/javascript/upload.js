@@ -48,7 +48,7 @@ if ("geolocation" in navigator) {
       lon: position.coords.longitude,
       format: 'json',
     }, function (result) {
-      $("#finding").text("Found! Correct if inaccurate.")
+      $("#finding").text("¡Encontró! Corrija si es inexacto.")
       $("#nearestAddress").val(result.address.house_number + " " + result.address.road + ", " + result.address.city + ", " + result.address.state + " " + result.address.postcode);
     });
 
@@ -56,7 +56,7 @@ if ("geolocation" in navigator) {
     $("#finding").text("")
   });
 } else {
-  $("#finding").text("We couldn't locate you! Please provide the address.")
+  $("#finding").text("¡No pudimos localizarlo! Por favor ingrese la dirección.")
 }
 
 // Upload Function
@@ -140,7 +140,7 @@ function upload(path, redirectPath) {
     // Upload Data
     database.ref("/" + path + "/report" + count).set(data, function (err) {
       if (err) {
-        alert("Upload of data failed");
+        alert("Carga de datos fallida");
       } else {
         isDataUploaded = true;
         if (isDataUploaded && isMediaUploaded) {

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Truck Spot Idle Data</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="interior">
+  <header>
+    <div id="pic">
+      <div class="row">
+        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+          <div id="mobile-nav" class="btn-group">
+            <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
+              <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menu
+                </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="data.html">Data</a></li>
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="index.html">
+            <h1 id="logo">Truck Spot</h1>
+          </a>
+
+        </div>
+
+        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+          <!--Jessica's menu here-->
+          <div class="dropdown">
+            <ul id=nav>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="data.html">Data</a>
+                <ul>
+                  <li><a href="idle-data.html">Idle Data</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- dropdown-->
+      </div>
+    </div>
+    <!-- pic-->
+  </header>
+
+  <div class="container">
+
+    <div id="text-box">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Truck Idle Data</h3>
+          <div id="loading">
+            <img src="images/Ellipsis-2s-200px.svg">
+            <!-- https://loading.io/spinner/ellipsis/-discuss-ellipsis-preloader -->
+          </div>
+          <div class="reports row">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-xs-4">
+          <button id="lastBtn" class="btn btn-secondary" disabled>Last</button>
+        </div>
+        <div class="col-md-6 col-xs-4 text-center">
+          <small class="pagination"> </small>
+        </div>
+        <div class="col-md-3 col-xs-4">
+          <button id="nextBtn" class="btn btn-secondary">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel report">Report</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-4">
+              <h5><b>Date</b></h5>
+              <p id="date"></p>
+            </div>
+            <div class="col-xs-4">
+              <h5><b>Duration</b></h5>
+              <p id="duration_range"></p>
+            </div>
+            <div class="col-xs-4">
+              <h5><b>Name</b></h5>
+              <p id="name"></p>
+            </div>
+            <div class="col-xs-12">
+              <h5><b>Nearest Address</b></h5>
+              <p id="nearest_address"></p>
+            </div>
+            <div class="col-xs-12">
+              <h5><b>Description</b></h5>
+              <p id="description"></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script type="text/javascript" src="javascript/config.js"></script>
+  <script type="text/javascript" src="javascript/download.js"></script>
+  <script>
+    download("idle_truck");
+
+  </script>
+</body>
+
+</html>
