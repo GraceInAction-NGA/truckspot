@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Truck Idle </title>
+  <title>Reporta un Camión Inactivo </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'/>  <meta name="mobile-web-app-capable" content="yes">
 
@@ -29,16 +29,16 @@
   <header>
     <div id="pic">
       <div class="row">
-        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+        <div class="col-lg-4 col-xs-12">
           <div id="mobile-nav" class="btn-group">
-            <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
+            <div class="dropdown hidden-lg">
               <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menu
+                  Menú
                 </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Home</a></li>
-                <li><a class="dropdown-item" href="data.html">Data</a></li>
-                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="index.html">Casa</a></li>
+                <li><a class="dropdown-item" href="data.html">Datos</a></li>
+                <li><a class="dropdown-item" href="about.html">Acerca de TruckSpot</a></li>
               </ul>
             </div>
           </div>
@@ -49,74 +49,109 @@
 
         </div>
 
-        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+        <div class="col-lg-8 hidden-xs hidden-sm hidden-md">
           <!--Jessica's menu here-->
           <div class="dropdown">
             <ul id=nav>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="data.html">Data</a>
+              <li><a href="index.html">Casa</a></li>
+              <li><a href="data.html">Datos</a>
                 <ul>
-                  <li><a href="idle-data.html">Idle Data</a></li>
-                  <li><a href="audio-data.html">Audio Data</a></li>
+                  <li><a href="idle-data.html">Datos de Camiónes Inactivos</a></li>
                 </ul>
               </li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="about.html">Acerca de TruckSpot</a></li>
             </ul>
           </div>
+          <!-- dropdown-->
         </div>
+        <!-- pic-->
       </div>
-      <!-- dropdown-->
     </div>
-    <!-- pic-->
   </header>
 
   <div class="container">
     <div id="text-box">
-      <h3 id="top">American Truck Idler</h3>
+      <h3 id="top">Reporta un Camión Inactivo</h3>
 
       <form role="form" class="needs-validation" novalidate>
         <div class="form-row">
           <div class="field form-group col-sm-6">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Opcional)" value="">
           </div>
 
           <div class="field form-group col-sm-6">
-            <label for="date">Date</label>
-            <p class="error-block">Enter a date</p>
+            <label for="date">Fecha</label>
+            <p class="error-block">Dar una fecha</p>
             <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
           </div>
         </div>
 
         <div class="field form-group">
-          <label for="duration">Duration</label>
-          <p class="error-block">Enter a duration</p>
+          <label for="duration">Duración</label>
+          <p class="error-block">Dar una duración</p>
           <select name="duration_range" class="form-control" id="duration" required>
-              <option value="0-5">0-5 Minutes</option>
-              <option value="5-10">5-10 Minutes</option>
-              <option value="10-15">10-15 Minutes</option>
-              <option value="over 15">More than 15 Minutes</option>
+              <option value="0-5">0-5 Minutos</option>
+              <option value="5-10">5-10 Minutos</option>
+              <option value="10-15">10-15 Minutos</option>
+              <option value="over 15">Mas de 15 Minutos</option>
             </select>
         </div>
 
+
         <div class="field form-group">
-          <label for="nearestAddress">Nearest Address</label>
-          <span id="finding" class="help-block">Finding address</span>
-          <p class="error-block">Enter a valid address: Addressee Street, City, State Zip</p>
-          <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+          <label for="duration">Duración</label>
+          <p class="error-block">Selecciona una Duración</p>
+          <select name="duration_range" class="field form-control" id="duration" required>
+              <option value="0-5">0-5 Minutos</option>
+              <option value="5-10">5-10 Minutos</option>
+              <option value="10-15">10-15 Minutos</option>
+              <option value="over 15">Más de 15 Minutos</option>
+          </select>
+        </div>
+
+        <div id="checkbox-group" class="field form-group">
+          <label for="problemTruck">Como es el camión problematico?</label>
+          <p class="error-block">Seleccione por lo menos uno</p>
+          <div>
+            <input type="checkbox" id="idle" name="idle">
+            <label for="idle">Inactivo</label>
+          </div>
+          <div>
+            <input type="checkbox" id="noise" name="noise">
+            <label for="noise">Ruidoso</label>
+          </div>
+          <div>
+            <input type="checkbox" id="offRoute" name="offRoute">
+            <label for="offRoute">Fuera de Ruta</label>
+          </div>
+          <div>
+            <input type="checkbox" id="uncovered" name="uncovered">
+            <label for="uncovered"> Descubierto/Remolque al aire libre</label>
+          </div>
+        </div>
+
+
+        <div id="address" class="field form-group">
+          <label for="nearestAddress">Dirección Más Cercana</label>
+          <span id="finding" class="help-block">Encontrando la dirección
+</span>
+          <p class="error-block">Ingrese una dirección válida: calle del destinatario, ciudad, estado, codigo postal
+</p>
+          <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Dirección" value="" required>
           <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
         </div>
 
         <div class="field form-group">
-          <label for="description">Description</label>
-          <p class="error-block">Enter a description</p>
-          <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
+          <label for="description">Descripción</label>
+          <p class="error-block">Dar una descripción</p>
+          <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Trate de poner el nombre en la puerta del camión y otros detalles no captados por la imagen" id="description" required></textarea>
         </div>
-
         <div class="field form-group">
-          <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Media Upload</label>
-          <p class="help-block">Select or capture media from your phone</p>
-          <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> Select or Capture Media</label>
+          <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Carga de medios</label>
+          <p class="help-block">Selecciona o captura medios desde tu teléfono
+</p>
+          <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> Selecciona o Captura Medios</label>
           <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
         </div>
 
@@ -128,13 +163,13 @@
         </div>
 -->
 
-        <button type="button" class="btn btn-primary" id="video" onclick="onBtnIdleFormSubmitClicked()">Submit</button>
+        <button type="button" class="btn btn-primary" id="video" onclick="onBtnAudioFormSubmitClicked()">Someter</button>
       </form>
     </div>
   </div>
   <div id="loadingScreen" class="row">
     <div class="col-xs-12">
-      <h3> Uploading your information</h3>
+      <h3> Cargando su información</h3>
       <!--    <h2> Please wait... </h2>-->
     </div>
     <div class="col-xs-12">

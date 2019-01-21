@@ -157,7 +157,7 @@ $("#upload-media").change(function(){
     $(this).prev().html('<span class="glyphicon glyphicon-upload"></span> ' + fileName);
  });
 
-/* truckIdle.html */
+/* report.html */
 function onBtnIdleFormSubmitClicked() {
   upload("idle_truck", "idle-data.html");
 }

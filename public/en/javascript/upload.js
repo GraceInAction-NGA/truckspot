@@ -1,17 +1,3 @@
-/* Uploads images and data to Firebase Storage */
-
-/* Configuring Firebase */
-//var config = {
-//  apiKey: "AIzaSyBRypIzyl38XXbHloKeow9n8oSbWHxOSZo",
-//  authDomain: "truckstop-a27e6.firebaseapp.com",
-//  databaseURL: "https://truckstop-a27e6.firebaseio.com",
-//  projectId: "truckstop-a27e6",
-//  storageBucket: "truckstop-a27e6.appspot.com",
-//  messagingSenderId: "498032762100"
-//};
-//
-//firebase.initializeApp(config);
-
 // Get reference to databse
 var database = firebase.database();
 
@@ -157,7 +143,7 @@ $("#upload-media").change(function(){
     $(this).prev().html('<span class="glyphicon glyphicon-upload"></span> ' + fileName);
  });
 
-/* truckIdle.html */
+/* report.html */
 function onBtnIdleFormSubmitClicked() {
   upload("idle_truck", "idle-data.html");
 }

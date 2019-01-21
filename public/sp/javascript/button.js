@@ -1,6 +1,6 @@
 
 function onBtnVideoClicked (){
-  window.location="truckidle.html";
+  window.location="report.html";
 }
 
 function onBtnAudioClicked() {
