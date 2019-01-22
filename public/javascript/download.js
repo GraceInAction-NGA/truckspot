@@ -1,15 +1,3 @@
-/* Configuring Firebase */
-//var config = {
-//  apiKey: "AIzaSyBRypIzyl38XXbHloKeow9n8oSbWHxOSZo",
-//  authDomain: "truckstop-a27e6.firebaseapp.com",
-//  databaseURL: "https://truckstop-a27e6.firebaseio.com",
-//  projectId: "truckstop-a27e6",
-//  storageBucket: "truckstop-a27e6.appspot.com",
-//  messagingSenderId: "498032762100"
-//};
-//
-//firebase.initializeApp(config);
-
 // Get reference to databse
 var database = firebase.database();
 
@@ -105,6 +93,36 @@ function download(path, startKey) {
       $("#nearest_address").text(data.nearest_address);
       $("#name").text(name);
       $("#description").text(data.description);
+      $("#truck_count").text(data.truck_amount);
+      console.log(data);
+
+      if (data.offRoute === undefined) {
+        $("#offRoute").hide();
+      } else {
+        $("#offRoute").show();
+      }
+      if (data.idle === undefined) {
+        $("#idle").hide();
+      } else {
+        $("#idle").show();
+      }
+      if (data.noise === undefined) {
+        $("#noise").hide();
+      } else {
+        $("#noise").show();
+      }
+      if (data.uncovered === undefined) {
+        $("#uncovered").hide();
+      } else {
+        $("#uncovered").show();
+      }
+
+      if (data.uncovered === undefined && data.noise === undefined && data.idle === undefined && data.offRoute === undefined) {
+        $("#na").show();
+      } else {
+        $("#na").hide();
+      }
+
       $("#media").remove();
       // check media exists
       var media = null;

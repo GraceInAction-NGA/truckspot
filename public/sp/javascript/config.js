@@ -6,4 +6,5 @@ var config = {
     storageBucket: "truckspot-gia-48209.appspot.com",
     messagingSenderId: "729839815071"
   };
-  firebase.initializeApp(config);
+
+firebase.initializeApp(config);

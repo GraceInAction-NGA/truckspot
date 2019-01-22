@@ -2,9 +2,10 @@
 <html>
 
 <head>
-  <title>Datos</title>
+  <title>Datos de Camiónes Inactivos</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'/>  <meta name="mobile-web-app-capable" content="yes">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,7 +26,7 @@
   <header>
     <div id="pic">
       <div class="row">
-        <div class="col-lg-4 col-xs-12">
+        <div class="col-lg-4 col-xl-12">
           <div id="mobile-nav" class="btn-group">
             <div class="dropdown hidden-lg">
               <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,17 +46,12 @@
 
         </div>
 
-        <div class="col-lg-8 hidden-md hidden-sm">
+        <div class="col-lg-8 hidden-xs hidden-sm hidden-md">
           <!--Jessica's menu here-->
           <div class="dropdown">
             <ul id=nav>
               <li><a href="index.html">Home</a></li>
-              <li><a href="data.html">Datos</a>
-                <ul>
-                  <li><a href="idle-data.html">Datos de Camiónes Inactivos</a></li>
-                  <li><a href="audio-data.html">Datos de Camiónes Ruidosos</a></li>
-                </ul>
-              </li>
+              <li><a href="data.html">Datos</a></li>
               <li><a href="about.html">Acerca de TruckSpot</a></li>
             </ul>
           </div>
@@ -65,29 +61,92 @@
       </div>
     </div>
   </header>
+
   <div class="container">
+
     <div id="text-box">
       <div class="row">
         <div class="col-xs-12">
-          <h3>Datos de TruckSpot</h3>
-          <p>Con un aumento proyectado del tráfico de camiones del 125% en los próximos 30 años, los camiones que conducen y se sientan al ralentí en nuestros vecindarios reducen la calidad de vida. Si la contaminación, el zumbido constante, las calles inseguras, hay muchos factores que el tráfico de camiones interfiere con la vida que queremos el uno para el otro. A continuación se muestran enlaces para ver los datos que hemos recopilado sobre la marcha en vacío y el volumen de los camiones.</p>
+          <h3>Datos de Camiónes Inactivos</h3>
+          <div id="loading">
+            <img src="images/Ellipsis-2s-200px.svg">
+            <!-- https://loading.io/spinner/ellipsis/-discuss-ellipsis-preloader -->
+          </div>
+          <div class="reports row">
+          </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6">
-          <a href="idle-data.html" "button" class="btn btn-primary" id="idle-reports">Datos de Camiónes Inactivos</a>
+        <div class="col-md-3 col-xs-5">
+          <button id="lastBtn" class="btn btn-secondary" disabled>Anterior</button>
         </div>
-        <div class="col-sm-6">
-          <a href="audio-data.html" type="button" class="btn btn-primary" id="audio-reports">Datos de Camiónes Ruidosos</a>
+        <div class="col-md-6 col-xs-2 text-center">
+          <small class="pagination"> </small>
+        </div>
+        <div class="col-md-3 col-xs-5">
+          <button id="nextBtn" class="btn btn-secondary">Siguiente</button>
         </div>
       </div>
     </div>
-
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel report">El Informe</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-4">
+              <h5><b>Fecha</b></h5>
+              <p id="date"></p>
+            </div>
+            <div class="col-xs-4">
+              <h5><b>Duración</b></h5>
+              <p id="duration_range"></p>
+            </div>
+            <div class="col-xs-4">
+              <h5><b>Nombre</b></h5>
+              <p id="name"></p>
+            </div>
+            <div class="col-xs-12">
+              <h5><b>Dirección más cercana</b></h5>
+              <p id="nearest_address"></p>
+            </div>
+            <div class="col-xs-12">
+              <h5><b>Descripción</b></h5>
+              <p id="description"></p>
+            </div>
+            <div class="col-xs-12">
+              <h5><b>Problemas Causados por Camiones</b></h5>
+              <ul id="problem">
+                <p id="na">N/A</p>
+                <li id="uncovered">Descubierto/Remolque al aire libre</li>
+                <li id="offRoute">Fuera de Ruta</li>
+                <li id="idle">Inactivo</li>
+                <li id="noise">Ruidoso</li>
+              </ul>
+            </div>
+            <div class="col-xs-12">
+              <h5><b>Camiones Involucrados</b></h5>
+              <p id="truck_count"></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
   <script type="text/javascript" src="javascript/config.js"></script>
-  <script type="text/javascript" src="javascript/data.js"></script>
-
+  <script type="text/javascript" src="javascript/download.js"></script>
+  <script>
+    download("idle_truck");
+  </script>
 </body>
-
 </html>

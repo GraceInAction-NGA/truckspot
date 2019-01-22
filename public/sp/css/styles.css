@@ -151,6 +151,10 @@ label span {
   font-size: 12px;
 }
 
+div#checkbox-group div label{
+ background-color: transparent;
+}
+
 button.btn-dark {
   text-align: center;
   margin-left: auto;

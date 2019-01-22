@@ -4,7 +4,8 @@
 <head>
   <title>Reporta un Camión Inactivo </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'/>  <meta name="mobile-web-app-capable" content="yes">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,10 +34,10 @@
           <div id="mobile-nav" class="btn-group">
             <div class="dropdown hidden-lg">
               <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menú
-                </button>
+                Menú
+              </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="index.html">Casa</a></li>
                 <li><a class="dropdown-item" href="data.html">Datos</a></li>
                 <li><a class="dropdown-item" href="about.html">Acerca de TruckSpot</a></li>
               </ul>
@@ -53,13 +54,8 @@
           <!--Jessica's menu here-->
           <div class="dropdown">
             <ul id=nav>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="data.html">Datos</a>
-                <ul>
-                  <li><a href="idle-data.html">Datos de Camiónes Inactivos</a></li>
-                  <li><a href="audio-data.html">Datos de Camiónes Ruidosos</a></li>
-                </ul>
-              </li>
+              <li><a href="index.html">Casa</a></li>
+              <li><a href="data.html">Datos</a></li>
               <li><a href="about.html">Acerca de TruckSpot</a></li>
             </ul>
           </div>
@@ -92,21 +88,63 @@
           <label for="duration">Duración</label>
           <p class="error-block">Dar una duración</p>
           <select name="duration_range" class="form-control" id="duration" required>
-              <option value="0-5">0-5 Minutos</option>
-              <option value="5-10">5-10 Minutos</option>
-              <option value="10-15">10-15 Minutos</option>
-              <option value="over 15">Mas de 15 Minutos</option>
-            </select>
+            <option value="0-5">0-5 Minutos</option>
+            <option value="5-10">5-10 Minutos</option>
+            <option value="10-15">10-15 Minutos</option>
+            <option value="over 15">Mas de 15 Minutos</option>
+          </select>
+        </div>
+
+        <div id="checkbox-group" class="field form-group">
+          <label for="problemTruck">Como es el camión problematico?</label>
+          <p class="error-block">Seleccione por lo menos uno</p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
+            <label class="form-check-label" for="idle">Inactivo</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noise" name="noise" value="noise">
+            <label class="form-check-label" for="noise">Ruidoso</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="offRoute" name="offRoute" value="offRoute">
+            <label class="form-check-label" for="offRoute">Fuera de Ruta</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="uncovered" name="uncovered" value="uncovered">
+            <label class="form-check-label" for="uncovered"> Descubierto/Remolque al aire libre</label>
+          </div>
+        </div>
+
+        <div class="field form-group col-sm-6">
+          <label for="truckAmount">Cuántos camiones hay</label>
+          <p class="error-block">Seleccione una cantidad</p>
+          <select name="truck_amount" class="field form-control" id="amount" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5+">5+</option>
+          </select>
+        </div>
+
+        <div id="address" class="field form-group">
+          <label for="nearestAddress">Dirección Más Cercana</label>
+          <span id="finding" class="help-block">Encontrando la dirección
+          </span>
+          <p class="error-block">Ingrese una dirección válida: calle del destinatario, ciudad, estado, codigo postal
+          </p>
+          <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Dirección" value="" required>
+          <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
         </div>
 
         <div class="field form-group">
-          <label for="nearestAddress">Dirección Más Cercana</label>
-          <span id="finding" class="help-block">Encontrando la dirección
-</span>
-          <p class="error-block">Ingrese una dirección válida: calle del destinatario, ciudad, estado postal
-</p>
-          <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Dirección" value="" required>
-          <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
+          <label for="city">Ciudad</label>
+          <p class="error-block">Elige una ciudad</p>
+          <select name="city" id="city" class="field form-control col-sm-6">
+            <option value="Detroit">Detroit</option>
+            <option value="Dearborn">Dearborn</option>
+          </select>
         </div>
 
         <div class="field form-group">
@@ -117,12 +155,12 @@
         <div class="field form-group">
           <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Carga de medios</label>
           <p class="help-block">Selecciona o captura medios desde tu teléfono
-</p>
+          </p>
           <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> Selecciona o Captura Medios</label>
           <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
         </div>
 
-<!--
+        <!--
         <div class="field form-group">
           <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Media Upload</label>
           <p class="help-block">Select or capture media from your phone</p>
@@ -165,11 +203,9 @@
         });
       }, false);
     })();
-
   </script>
   <!-- End Firebase Config -->
   <script type="text/javascript" src="javascript/config.js"></script>
-  <script type="text/javascript" src="javascript/button.js"></script>
   <script type="text/javascript" src="javascript/upload.js"></script>
 </body>
 
