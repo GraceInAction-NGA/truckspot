@@ -145,10 +145,5 @@ $("#upload-media").change(function(){
 
 /* report.html */
 function onBtnIdleFormSubmitClicked() {
-  upload("idle_truck", "idle-data.html");
-}
-
-/* truckSound.html */
-function onBtnAudioFormSubmitClicked() {
-  upload("loud_truck", "audio-data.html");
+  upload("idle_truck", "data.html");
 }

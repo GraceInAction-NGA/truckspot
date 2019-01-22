@@ -93,6 +93,36 @@ function download(path, startKey) {
       $("#nearest_address").text(data.nearest_address);
       $("#name").text(name);
       $("#description").text(data.description);
+      $("#truck_count").text(data.truck_amount);
+      console.log(data);
+
+      if (data.offRoute === undefined) {
+        $("#offRoute").hide();
+      } else {
+        $("#offRoute").show();
+      }
+      if (data.idle === undefined) {
+        $("#idle").hide();
+      } else {
+        $("#idle").show();
+      }
+      if (data.noise === undefined) {
+        $("#noise").hide();
+      } else {
+        $("#noise").show();
+      }
+      if (data.uncovered === undefined) {
+        $("#uncovered").hide();
+      } else {
+        $("#uncovered").show();
+      }
+
+      if (data.uncovered === undefined && data.noise === undefined && data.idle === undefined && data.offRoute === undefined) {
+        $("#na").show();
+      } else {
+        $("#na").hide();
+      }
+
       $("#media").remove();
       // check media exists
       var media = null;
