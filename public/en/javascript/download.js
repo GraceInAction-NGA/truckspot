@@ -10,7 +10,7 @@ var lastKey = null;
 var globPath = null;
 var masterCount = 0;
 var count = 0;
-var listLength = 10;
+var listLength = 5;
 
 // download function
 function download(path, startKey) {

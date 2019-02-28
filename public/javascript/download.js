@@ -1,5 +1,5 @@
 // Get reference to databse
-var database = firebase.database();
+var database = firebase.firestore();
 
 // Get reference to storage
 var storage = firebase.storage();
@@ -18,7 +18,7 @@ function download(path, startKey) {
   globPath = path;
   // Clear out old reports
   $(".reports").empty();
-  var recentReports;
+  var recentReports = [];
   var shouldAdd = true;
 
   // Download the references to reports
