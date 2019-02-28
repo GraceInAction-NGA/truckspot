@@ -11,13 +11,13 @@
 //firebase.initializeApp(config);
 
 // Get reference to databse
-var database = firebase.database();
+//var database = firebase.database();
 
 // Get reference to storage
-var storage = firebase.storage();
+//var storage = firebase.storage();
 
 // Used in Pagination
-var firstKey = null;
+/*var firstKey = null;
 var lastKey = null;
 var globPath = null;
 var masterCount = 0;
@@ -98,44 +98,15 @@ function download(path, startKey) {
       var id = $(this)[0].id;
       var data = $(this).data('data');
       var name = "";
-      console.log(data)
       if (data.name == "") {name = "N/P"}
       else {name = data.name};
 
       $(".modal-title").text(data.nearest_address.split(",")[0]);
-      $("#name").text(name);
       $("#date").text(data.date);
-      $("#nearest_address").text(data.nearest_address);
-      $("#city").text(data.city);
       $("#duration_range").text(data.duration_range);
-      $("#truck_amount").text(data.truck_amount);
+      $("#nearest_address").text(data.nearest_address);
+      $("#name").text(name);
       $("#description").text(data.description);
-
-      if ('idle' in data) { 
-        $("#truck_problem").children().eq(0).show();
-      } else {
-        $('#truck_problem').children().eq(0).hide();
-      };
-
-      if('noise' in data) { 
-        $("#truck_problem").children().eq(1).show();
-      } else {
-        $('#truck_problem').children().eq(1).hide();
-      };
-
-      if('offRoute' in data) { 
-        $("#truck_problem").children().eq(2).show();
-      } else {
-        $('#truck_problem').children().eq(2).hide();
-      };
-
-      if('uncovered' in data) { 
-        $("#truck_problem").children().eq(3).show();
-      } else {
-        $('#truck_problem').children().eq(3).hide();
-      };
-
-
       $("#media").remove();
       // check media exists
       var media = null;

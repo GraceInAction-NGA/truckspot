@@ -54,11 +54,7 @@
           <div class="dropdown">
             <ul id=nav>
               <li><a href="index.html">Home</a></li>
-              <li><a href="data.html">Data</a>
-                <ul>
-                  <li><a href="idle-data.html">Idle Data</a></li>
-                </ul>
-              </li>
+              <li><a href="data.html">Data</a></li>
               <li><a href="about.html">About</a></li>
             </ul>
           </div>
@@ -71,7 +67,6 @@
 
   <div class="container">
     <div id="text-box">
-      <h3 id="top">American Truck Idler</h3>
 
       <form role="form" class="needs-validation" novalidate>
         <div class="form-row">
@@ -87,6 +82,23 @@
           </div>
         </div>
 
+        <div id="address" class="field form-group">
+          <label for="nearestAddress">Nearest Address</label>
+          <span id="finding" class="help-block">Finding address</span>
+          <p class="error-block">Enter a valid address: Addressee Street, City, State Zip</p>
+          <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+          <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
+        </div>
+
+        <div class="field form-group">
+          <label>City</label>
+          <p class="error-block">Choose a city</p>
+          <select name="city" class="field form-control col-sm-6">
+            <option value="Detroit">Detroit</option>
+            <option value="Dearborn">Dearborn</option>
+          </select>
+        </div>
+
         <div class="field form-group">
           <label for="duration">Duration</label>
           <p class="error-block">Enter a duration</p>
@@ -95,6 +107,18 @@
               <option value="5-10">5-10 Minutes</option>
               <option value="10-15">10-15 Minutes</option>
               <option value="over 15">More than 15 Minutes</option>
+            </select>
+        </div>
+
+        <div class="field form-group col-sm-6">
+          <label for="truckAmount">How many trucks are there?</label>
+          <p class="error-block">Select an amount</p>
+          <select name="truck_amount" class="field form-control" id="amount" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5+">5+</option>
             </select>
         </div>
 
@@ -115,38 +139,8 @@
           </div>
           <div>
             <input type="checkbox" id="uncovered" name="uncovered">
-            <label for="uncovered"> Uncovered/Open Air Truck Trailer</label>
+            <label for="uncovered"> Uncontained/Open Air Truck Trailer</label>
           </div>
-        </div>
-
-        <div class="field form-group col-sm-6">
-          <label for="truckAmount">How many trucks are there?</label>
-          <p class="error-block">Select an amount</p>
-          <select name="truck_amount" class="field form-control" id="amount" required>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5+">5+</option>
-            </select>
-        </div>
-
-
-        <div id="address" class="field form-group">
-          <label for="nearestAddress">Nearest Address</label>
-          <span id="finding" class="help-block">Finding address</span>
-          <p class="error-block">Enter a valid address: Addressee Street, City, State Zip</p>
-          <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
-          <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
-        </div>
-
-        <div class="field form-group">
-          <label>City</label>
-          <p class="error-block">Choose a city</p>
-          <select name="city" class="field form-control col-sm-6">
-            <option value="Detroit">Detroit</option>
-            <option value="Dearborn">Dearborn</option>
-          </select>
         </div>
 
         <div class="field form-group">

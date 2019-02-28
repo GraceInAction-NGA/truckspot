@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl" lang="ar">
 
 <head>
   <title>Truck Spot</title>
@@ -26,18 +26,19 @@
 
 <body>
   <header>
-    <div id="pic">
+
+    <div id="pic" class="img-fluid">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
           <div id="mobile-nav" class="btn-group">
-            <div class="dropdown hidden-lg">
+            <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
               <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menú
-                </button>
+                    Menu
+                  </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Casa</a></li>
-                <li><a class="dropdown-item" href="data.html">Datos</a></li>
-                <li><a class="dropdown-item" href="about.html">Acerca</a></li>
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="data.html">Data</a></li>
+                <li><a class="dropdown-item" href="about.html">About</a></li>
               </ul>
             </div>
           </div>
@@ -48,20 +49,27 @@
 
         </div>
 
-        <div class="hidden-sm hidden-md col-lg-8">
+        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
           <!--Jessica's menu here-->
           <div class="dropdown">
             <ul id=nav>
               <li><a href="index.html">Home</a></li>
-              <li><a href="data.html">Datos</a></li>
-              <li><a href="about.html">Acerca</a></li>
+              <li><a href="data.html">Data</a></li>
+              <li><a href="about.html">About</a></li>
             </ul>
           </div>
           <!-- dropdown-->
         </div>
-        <!-- pic-->
+        <div id="slogan">
+          <h2>Spot a truck. Stop a truck.</h2>
+          <h3>Report now and make a difference.</h3>
+        </div>
+        <!--slogan-->
       </div>
+      <!--row-->
     </div>
+    <!--#pic-->
+
   </header>
 
 
@@ -71,52 +79,46 @@
       <div id="mobileInterface" class="row hidden-lg hidden-md hidden-sm">
         <div class="col-xs-12">
           <button type="button" class="btn home btn-primary" id="stop" onclick="onBtnVideoClicked()">
-            Someter un Reporte
+            Submit a Report 
           </button>
         </div>
         <div class="col-xs-6">
           <button type="button" class="btn btn-secondary" onclick="onBtnAboutClicked()">
-            Acerca 
+            About
           </button>
         </div>
         <div class="col-xs-6">
           <button type="button" class="btn btn-secondary" onclick="onBtnDataClicked()">
-            Datos
+            Data
           </button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-xs-12">
-          <h3>Nos importa porque lo respiramos</h3>
-          <p id="aboutus">Queremos mejorar la calidad del aire en la comunidad de Detroit y con tu ayuda usando truckSPOT, tu puedes reportar incidentes de camiones en marcha en vacío que están perturbando nuestro ambiente limpio y pacífico. Con tus reportes vas a poder ver datos en vivo coleccionado por la comunidad.
-          </p>
+        <div class="col-xs-12 align-right">
+          <h3>نحن نهتم لأننا نتنفسه</h3>
+          <p id="aboutus">نحن نريد تحسين نوعية الهواء في مجتمع ديترويت ومساعدتكم باستخدام truckSPOT ، يمكنك الإبلاغ عن حوادث الشاحنات التي تزعج بيئتنا السلمية والنظيفة. من خلال تقاريرك ، ستتمكن من رؤية الوقت الفعلي الذي يجمعه المجتمع.</p>
         </div>
 
-        <!--
-        <div id="quote">
-          <span>&ldquo;</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.<br/>-Firstname Lastname</p>
-        </div>
--->
         <div class="col-xs-12">
-          <p id="statement"> El aire contaminado no tiene límites de donde viaja y continuará causando daños a la salud de la comunidad. Tu puedes hacer un cambio.</p>
+          <p id="statement"> لا يحتوي الهواء الملوث على أي حدود من حيث ينتقل ويستمر في التسبب في ضرر طويل الأمد لصحة الناس. يمكنك إجراء تغيير.
+          </p>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-xs-12">
-          <h3>Ubicación de interés </h3>
+        <div class="col-xs-12 align-right">
+          <h3>مجال الاهتمام</h3>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 align-right">
           <div id="mapid"></div>
-          <p> Dale a las formas para saber más sobre ellas</p>
+          <p> انقر على الأشكال لمعرفة المزيد عنها</p>
         </div>
       </div>
 
       <div id="groups" class="row">
         <div class="col-sm-12">
-          <h3>Coalición de grupos comunitarios</h3>
+          <h3>Coalition of community groups</h3>
         </div>
         <div class="col-md-3 col-sm-12 col-xs-12">
           <a href="http://www.graceinactiondetroit.org/radical-productions/">

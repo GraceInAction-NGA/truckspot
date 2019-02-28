@@ -283,7 +283,8 @@ p#statement {
 }
 
 .home.btn-primary {
-  height: 50px;
+  height: 60px;
+  font-size: 25px;
 }
 
 .btn-primary:hover {
@@ -299,6 +300,8 @@ p#statement {
 .btn-secondary {
   color: #45A095;
   background-color: #ffffff;
+  height: 42px;
+  font-size: 18px;
 }
 
 .padding-0-left {
@@ -687,7 +690,6 @@ h4.alert {
 
   #info {
     border-left: 5px solid #45A095;
-    padding-top: 0;
     border-top: 0;
   }
 }
@@ -708,4 +710,37 @@ h4.alert {
   div#pic {
     width: 1170px;
   }
+}
+
+div#filter h3{
+  color: #45A095;
+ }
+
+ul#city{
+ list-style-type: none;
+ color:black;
+ font-size: 15px;
+ padding-left: 10px;
+}
+
+ul#duration{
+ list-style-type: none;
+ color:black;
+ font-size: 15px;
+ padding-left: 10px;
+ width:171px;
+}
+
+ul#number_of_trucks{
+ list-style-type: none;
+ color:black;
+ font-size: 15px;
+ padding-left: 10px;
+}
+
+ul#truck_problem{
+ list-style-type: none;
+ color:black;
+ font-size: 15px;
+ padding-left: 10px;
 }

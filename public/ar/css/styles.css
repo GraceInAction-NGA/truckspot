@@ -32,7 +32,7 @@ header h1#logo {
   background-image: url("../images/TruckSpotLogo.png");
   background-repeat: no-repeat;
   text-indent: -999px;
-  background-size: contain;
+  background-size:contain;
   height: 50px;
   display: inline-block;
   margin-right: 0;
@@ -145,6 +145,14 @@ label {
   color: #9a4124;
 }
 
+div#address{
+  clear:both;
+}
+
+option{
+  padding-bottom: 20px;
+}
+
 label span {
   font-style: italic;
   opacity: 0.8;
@@ -194,7 +202,6 @@ p#aboutus {
   font-weight: 300;
   font-style: italic;
   font-size: 20px;
-  text-align: left;
 }
 
 div#quote {
@@ -231,6 +238,10 @@ p#statement {
   margin-top: 30px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.align-right{
+  text-align: right;
 }
 
 .btn-success {
@@ -295,7 +306,6 @@ p#statement {
   height: 42px;
   font-size: 18px;
 }
-
 
 .padding-0-left {
   padding-left: 0;
@@ -445,6 +455,8 @@ form input#upload-media {
   display: inline-block;
 }
 
+
+
 h4.alert {
   text-align: center;
   border: 3px solid #45A095;
@@ -584,6 +596,10 @@ h4.alert {
   .hidden-md-up {
     display: none;
   }
+  header h1#logo {
+    width: 100%;
+    margin-top: 20px;
+  }
 
   ul#nav {
     float: right;
@@ -697,9 +713,5 @@ h4.alert {
 @media (min-width: 1200px) {
   div#pic {
     width: 1170px;
-  }
-
-   header h1#logo {
-    margin-top: 20px;
   }
 }
