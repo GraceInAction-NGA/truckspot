@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Configuring Firebase */
 //var config = {
 //  apiKey: "AIzaSyBRypIzyl38XXbHloKeow9n8oSbWHxOSZo",
@@ -10,8 +11,10 @@
 //
 //firebase.initializeApp(config);
 
+=======
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866
 // Get reference to databse
-var database = firebase.database();
+var database = firebase.firestore();
 
 // Get reference to storage
 var storage = firebase.storage();
@@ -30,7 +33,7 @@ function download(path, startKey) {
   globPath = path;
   // Clear out old reports
   $(".reports").empty();
-  var recentReports;
+  var recentReports = [];
   var shouldAdd = true;
 
   // Download the references to reports
@@ -105,6 +108,36 @@ function download(path, startKey) {
       $("#nearest_address").text(data.nearest_address);
       $("#name").text(name);
       $("#description").text(data.description);
+      $("#truck_count").text(data.truck_amount);
+      console.log(data);
+
+      if (data.offRoute === undefined) {
+        $("#offRoute").hide();
+      } else {
+        $("#offRoute").show();
+      }
+      if (data.idle === undefined) {
+        $("#idle").hide();
+      } else {
+        $("#idle").show();
+      }
+      if (data.noise === undefined) {
+        $("#noise").hide();
+      } else {
+        $("#noise").show();
+      }
+      if (data.uncovered === undefined) {
+        $("#uncovered").hide();
+      } else {
+        $("#uncovered").show();
+      }
+
+      if (data.uncovered === undefined && data.noise === undefined && data.idle === undefined && data.offRoute === undefined) {
+        $("#na").show();
+      } else {
+        $("#na").hide();
+      }
+
       $("#media").remove();
       // check media exists
       var media = null;
