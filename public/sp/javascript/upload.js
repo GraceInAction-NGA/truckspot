@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Uploads images and data to Firebase Storage */
 
 /* Configuring Firebase */
@@ -12,6 +13,8 @@
 //
 //firebase.initializeApp(config);
 
+=======
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866
 // Get reference to databse
 var database = firebase.database();
 
@@ -159,10 +162,5 @@ $("#upload-media").change(function(){
 
 /* report.html */
 function onBtnIdleFormSubmitClicked() {
-  upload("idle_truck", "idle-data.html");
-}
-
-/* truckSound.html */
-function onBtnAudioFormSubmitClicked() {
-  upload("loud_truck", "audio-data.html");
+  upload("idle_truck", "data.html");
 }

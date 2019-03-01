@@ -1,15 +1,3 @@
-/* Configuring Firebase */
-//var config = {
-//  apiKey: "AIzaSyBRypIzyl38XXbHloKeow9n8oSbWHxOSZo",
-//  authDomain: "truckstop-a27e6.firebaseapp.com",
-//  databaseURL: "https://truckstop-a27e6.firebaseio.com",
-//  projectId: "truckstop-a27e6",
-//  storageBucket: "truckstop-a27e6.appspot.com",
-//  messagingSenderId: "498032762100"
-//};
-//
-//firebase.initializeApp(config);
-
 // Get reference to databse
 var database = firebase.database();
 
@@ -22,7 +10,7 @@ var lastKey = null;
 var globPath = null;
 var masterCount = 0;
 var count = 0;
-var listLength = 10;
+var listLength = 5;
 
 // download function
 function download(path, startKey) {
@@ -32,7 +20,6 @@ function download(path, startKey) {
   $(".reports").empty();
   var recentReports;
   var shouldAdd = true;
-  var isFirstPage = false;
 
   // Download the references to reports
   if (lastKey == null && firstKey == null) {
@@ -69,7 +56,6 @@ function download(path, startKey) {
       } else if (firstKey == null) {
         // Stores master count for total number of reports that exists
         masterCount = reports[key];
-        isFirstPage = true;
       }
 
       // Stores last report downloaded
@@ -111,30 +97,29 @@ function download(path, startKey) {
       $("#truck_amount").text(data.truck_amount);
       $("#description").text(data.description);
 
-      if ('idle' in data) { 
-        $("#truck_problem").children().eq(0).show();
-      } else {
-        $('#truck_problem').children().eq(0).hide();
-      };
+      $("#truck_count").text(data.truck_amount);
+      console.log(data);
 
-      if('noise' in data) { 
-        $("#truck_problem").children().eq(1).show();
+      if (data.offRoute === undefined) {
+        $("#offRoute").hide();
       } else {
-        $('#truck_problem').children().eq(1).hide();
-      };
-
-      if('offRoute' in data) { 
-        $("#truck_problem").children().eq(2).show();
+        $("#offRoute").show();
+      }
+      if (data.idle === undefined) {
+        $("#idle").hide();
       } else {
-        $('#truck_problem').children().eq(2).hide();
-      };
-
-      if('uncovered' in data) { 
-        $("#truck_problem").children().eq(3).show();
+        $("#idle").show();
+      }
+      if (data.noise === undefined) {
+        $("#noise").hide();
       } else {
-        $('#truck_problem').children().eq(3).hide();
-      };
-
+        $("#noise").show();
+      }
+      if (data.uncovered === undefined) {
+        $("#uncovered").hide();
+      } else {
+        $("#uncovered").show();
+      }
 
       $("#media").remove();
       // check media exists
@@ -158,17 +143,15 @@ function download(path, startKey) {
     });
 
     // Ensures accurate report count
-    if (tempCount > listLength) {
+    if (tempCount >= listLength) {
       // removes last appended report
-      if (!isFirstPage) {
-        $(".report").last().remove();
-      }
+      $(".report").last().remove();
       // adds if first load or next button was clicked
       if (shouldAdd) {
         count += listLength;
       } else {
         // Ensures proper subtraction on count
-        count = (Math.ceil((count / listLength)) * listLength) - listLength;
+        count = (Math.round((count / listLength)) * listLength) - listLength;
       }
     } else {
       // adds if first load or next button was clicked
@@ -187,18 +170,13 @@ function download(path, startKey) {
     }
 
     // Update Pagination
-    var pages = Math.ceil((masterCount-1) / listLength);
-    var page = Math.ceil(count / listLength);
-    if (pages > 1) {
-      $(".pagination").text(page + " out of " + pages);
-    }
+    var pages = Math.round(masterCount / listLength);
+    var page = Math.round(count / listLength);
+    $(".pagination").text(page + " out of " + pages);
+
     // Disables Last Button
     if (count <= listLength) {
       $("#lastBtn").attr("disabled", "disabled");
-    }
-    // If no data is provided, tell the user
-    if (masterCount == 1) {
-      $(".reports").append("<h4 class='text-center'>Data is not available</h4>");
     }
   });
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Configuring Firebase */
 //var config = {
 //  apiKey: "AIzaSyBRypIzyl38XXbHloKeow9n8oSbWHxOSZo",
@@ -10,6 +11,8 @@
 //
 //firebase.initializeApp(config);
 
+=======
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866
 // Get reference to databse
 var database = firebase.database();
 
@@ -32,7 +35,6 @@ function download(path, startKey) {
   $(".reports").empty();
   var recentReports;
   var shouldAdd = true;
-  var isFirstPage = true;
 
   // Download the references to reports
   if (lastKey == null && firstKey == null) {
@@ -61,7 +63,6 @@ function download(path, startKey) {
 
     // Populates list with reports and stores data within element
     var tempCount = 0;
-
     for (var key in reports) {
 
       if (firstKey == null && reports[key].time_stamp != undefined) {
@@ -70,7 +71,6 @@ function download(path, startKey) {
       } else if (firstKey == null) {
         // Stores master count for total number of reports that exists
         masterCount = reports[key];
-        isFirstPage = true;
       }
 
       // Stores last report downloaded
@@ -108,6 +108,36 @@ function download(path, startKey) {
       $("#nearest_address").text(data.nearest_address);
       $("#name").text(name);
       $("#description").text(data.description);
+      $("#truck_count").text(data.truck_amount);
+      console.log(data);
+
+      if (data.offRoute === undefined) {
+        $("#offRoute").hide();
+      } else {
+        $("#offRoute").show();
+      }
+      if (data.idle === undefined) {
+        $("#idle").hide();
+      } else {
+        $("#idle").show();
+      }
+      if (data.noise === undefined) {
+        $("#noise").hide();
+      } else {
+        $("#noise").show();
+      }
+      if (data.uncovered === undefined) {
+        $("#uncovered").hide();
+      } else {
+        $("#uncovered").show();
+      }
+
+      if (data.uncovered === undefined && data.noise === undefined && data.idle === undefined && data.offRoute === undefined) {
+        $("#na").show();
+      } else {
+        $("#na").hide();
+      }
+
       $("#media").remove();
       // check media exists
       var media = null;
@@ -130,17 +160,15 @@ function download(path, startKey) {
     });
 
     // Ensures accurate report count
-    if (tempCount > listLength) {
+    if (tempCount >= listLength) {
       // removes last appended report
-      if (!isFirstPage) {
-        $(".report").last().remove();
-      }
+      $(".report").last().remove();
       // adds if first load or next button was clicked
       if (shouldAdd) {
         count += listLength;
       } else {
         // Ensures proper subtraction on count
-        count = (Math.ceil((count / listLength)) * listLength) - listLength;
+        count = (Math.round((count / listLength)) * listLength) - listLength;
       }
     } else {
       // adds if first load or next button was clicked
@@ -159,20 +187,13 @@ function download(path, startKey) {
     }
 
     // Update Pagination
-    var pages = Math.ceil((masterCount-1) / listLength);
-    var page = Math.ceil(count / listLength);
-
-    if (pages > 1) {
-      $(".pagination").text(page + " de " + pages);
-    }
+    var pages = Math.round(masterCount / listLength);
+    var page = Math.round(count / listLength);
+    $(".pagination").text(page + " out of " + pages);
 
     // Disables Last Button
     if (count <= listLength) {
       $("#lastBtn").attr("disabled", "disabled");
-    }
-    // If no data is provided, tell the user
-    if (masterCount == 1) {
-      $(".reports").append("<h4 class='text-center'>Los datos no están disponibles</h4>");
     }
   });
 }
