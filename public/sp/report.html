@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Reporta un Camión Inactivo </title>
+  <title>Reportes </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
   <meta name="mobile-web-app-capable" content="yes">
@@ -22,7 +22,7 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src="javascript/loading-bar.min.js"></script>
+  <script type="text/javascript" src="../javascript/loading-bar.min.js"></script>
 
 </head>
 
@@ -55,15 +55,7 @@
           <div class="dropdown">
             <ul id=nav>
               <li><a href="index.html">Casa</a></li>
-<<<<<<< HEAD:public/sp/report.html
-              <li><a href="data.html">Datos</a>
-                <ul>
-                  <li><a href="idle-data.html">Datos de Camiónes Inactivos</a></li>
-                </ul>
-              </li>
-=======
               <li><a href="data.html">Datos</a></li>
->>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
               <li><a href="about.html">Acerca de TruckSpot</a></li>
             </ul>
           </div>
@@ -103,41 +95,6 @@
           </select>
         </div>
 
-<<<<<<< HEAD:public/sp/report.html
-
-        <div class="field form-group">
-          <label for="duration">Duración</label>
-          <p class="error-block">Selecciona una Duración</p>
-          <select name="duration_range" class="field form-control" id="duration" required>
-              <option value="0-5">0-5 Minutos</option>
-              <option value="5-10">5-10 Minutos</option>
-              <option value="10-15">10-15 Minutos</option>
-              <option value="over 15">Más de 15 Minutos</option>
-          </select>
-        </div>
-
-        <div id="checkbox-group" class="field form-group">
-          <label for="problemTruck">Como es el camión problematico?</label>
-          <p class="error-block">Seleccione por lo menos uno</p>
-          <div>
-            <input type="checkbox" id="idle" name="idle">
-            <label for="idle">Inactivo</label>
-          </div>
-          <div>
-            <input type="checkbox" id="noise" name="noise">
-            <label for="noise">Ruidoso</label>
-          </div>
-          <div>
-            <input type="checkbox" id="offRoute" name="offRoute">
-            <label for="offRoute">Fuera de Ruta</label>
-          </div>
-          <div>
-            <input type="checkbox" id="uncovered" name="uncovered">
-            <label for="uncovered"> Descubierto/Remolque al aire libre</label>
-          </div>
-        </div>
-
-=======
         <div id="checkbox-group" class="field form-group">
           <label for="problemTruck">Como es el camión problematico?</label>
           <p class="error-block">Seleccione por lo menos uno</p>
@@ -170,20 +127,13 @@
             <option value="5+">5+</option>
           </select>
         </div>
->>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
 
         <div id="address" class="field form-group">
           <label for="nearestAddress">Dirección Más Cercana</label>
           <span id="finding" class="help-block">Encontrando la dirección
-<<<<<<< HEAD:public/sp/report.html
-</span>
-          <p class="error-block">Ingrese una dirección válida: calle del destinatario, ciudad, estado, codigo postal
-</p>
-=======
           </span>
           <p class="error-block">Ingrese una dirección válida: calle del destinatario, ciudad, estado, codigo postal
           </p>
->>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
           <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Dirección" value="" required>
           <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
         </div>
@@ -210,57 +160,24 @@
           <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
         </div>
 
-        <!--
-        <div class="field form-group">
-          <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Media Upload</label>
-          <p class="help-block">Select or capture media from your phone</p>
-          <input type="file" class="form-control-file" name="media" id="upload-media">
-        </div>
--->
-
-        <button type="button" class="btn btn-primary" id="video" onclick="onBtnAudioFormSubmitClicked()">Someter</button>
+        <button type="button" class="btn btn-primary" id="video" onclick="upload()">Someter</button>
       </form>
     </div>
   </div>
   <div id="loadingScreen" class="row">
     <div class="col-xs-12">
       <h3> Cargando su información</h3>
-      <!--    <h2> Please wait... </h2>-->
     </div>
     <div class="col-xs-12">
       <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>
     </div>
   </div>
 
-  <!-- Firebase Config -->
-  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-  </script>
-  <!-- End Firebase Config -->
-  <script type="text/javascript" src="javascript/config.js"></script>
-<<<<<<< HEAD:public/sp/report.html
-  <script type="text/javascript" src="javascript/button.js"></script>
-=======
->>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
-  <script type="text/javascript" src="javascript/upload.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
+  <script type="text/javascript" src="../javascript/config.js"></script>
+  <script type="text/javascript" src="../javascript/upload_v2.js"></script>
 </body>
 
 </html>

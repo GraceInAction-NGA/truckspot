@@ -40,7 +40,7 @@ if ("geolocation" in navigator) {
 }
 
 // Upload Function
-function upload(path, redirectPath) {
+function upload() {
   // Clear Errors
   $(".error-block").hide();
   $(".has-error").removeClass("has-error");
@@ -59,15 +59,15 @@ function upload(path, redirectPath) {
     .then((ref) => {
       incrementReportCount();
       if (data.hasMedia) {
-        uploadMedia(ref.id, redirectPath);
+        uploadMedia(ref.id);
       } else {
-        redirect(redirectPath)
+        redirect()
       }
     }).catch((error) => {
       console.error("Error", error);
       alert("Data Upload Failed");
     });
-});
+};
 
 function incrementReportCount() {
   database.collection("counts").get().then((querySnapshot) => {
@@ -79,7 +79,7 @@ function incrementReportCount() {
   });
 }
 
-function uploadMedia(ref, redirectPath) {
+function uploadMedia(ref) {
   const mediaFiles = $("input[type='file']")[0].files;
   const task = storage.ref("/" + ref).put(mediaFiles[0]);
 
@@ -93,15 +93,15 @@ function uploadMedia(ref, redirectPath) {
       alert("Media Upload Failed");
     },
     () => {
-      redirect(redirectPath);
+      redirect();
     }
   );
 }
 
-function redirect(path) {
+function redirect() {
   var newGraph = new ldBar(".ldBar");
   newGraph.set(100);
-  setTimeout(() => window.location = path, 1000);
+  setTimeout(() => window.location = "data.html", 1000);
 }
 
 function mapFormData(formData) {
@@ -159,8 +159,3 @@ $("#upload-media").change(function () {
   var fileName = $(this)[0].files[0].name;
   $(this).prev().html('<span class="glyphicon glyphicon-upload"></span> ' + fileName);
 });
-
-/* report.html */
-function onBtnIdleFormSubmitClicked() {
-  upload("idle_truck", "data.html");
-}
