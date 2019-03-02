@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+/* Uploads images and data to Firebase Storage */
+
+/* Configuring Firebase */
+//var config = {
+//  apiKey: "AIzaSyBRypIzyl38XXbHloKeow9n8oSbWHxOSZo",
+//  authDomain: "truckstop-a27e6.firebaseapp.com",
+//  databaseURL: "https://truckstop-a27e6.firebaseio.com",
+//  projectId: "truckstop-a27e6",
+//  storageBucket: "truckstop-a27e6.appspot.com",
+//  messagingSenderId: "498032762100"
+//};
+//
+//firebase.initializeApp(config);
+
+=======
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866
 // Get reference to databse
 var database = firebase.database();
 

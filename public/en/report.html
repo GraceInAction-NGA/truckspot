@@ -55,7 +55,15 @@
           <div class="dropdown">
             <ul id=nav>
               <li><a href="index.html">Home</a></li>
+<<<<<<< HEAD:public/en/report.html
+              <li><a href="data.html">Data</a>
+                <ul>
+                  <li><a href="idle-data.html">Idle Data</a></li>
+                </ul>
+              </li>
+=======
               <li><a href="data.html">Data</a></li>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/en/report.html
               <li><a href="about.html">About</a></li>
             </ul>
           </div>
@@ -88,16 +96,41 @@
           <label for="duration">Duration</label>
           <p class="error-block">Enter a duration</p>
           <select name="duration_range" class="field form-control" id="duration" required>
+<<<<<<< HEAD:public/en/report.html
+              <option value="0-5">0-5 Minutes</option>
+              <option value="5-10">5-10 Minutes</option>
+              <option value="10-15">10-15 Minutes</option>
+              <option value="over 15">More than 15 Minutes</option>
+            </select>
+=======
             <option value="0-5">0-5 Minutes</option>
             <option value="5-10">5-10 Minutes</option>
             <option value="10-15">10-15 Minutes</option>
             <option value="over 15">More than 15 Minutes</option>
           </select>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/en/report.html
         </div>
 
         <div id="checkbox-group" class="field form-group col-sm-6">
           <label for="problemTruck">How is the truck problematic?</label>
           <p class="error-block">Select at least one</p>
+<<<<<<< HEAD:public/en/report.html
+          <div>
+            <input type="checkbox" id="idle" name="idle">
+            <label for="idle">Idle</label>
+          </div>
+          <div>
+            <input type="checkbox" id="noise" name="noise">
+            <label for="noise">Noise</label>
+          </div>
+          <div>
+            <input type="checkbox" id="offRoute" name="offRoute">
+            <label for="offRoute"> Off Route</label>
+          </div>
+          <div>
+            <input type="checkbox" id="uncovered" name="uncovered">
+            <label for="uncovered"> Uncovered/Open Air Truck Trailer</label>
+=======
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
             <label class="form-check-label" for="idle">Idle</label>
@@ -113,12 +146,22 @@
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="uncovered" name="uncovered" value="uncovered">
             <label class="form-check-label" for="uncovered"> Uncovered/Open Air Truck Trailer</label>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/en/report.html
           </div>
         </div>
 
         <div class="field form-group col-sm-6">
           <label for="truckAmount">How many trucks are there?</label>
           <p class="error-block">Select an amount</p>
+<<<<<<< HEAD:public/en/report.html
+          <select name="truck_amount" class="field form-control" id="amount" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5+">5+</option>
+            </select>
+=======
           <select name="truck_amount" class="field form-control" id="truckAmount" required>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -126,6 +169,7 @@
             <option value="4">4</option>
             <option value="5+">5+</option>
           </select>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/en/report.html
         </div>
 
 
@@ -138,9 +182,15 @@
         </div>
 
         <div class="field form-group">
+<<<<<<< HEAD:public/en/report.html
+          <label>City</label>
+          <p class="error-block">Choose a city</p>
+          <select name="city" class="field form-control col-sm-6">
+=======
           <label for="city">City</label>
           <p class="error-block">Choose a city</p>
           <select name="city" id="city" class="field form-control col-sm-6">
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/en/report.html
             <option value="Detroit">Detroit</option>
             <option value="Dearborn">Dearborn</option>
           </select>
@@ -187,8 +237,14 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
   <!-- End Firebase Config -->
+<<<<<<< HEAD:public/en/report.html
+  <script type="text/javascript" src="javascript/config.js"></script>
+  <script type="text/javascript" src="javascript/button.js"></script>
+  <script type="text/javascript" src="javascript/upload.js"></script>
+=======
   <script type="text/javascript" src="../javascript/config.js"></script>
   <script type="text/javascript" src="../javascript/upload_v2.js"></script>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/en/report.html
 </body>
 
 </html>

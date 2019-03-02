@@ -55,7 +55,15 @@
           <div class="dropdown">
             <ul id=nav>
               <li><a href="index.html">Casa</a></li>
+<<<<<<< HEAD:public/sp/report.html
+              <li><a href="data.html">Datos</a>
+                <ul>
+                  <li><a href="idle-data.html">Datos de Camiónes Inactivos</a></li>
+                </ul>
+              </li>
+=======
               <li><a href="data.html">Datos</a></li>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
               <li><a href="about.html">Acerca de TruckSpot</a></li>
             </ul>
           </div>
@@ -95,6 +103,41 @@
           </select>
         </div>
 
+<<<<<<< HEAD:public/sp/report.html
+
+        <div class="field form-group">
+          <label for="duration">Duración</label>
+          <p class="error-block">Selecciona una Duración</p>
+          <select name="duration_range" class="field form-control" id="duration" required>
+              <option value="0-5">0-5 Minutos</option>
+              <option value="5-10">5-10 Minutos</option>
+              <option value="10-15">10-15 Minutos</option>
+              <option value="over 15">Más de 15 Minutos</option>
+          </select>
+        </div>
+
+        <div id="checkbox-group" class="field form-group">
+          <label for="problemTruck">Como es el camión problematico?</label>
+          <p class="error-block">Seleccione por lo menos uno</p>
+          <div>
+            <input type="checkbox" id="idle" name="idle">
+            <label for="idle">Inactivo</label>
+          </div>
+          <div>
+            <input type="checkbox" id="noise" name="noise">
+            <label for="noise">Ruidoso</label>
+          </div>
+          <div>
+            <input type="checkbox" id="offRoute" name="offRoute">
+            <label for="offRoute">Fuera de Ruta</label>
+          </div>
+          <div>
+            <input type="checkbox" id="uncovered" name="uncovered">
+            <label for="uncovered"> Descubierto/Remolque al aire libre</label>
+          </div>
+        </div>
+
+=======
         <div id="checkbox-group" class="field form-group">
           <label for="problemTruck">Como es el camión problematico?</label>
           <p class="error-block">Seleccione por lo menos uno</p>
@@ -127,13 +170,20 @@
             <option value="5+">5+</option>
           </select>
         </div>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
 
         <div id="address" class="field form-group">
           <label for="nearestAddress">Dirección Más Cercana</label>
           <span id="finding" class="help-block">Encontrando la dirección
+<<<<<<< HEAD:public/sp/report.html
+</span>
+          <p class="error-block">Ingrese una dirección válida: calle del destinatario, ciudad, estado, codigo postal
+</p>
+=======
           </span>
           <p class="error-block">Ingrese una dirección válida: calle del destinatario, ciudad, estado, codigo postal
           </p>
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
           <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Dirección" value="" required>
           <!--            <span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
         </div>
@@ -206,6 +256,10 @@
   </script>
   <!-- End Firebase Config -->
   <script type="text/javascript" src="javascript/config.js"></script>
+<<<<<<< HEAD:public/sp/report.html
+  <script type="text/javascript" src="javascript/button.js"></script>
+=======
+>>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866:public/sp/report.html
   <script type="text/javascript" src="javascript/upload.js"></script>
 </body>
 

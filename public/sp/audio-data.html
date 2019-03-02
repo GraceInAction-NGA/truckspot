@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Datos de Camiónes Inactivos</title>
+  <title>Datos de Camiónes Ruidosos</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
   <meta name="mobile-web-app-capable" content="yes">
@@ -26,7 +26,7 @@
   <header>
     <div id="pic">
       <div class="row">
-        <div class="col-lg-4 col-xl-12">
+        <div class="col-lg-4 col-xs-12">
           <div id="mobile-nav" class="btn-group">
             <div class="dropdown hidden-lg">
               <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,15 +51,11 @@
           <div class="dropdown">
             <ul id=nav>
               <li><a href="index.html">Home</a></li>
-<<<<<<< HEAD
               <li><a href="data.html">Datos</a>
                 <ul>
                   <li><a href="idle-data.html">Datos de Camiónes Inactivos</a></li>
                 </ul>
               </li>
-=======
-              <li><a href="data.html">Datos</a></li>
->>>>>>> 46525a6b1b050ec2531082e655dd42e19886c866
               <li><a href="about.html">Acerca de TruckSpot</a></li>
             </ul>
           </div>
@@ -69,19 +65,17 @@
       </div>
     </div>
   </header>
-
   <div class="container">
-
     <div id="text-box">
       <div class="row">
         <div class="col-xs-12">
-          <h3>Datos de Camiónes Inactivos</h3>
+          <h3>Datos de Camiónes Ruidosos</h3>
           <div id="loading">
             <img src="images/Ellipsis-2s-200px.svg">
             <!-- https://loading.io/spinner/ellipsis/-discuss-ellipsis-preloader -->
           </div>
-          <div class="reports row">
-          </div>
+        </div>
+        <div class="reports">
         </div>
       </div>
       <div class="row">
@@ -96,8 +90,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- Modal -->
+    <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -127,20 +120,6 @@
               <h5><b>Descripción</b></h5>
               <p id="description"></p>
             </div>
-            <div class="col-xs-12">
-              <h5><b>Problemas Causados por Camiones</b></h5>
-              <ul id="problem">
-                <p id="na">N/A</p>
-                <li id="uncovered">Descubierto/Remolque al aire libre</li>
-                <li id="offRoute">Fuera de Ruta</li>
-                <li id="idle">Inactivo</li>
-                <li id="noise">Ruidoso</li>
-              </ul>
-            </div>
-            <div class="col-xs-12">
-              <h5><b>Camiones Involucrados</b></h5>
-              <p id="truck_count"></p>
-            </div>
           </div>
         </div>
         <div class="modal-footer">
@@ -152,9 +131,13 @@
 
   <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
   <script type="text/javascript" src="javascript/config.js"></script>
+  <script src="javascript/config.js"></script>
   <script type="text/javascript" src="javascript/download.js"></script>
   <script>
-    download("idle_truck");
+    download("loud_truck");
+
   </script>
+
 </body>
+
 </html>
