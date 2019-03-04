@@ -11,7 +11,7 @@ function download(path, query) {
   // Clear out old reports
   $(".reports").empty();
   const initialQuery = database.collection("reports")
-    .orderBy("time_stamp");
+.where("name", "==", "Angel Gonzalez")
   let localQuery = query ? query : initialQuery
 
 
