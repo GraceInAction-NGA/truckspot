@@ -4,7 +4,7 @@ var database = firebase.firestore();
 // Get reference to storage
 var storage = firebase.storage();
 
-var limit = 10;
+var limit = 24;
 var count = limit;
 var masterCount = 0;
 var next = null;

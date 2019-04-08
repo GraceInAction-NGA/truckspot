@@ -143,6 +143,8 @@ label {
   background-color: rgba(241, 241, 241, 0.4);
   padding: 5px;
   color: #9a4124;
+  font-size: 15px;
+  margin-top: 7px;
 }
 
 div#address{
@@ -188,7 +190,6 @@ button.btn-dark {
 #text-box {
   padding: 0px 25px 25px;
   background-color: #91D2D0;
-  margin-bottom: 25px;
   border: 3px solid #45A095;
   text-align: left;
 }
@@ -241,6 +242,23 @@ p#statement {
   text-transform: uppercase;
 }
 
+#text-box h4 {
+  color: #45A095;
+  margin:0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size:20px;
+  text-align: left;
+}
+
+[data-toggle="collapse"] .fa:before{  
+  content: "\f139";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a";
+}
+
 .btn-success {
   background-color: #45A095;
 }
@@ -261,9 +279,19 @@ p#statement {
 
 .btn {
   width: 100%;
-  margin-bottom: 20px;
   border: none;
 }
+
+div.card-body {
+  margin-bottom:2em;
+  margin-top:0px;
+}
+
+.organization div.card{
+  margin-bottom:5px;
+}
+
+
 
 .btn-large {
   background-color: #45A095;
@@ -330,6 +358,10 @@ p#statement {
 
 .reports .btn-primary {
   font-size: 9px;
+}
+
+button#filterSubmit{
+  margin-top: 15px;
 }
 
 video {
@@ -452,7 +484,17 @@ form input#upload-media {
   display: inline-block;
 }
 
+div#filter label{
+  color: #333;
+  font-size: 15px;
+  padding:2px 5px 0;
+  background-color: inherit;
+  font-weight: 500;
+}
 
+input[type=checkbox]{
+  margin-left: 25px;
+}
 
 h4.alert {
   text-align: center;
@@ -497,11 +539,7 @@ h4.alert {
   box-shadow: none;
   padding: 2em 0em;
   margin-bottom: 2em;
-
   margin-bottom: 0.5em;
-/*  background: transparent;*/
-/*  border-top: 1px dotted black;*/
-/*  border-radius: 0px;*/
 }
 
 .reports p {
@@ -712,35 +750,6 @@ h4.alert {
   }
 }
 
-div#filter h3{
-  color: #45A095;
- }
 
-ul#city{
- list-style-type: none;
- color:black;
- font-size: 15px;
- padding-left: 10px;
-}
 
-ul#duration{
- list-style-type: none;
- color:black;
- font-size: 15px;
- padding-left: 10px;
- width:171px;
-}
 
-ul#number_of_trucks{
- list-style-type: none;
- color:black;
- font-size: 15px;
- padding-left: 10px;
-}
-
-ul#truck_problem{
- list-style-type: none;
- color:black;
- font-size: 15px;
- padding-left: 10px;
-}
