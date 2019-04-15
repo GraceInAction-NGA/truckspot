@@ -1,0 +1,11 @@
+{
+	"slogan": {
+		"line_1": "Spot a truck. Stop a truck.",
+		"line_2": "Report now and make a difference."
+	},
+	"menu_items":[
+		{"href":"index.html","text":"Home"},
+		{"href":"data.html","text":"Data"},
+		{"href":"about.html","text":"About"}
+	]
+}

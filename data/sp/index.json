@@ -1,0 +1,11 @@
+{
+	"slogan": {
+		"line_1": "Mira un camión. Para un camión",
+		"line_2": "Reporta ahora y hagas una diferencia."
+	},
+	"menu_items":[
+		{"href":"index.html","text":"Casa"},
+		{"href":"data.html","text":"Datos"},
+		{"href":"about.html","text":"Acerca"}
+	]
+}
