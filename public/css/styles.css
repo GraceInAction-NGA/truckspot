@@ -21,7 +21,12 @@ header {
   background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
   background-size: cover;
   min-height: 220px;
-  /*padding: 25px;*/
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
 }
 
 #interior header {
