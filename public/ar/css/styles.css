@@ -21,12 +21,7 @@ header {
   background: url(../images/app-background-image-truckL.jpg) center top no-repeat;
   background-size: cover;
   min-height: 220px;
-}
-
-.btn {
-  width: 100%;
-  margin-bottom: 20px;
-  border: none;
+  /*padding: 25px;*/
 }
 
 #interior header {
@@ -37,7 +32,7 @@ header h1#logo {
   background-image: url("../images/TruckSpotLogo.png");
   background-repeat: no-repeat;
   text-indent: -999px;
-  background-size: contain;
+  background-size:contain;
   height: 50px;
   display: inline-block;
   margin-right: 0;
@@ -144,6 +139,20 @@ div.container {
   /*  margin-bottom: 35px;*/
 }
 
+label {
+  background-color: rgba(241, 241, 241, 0.4);
+  padding: 5px;
+  color: #9a4124;
+}
+
+div#address{
+  clear:both;
+}
+
+option{
+  padding-bottom: 20px;
+}
+
 label span {
   font-style: italic;
   opacity: 0.8;
@@ -193,7 +202,6 @@ p#aboutus {
   font-weight: 300;
   font-style: italic;
   font-size: 20px;
-  text-align: left;
 }
 
 div#quote {
@@ -232,6 +240,10 @@ p#statement {
   text-transform: uppercase;
 }
 
+.align-right{
+  text-align: right;
+}
+
 .btn-success {
   background-color: #45A095;
 }
@@ -248,6 +260,12 @@ p#statement {
 .btn-success:active {
   background-color: #7AB8A1;
   box-shadow: none;
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
 }
 
 .btn-large {
@@ -288,7 +306,6 @@ p#statement {
   height: 42px;
   font-size: 18px;
 }
-
 
 .padding-0-left {
   padding-left: 0;
@@ -438,6 +455,8 @@ form input#upload-media {
   display: inline-block;
 }
 
+
+
 h4.alert {
   text-align: center;
   border: 3px solid #45A095;
@@ -481,7 +500,11 @@ h4.alert {
   box-shadow: none;
   padding: 2em 0em;
   margin-bottom: 2em;
+
   margin-bottom: 0.5em;
+/*  background: transparent;*/
+/*  border-top: 1px dotted black;*/
+/*  border-radius: 0px;*/
 }
 
 .reports p {
@@ -559,7 +582,6 @@ h4.alert {
 
 }
 
-
 @media (min-width: 768px) {
   header {
     background: url(../images/app-background-image-truckL.jpg) center center no-repeat;
@@ -573,6 +595,10 @@ h4.alert {
   }
   .hidden-md-up {
     display: none;
+  }
+  header h1#logo {
+    width: 100%;
+    margin-top: 20px;
   }
 
   ul#nav {
@@ -667,6 +693,7 @@ h4.alert {
 
   #info {
     border-left: 5px solid #45A095;
+    padding-top: 0;
     border-top: 0;
   }
 }
@@ -686,9 +713,5 @@ h4.alert {
 @media (min-width: 1200px) {
   div#pic {
     width: 1170px;
-  }
-
-   header h1#logo {
-    margin-top: 20px;
   }
 }

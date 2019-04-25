@@ -10,10 +10,16 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -21,6 +27,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </head>
+
 
 <body id="interior">
   <header>
@@ -64,12 +71,12 @@
 
   <div class="container">
 
-    <div id="text-box">
+    <div id="text-box" class="col-sm-8 organization">
       <div class="row">
         <div class="col-xs-12">
-          <h3>Truck Idle Data</h3>
+          <h3>Truck Reports</h3>
           <div id="loading">
-            <img src="images/Ellipsis-2s-200px.svg">
+            <img src="../images/Ellipsis-2s-200px.svg">
           </div>
           <div class="reports row">
           </div>
@@ -77,17 +84,165 @@
       </div>
       <div class="row">
         <div class="col-md-3 col-xs-4">
-          <button id="lastBtn" class="btn btn-secondary" disabled>Last</button>
+          <button id="lastBtn" class="btn btn-secondary" disabled>
+            <i class="fas fa-arrow-left"></i>
+          </button>
         </div>
         <div class="col-md-6 col-xs-4 text-center">
           <small class="pagination"> </small>
         </div>
         <div class="col-md-3 col-xs-4">
-          <button id="nextBtn" class="btn btn-secondary">Next</button>
+          <button id="nextBtn" class="btn btn-secondary">
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </div>
+
+    <div id="text-box" class="col-sm-4 organization">
+      <h3>Reports Filter</h3>
+      <div id="filter" class="organization">
+        <div id="accordion">
+          <div class="card" id="first">
+            <div class="card-header" id="headingOne">
+              <button class="btn btn-link collapsed filter-button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <h4 class="mb-0 data-filter">
+                <i class="fa" aria-hidden="true"></i>
+                  City
+                </h4>
+              </button>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                   <div class="form-check">
+                      <input class="form-check-input" type="radio" id="city" name="city" value="Detroit">
+                      <label class="form-check-label" id="city" for="city">Detroit</label>
+                   </div>
+                   <div class="form-check">
+                      <input class="form-check-input" type="radio" id="city" name="city" value="Dearborn">
+                      <label class="form-check-label" id="city" for="city">Dearborn</label>
+                   </div>
+                   <div class="form-check">
+                      <input checked class="form-check-input" type="radio" id="city" name="city" value="all">
+                      <label class="form-check-label" id="city" for="city">All the above</label>
+                   </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="second">
+            <div class="card-header" id="headingTwo">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h4 class="mb-0">
+                <i class="fa" aria-hidden="true"></i>
+                  Duration
+                </h4>
+              </button>
+
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="duration" name="duration" value="0-5">
+                  <label class="form-check-label" id="duration" for="duration">0-5 Minutes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="duration" name="duration" value="5-10">
+                  <label class="form-check-label" id="duration" for="duration">5-10 Minutes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="duration" name="duration" value="10-15">
+                  <label class="form-check-label" id="duration" for="duration">10-15 Minutes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="duration" name="duration" value="over 15">
+                  <label class="form-check-label" id="duration" for="duration">More than 15 Minutes</label>
+                </div>
+                <div class="form-check">
+                  <input checked class="form-check-input" type="radio" id="duration" name="duration" value="all">
+                  <label class="form-check-label" id= "duration" for="duration">All the above</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="third">
+            <div class="card-header" id="headingThree">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h4 class="mb-0">
+                <i class="fa" aria-hidden="true"></i>
+                  Number of Trucks
+                </h4>
+              </button>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="number" name="number" value="1">
+                  <label class="form-check-label" id="number" for="number">1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="number" name="number" value="2">
+                  <label class="form-check-label" id="number" for="number">2</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="number" name="number" value="3">
+                  <label class="form-check-label" id="number" for="number">3</label>
+                </div>
+                <div class="form-check">
+                   <input class="form-check-input" type="radio" id="number" name="number" value="4">
+                   <label class="form-check-label" id="number" for="city">4</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="number" name="number" value="5">
+                  <label class="form-check-label" id="number" for="number">5+</label>
+                </div>
+                <div class="form-check">
+                  <input checked class="form-check-input" type="radio" id="number" name="number" value="all">
+                  <label class="form-check-label" id="number" for="number">All the above</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="fourth">
+            <div class="card-header" id="headingThree">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <h4 class="mb-0">
+                <i class="fa" aria-hidden="true"></i>
+                  Truck Problem
+                </h4>
+              </button>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="problem" name="problem" value="idle">
+                  <label class="form-check-label" id="problem" for="problem">Idle</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="problem" name="problem" value="noise">
+                  <label class="form-check-label" id="problem" for="problem">Noise</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="problem" name="problem" value="offRoute">
+                  <label class="form-check-label" id="problem" for="problem">Off Route</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="problem" name="problem" value="uncontained">
+                  <label class="form-check-label" id="problem" for="problem">Uncontained/Open Air Truck Trailer</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="problem" name="problem" value="all">
+                  <label class="form-check-label" id="problem" for="problem">All the above</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="filterSubmit" type="submit" class="btn btn-secondary">Submit</button>
+      </div>
+    </div>
   </div>
+Ò
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -119,18 +274,22 @@
               <p id="description"></p>
             </div>
             <div class="col-xs-12">
-              <h5><b>Problem Reported</b></h5>
-              <ul id="problem">
-                <p id="na">N/A</p>
-                <li id="uncovered">Uncovered/Open Air Trailer</li>
-                <li id="offRoute">Off Route</li>
-                <li id="idle">Idle</li>
-                <li id="noise">Noisy</li>
-              </ul>
+              <h5><b>City</b></h5>
+              <p id="city"></p>
             </div>
             <div class="col-xs-12">
-              <h5><b>Trucks Invovled</b></h5>
-              <p id="truck_count"></p>
+              <h5><b>Truck Amount</b></h5>
+              <p id="truck_amount"></p>
+            </div>
+            <div class="col-xs-12">
+              <h5><b>Truck Problem</b></h5>
+              <ul id="problem">
+                <li id="na">N/A</li>
+                <li id="idle">Idle</li>
+                <li id="noise">Noise</li>
+                <li id="offRoute">Off Route</li>
+                <li id="uncovered">Uncontained/Open Air Truck Trailer</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -146,6 +305,8 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
   <script type="text/javascript" src="../javascript/config.js"></script>
   <script type="text/javascript" src="../javascript/download_v2.js"></script>
+  <script type="text/javascript" src="../javascript/download_filter.js"></script>
+
   <script>
     download();
   </script>
