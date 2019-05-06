@@ -1,0 +1,71 @@
+<div id="text-box" class="col-sm-4 organization">
+    <h3>{{text_box.text_2}}</h3>
+
+    <div id="filter" class="organization">
+        <div id="accordion">
+            <div class="card" id="first">
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link collapsed filter-button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h4 class="mb-0 data-filter">
+            <i class="fa" aria-hidden="true"></i>
+              {{city_title}}
+            </h4>
+                    </button>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">{{#each city}}
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="city" name="city" value="{{this}}">
+                            <label class="form-check-label" id="city" for="city">{{this}}</label>
+                        </div>{{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="second">
+                <div class="card-header" id="headingTwo">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h4 class="mb-0"><i class="fa" aria-hidden="true"></i>{{duration_title}}</h4>
+                    </button>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">{{#each duration}}
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="duration" name="duration" value="{{this}}">
+                            <label class="form-check-label" id="duration" for="duration">{{this}}</label>
+                        </div>{{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="third">
+                <div class="card-header" id="headingThree">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <h4 class="mb-0"><i class="fa" aria-hidden="true"></i>{{number_title}}</h4>
+                    </button>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">{{#each truck_number}}
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="number" name="number" value="{{this}}">
+                            <label class="form-check-label" id="number" for="number">{{this}}</label>
+                        </div>{{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="fourth">
+                <div class="card-header" id="headingThree">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <h4 class="mb-0"><i class="fa" aria-hidden="true"></i>{{problem_title}}</h4>
+                    </button>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">{{#each truck_problem}}
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="problem" name="problem" value="{{this}}">
+                            <label class="form-check-label" id="problem" for="problem">{{this}}</label>
+                        </div>{{/each}}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="filterSubmit" type="submit" class="btn btn-secondary">{{filter_submit}}</button>
+            </div>

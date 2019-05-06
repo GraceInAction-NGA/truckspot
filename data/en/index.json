@@ -1,8 +1,30 @@
 {
+	"coalition":{
+		"header":"Coalition of community groups"
+	},
+
+	"map":{
+		"header":"Area of Interest",
+		"mapID":"Click on the shapes to know more about them"
+	},
+
+	"body":{
+		"header":"We care because we breathe it",
+		"about_us":"We want to improve air quality in the Detroit community and with your help by using truckSPOT, you can report incidents of idling trucks thats are disturbing our peaceful and clean environment. With your reports you’ll be able to see real time data collected by the community.",
+		"statement":"Polluted air has no boundaries of where it travels and will continue causing long term damage to people's health. You can make a change."
+	},
+
+	"submit":[
+		{"href":"report.html","text":"Report a Truck"},
+		{"href":"about.html","text":"About"},
+		{"href":"data.html","text":"Data"}
+	],
+
 	"slogan": {
 		"line_1": "Spot a truck. Stop a truck.",
 		"line_2": "Report now and make a difference."
 	},
+
 	"menu_items":[
 		{"href":"index.html","text":"Home"},
 		{"href":"data.html","text":"Data"},

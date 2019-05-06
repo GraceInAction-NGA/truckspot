@@ -1,0 +1,60 @@
+{
+	"loading":"Uploading your information",
+	"submit_button":"Submit",
+
+	"media_title":"Media Upload",
+	"media_failure":"Select or capture media from your phone",
+	"media_upload":"Select or Capture Media",
+
+	"description_title":"Description",
+	"description_failure":"Enter a description",
+
+	"amount_title":"How many trucks are there?",
+	"amount_failure":"Select an amount",
+	"truck_number":[
+		"1","2","3","4","5+"
+	],
+
+	"problem_title":"How is the truck problematic?",
+	"problem_failure":"Select at least one",
+	"truck_problem":[
+		"Idle","Noise","Off Route","Uncontained/Open Air Truck Trailer"
+	],
+
+	"duration_title":"Duration",
+	"duration_failure":"Enter a duration",
+	"duration":[
+		"0-5 Minutes","5-10 Minutes","10-15 Minutes","More than 15 Minutes"
+	],
+
+
+	"city_title":"City",
+	"city_failure":"Choose a city",
+	"city":[
+		"Detroit","Dearborn"
+	],
+
+	"address_title":"Nearest Address",
+	"adress_help":"Finding Adress",
+	"adress_failure":"Enter a valid address: Addresse Street, City, State Zip",
+
+	"date_failre":"Enter a date",
+	"date_title":"Date",
+
+	"name_title":"Name",
+
+	"title":"Report",
+
+	"slogan": {
+		"line_1": "Spot a truck. Stop a truck.",
+		"line_2": "Report now and make a difference."
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"Home"},
+		{"href":"data.html","text":"Data"},
+		{"href":"about.html","text":"About"}
+	]
+
+
+}

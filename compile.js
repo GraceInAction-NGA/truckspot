@@ -17,7 +17,7 @@ const registerPartial = file => {
   handlebars.registerPartial(getName(file), fs.readFileSync(`${PARTIALS_PATH}/${file}`, 'utf8'))
 }
 
-const copys = (file, PATH) => {
+const copys = (file, PATH, encoding) => {
   const base = PATH.split('/')[2];
   const path = `${GEN_PATH}/${base}`;
   
@@ -25,8 +25,8 @@ const copys = (file, PATH) => {
     fs.mkdirSync(path, { recursive: true});
   }
   
-  const readFile = fs.readFileSync(`${PATH}/${file}`, 'utf8');
-  fs.writeFileSync(`${path}/${file}`, readFile, 'utf8');
+  const readFile = fs.readFileSync(`${PATH}/${file}`, encoding);
+  fs.writeFileSync(`${path}/${file}`, readFile, encoding);
 }
 
 const generatePage = (file, data) => {
@@ -62,8 +62,8 @@ const mapLang = (acc, path) => {
 // Main Program
 const data = fs.readdirSync(DATA_PATH).reduce(mapLang, {})
 fs.readdirSync(PARTIALS_PATH).forEach(file => registerPartial(file))
-fs.readdirSync(CSS_PATH).forEach(file => copys(file, CSS_PATH))
-fs.readdirSync(JS_PATH).forEach(file => copys(file, JS_PATH))
-fs.readdirSync(IMAGE_PATH).forEach(file => copys(file, IMAGE_PATH))
+fs.readdirSync(CSS_PATH).forEach(file => copys(file, CSS_PATH, 'utf8'))
+fs.readdirSync(JS_PATH).forEach(file => copys(file, JS_PATH, 'utf8'))
+fs.readdirSync(IMAGE_PATH).forEach(file => copys(file, IMAGE_PATH, 'binary'))
 fs.readdirSync(TEMP_PATH).forEach(file => generatePage(file, data))
 

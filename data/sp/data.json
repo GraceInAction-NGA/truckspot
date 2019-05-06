@@ -1,0 +1,45 @@
+ {
+ 	"filter_submit":"Someter",
+
+	"modal_title":"Reporte",
+	"modal_body":[
+		"Fecha","Duración","Nombre","Dirección Más Cercana","Descripción","Ciudad","Cantidad de Camiones"
+	],
+	"modal_footer":"Cerrar",
+
+	"problem_title":"Problema de Camion",
+	"truck_problem":[
+		"Inactivo","Ruidoso","Fuera de Ruta","Descubierto/Remolque al aire libre","Todo lo Anterior"
+	],
+
+	"number_title":"Cantidad de Camiones",
+	"truck_number":[
+		"1","2","3","4","5+","Todo lo Anterior"
+	],
+
+	"duration_title":"Duración",
+	"duration":[
+		"0-5 Minutos","5-10 Minutos","10-15 Minutos","Mas de 15 Minutos","Todo lo Anterior"
+	],
+
+	"city_title":"Ciudad",
+	"city":[
+		"Detroit","Dearborn","Todo lo Anterior"
+	],
+
+	"text_box":{
+		"text_1":"Reportes de Camiones",
+		"text_2":"Filtro de Reportes"
+	},
+
+	"slogan": {
+		"line_1": "Mira un camión. Para un camión.",
+		"line_2": "Reporta ahora y has una diferencia."
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"Casa"},
+		{"href":"data.html","text":"Datos"},
+		{"href":"about.html","text":"Acerca"}
+	]
+}
