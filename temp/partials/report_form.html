@@ -1,0 +1,83 @@
+<div class="container">
+    <div id="text-box">
+
+        <form role="form" class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="field form-group col-sm-6">
+                    <label for="name">{{name_title}}</label>
+                    <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
+                </div>
+
+                <div class="field form-group col-sm-6">
+                    <label for="date">{{date_title}}</label>
+                    <p class="error-block">{{date_failure}}</p>
+                    <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
+                </div>
+            </div>
+
+            <div id="address" class="field form-group">
+                <label for="nearestAddress">{{address_title}}</label>
+                <span id="finding" class="help-block">{{address_help}}</span>
+                <p class="error-block">{{address_failure}}</p>
+                <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+            </div>
+
+            <div class="field form-group">
+                <label>{{city_title}}</label>
+                <p class="error-block">{{city_failure}}</p>
+                <select name="city" class="field form-control col-sm-6">
+                    <option value="{{#each city}}">{{this}}</option>{{/each}}
+
+                </select>
+            </div>
+
+            <div class="field form-group">
+                <label for="duration">{{duration_title}}</label>
+                <p class="error-block">{{duration_failure}}</p>
+                <select name="duration_range" class="field form-control" id="duration" required>
+                    <option value="{{#each duration}}">{{this}}</option>{{/each}}
+                </select>
+            </div>
+
+            <div id="checkbox-group" class="field form-group col-sm-6">
+                <label for="problemTruck">{{problem_title}}</label>
+                <p class="error-block">{{problem}}</p>
+                {{#each truck_problem}}<div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
+                    <label class="form-check-label" for="idle">{{this}}</label>
+                </div>{{/each}}
+            </div>
+
+            <div class="field form-group col-sm-6">
+                <label for="truckAmount">{{amount_title}}</label>
+                <p class="error-block">{{amount_failure}}</p>
+                <select name="truck_amount" class="field form-control" id="truckAmount" required>
+                    <option value="{{#each truck_number}}">{{this}}</option>{{/each}}
+                </select>
+            </div>
+
+            <div class="field form-group">
+                <label for="description">{{description_title}}</label>
+                <p class="error-block">{{description_failure}}</p>
+                <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
+            </div>
+
+            <div class="field form-group">
+                <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> {{media_title}}</label>
+                <p class="help-block">{{media_failure}}</p>
+                <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> {{media_upload}}</label>
+                <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
+            </div>
+
+            <button type="button" class="btn btn-primary" id="video" onclick="upload()">{{submit_button}}</button>
+        </form>
+    </div>
+</div>
+<div id="loadingScreen" class="row">
+    <div class="col-xs-12">
+        <h3> {{loading}}</h3>
+    </div>
+    <div class="col-xs-12">
+        <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>
+    </div>
+</div>

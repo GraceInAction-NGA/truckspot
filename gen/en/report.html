@@ -11,8 +11,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  <link rel="stylesheet" type="text/css" href="../css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
-  <script type="text/javascript" src="../javascript/loading-bar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/loading-bar.css" />
+  <script type="text/javascript" src="../js/loading-bar.min.js"></script>
 
 </head>
 
@@ -63,13 +63,103 @@
     <!--#pic-->
   
   </header>
+  <div class="container">
+      <div id="text-box">
   
+          <form role="form" class="needs-validation" novalidate>
+              <div class="form-row">
+                  <div class="field form-group col-sm-6">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
+                  </div>
   
+                  <div class="field form-group col-sm-6">
+                      <label for="date">Date</label>
+                      <p class="error-block"></p>
+                      <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
+                  </div>
+              </div>
+  
+              <div id="address" class="field form-group">
+                  <label for="nearestAddress">Nearest Address</label>
+                  <span id="finding" class="help-block"></span>
+                  <p class="error-block"></p>
+                  <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+              </div>
+  
+              <div class="field form-group">
+                  <label>City</label>
+                  <p class="error-block">Choose a city</p>
+                  <select name="city" class="field form-control col-sm-6">
+                      <option value="">Detroit</option>">Dearborn</option>
+  
+                  </select>
+              </div>
+  
+              <div class="field form-group">
+                  <label for="duration">Duration</label>
+                  <p class="error-block">Enter a duration</p>
+                  <select name="duration_range" class="field form-control" id="duration" required>
+                      <option value="">0-5 Minutes</option>">5-10 Minutes</option>">10-15 Minutes</option>">More than 15 Minutes</option>
+                  </select>
+              </div>
+  
+              <div id="checkbox-group" class="field form-group col-sm-6">
+                  <label for="problemTruck">How is the truck problematic?</label>
+                  <p class="error-block"></p>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
+                      <label class="form-check-label" for="idle">Idle</label>
+                  </div><div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
+                      <label class="form-check-label" for="idle">Noise</label>
+                  </div><div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
+                      <label class="form-check-label" for="idle">Off Route</label>
+                  </div><div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
+                      <label class="form-check-label" for="idle">Uncontained/Open Air Truck Trailer</label>
+                  </div>
+              </div>
+  
+              <div class="field form-group col-sm-6">
+                  <label for="truckAmount">How many trucks are there?</label>
+                  <p class="error-block">Select an amount</p>
+                  <select name="truck_amount" class="field form-control" id="truckAmount" required>
+                      <option value="">1</option>">2</option>">3</option>">4</option>">5+</option>
+                  </select>
+              </div>
+  
+              <div class="field form-group">
+                  <label for="description">Description</label>
+                  <p class="error-block">Enter a description</p>
+                  <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
+              </div>
+  
+              <div class="field form-group">
+                  <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Media Upload</label>
+                  <p class="help-block">Select or capture media from your phone</p>
+                  <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> Select or Capture Media</label>
+                  <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
+              </div>
+  
+              <button type="button" class="btn btn-primary" id="video" onclick="upload()">Submit</button>
+          </form>
+      </div>
+  </div>
+  <div id="loadingScreen" class="row">
+      <div class="col-xs-12">
+          <h3> Uploading your information</h3>
+      </div>
+      <div class="col-xs-12">
+          <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>
+      </div>
+  </div>  
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
-  <script type="text/javascript" src="../javascript/config.js"></script>
-  <script type="text/javascript" src="../javascript/upload_v2.js"></script>
+  <script type="text/javascript" src="../js/config.js"></script>
+  <script type="text/javascript" src="../js/upload_v2.js"></script>
 </body>
 
 </html>
