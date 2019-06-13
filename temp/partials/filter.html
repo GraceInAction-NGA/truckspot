@@ -15,8 +15,8 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">{{#each city}}
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="city" name="city" value="{{this}}">
-                            <label class="form-check-label" id="city" for="city">{{this}}</label>
+                            <input class="form-check-input" type="checkbox" id="city" name="city" value="{{this.id}}">
+                            <label class="form-check-label" id="city" for="city">{{this.label}}</label>
                         </div>{{/each}}
                     </div>
                 </div>
@@ -30,8 +30,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">{{#each duration}}
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="duration" name="duration" value="{{this}}">
-                            <label class="form-check-label" id="duration" for="duration">{{this}}</label>
+                            <input class="form-check-input" type="checkbox" id="duration" name="duration" value="{{this.id}}">
+                            <label class="form-check-label" id="duration" for="duration">{{this.label}}</label>
                         </div>{{/each}}
                     </div>
                 </div>
@@ -45,8 +45,8 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">{{#each truck_number}}
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="number" name="number" value="{{this}}">
-                            <label class="form-check-label" id="number" for="number">{{this}}</label>
+                            <input class="form-check-input" type="checkbox" id="number" name="number" value="{{this.id}}">
+                            <label class="form-check-label" id="number" for="number">{{this.label}}</label>
                         </div>{{/each}}
                     </div>
                 </div>
@@ -58,10 +58,10 @@
                     </button>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="card-body">{{#each truck_problem}}
+                    <div class="card-body">{{#each filter_truck_problem}}
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="problem" name="problem" value="{{this}}">
-                            <label class="form-check-label" id="problem" for="problem">{{this}}</label>
+                            <input class="form-check-input" type="checkbox" id="problem" name="problem" value="{{this.id}}">
+                            <label class="form-check-label" id="problem" for="problem">{{this.label}}</label>
                         </div>{{/each}}
                     </div>
                 </div>

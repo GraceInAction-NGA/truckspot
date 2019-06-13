@@ -16,22 +16,45 @@
 
 	"problem_title":"Truck Problem",
 	"truck_problem":[
-		"Idle","Noise","Off Route","Uncontained/Open Air Truck Trailer","All the Above"
+		{"id":"na", "label":"N/A"},
+		{"id":"idle", "label":"Idle"},
+		{"id":"noise", "label":"Noise"},
+		{"id":"offRoute", "label":"Off Route"},
+		{"id":"uncovered", "label":"Uncontained/Open Air Truck Trailer"}
+	],
+
+	"filter_truck_problem":[
+		{"id":"idle", "label":"Idle"},
+		{"id":"noise", "label":"Noise"},
+		{"id":"offRoute", "label":"Off Route"},
+		{"id":"uncovered", "label":"Uncontained/Open Air Truck Trailer"}, 	
+		{"id":"all", "label":"All the above"}
 	],
 
 	"number_title":"Number of Trucks",
 	"truck_number":[
-		"1","2","3","4","5+","All the Above"
+		{"id":"1", "label":"1"},
+		{"id":"2", "label":"2"},
+		{"id":"3", "label":"3"},
+		{"id":"4", "label":"4"},
+		{"id":"5", "label":"5+"},
+		{"id":"all", "label":"All the above"}
 	],
 
 	"duration_title":"Duration",
 	"duration":[
-		"0-5 Minutes","5-10 Minutes","10-15 Minutes","More than 15 Minutes","All the Above"
+		{"id":"0-5", "label":"0-5 Minutes"},
+		{"id":"5-10", "label":"5-10 Minutes"},
+		{"id":"10-15", "label":"10-15 Minutes"},
+		{"id":"over 15", "label":"More than 15 Minutes"},
+		{"id":"all", "label":"All the above"}
 	],
 
 	"city_title":"City",
 	"city":[
-		"Detroit","Dearborn","All the Above"
+		{"id":"Detroit", "label":"Detroit"},
+		{"id":"Dearborn", "label":"Dearborn"},
+		{"id":"all", "label":"All the above"}
 	],
 
 	"text_box":{

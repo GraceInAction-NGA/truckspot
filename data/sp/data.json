@@ -16,22 +16,45 @@
 
 	"problem_title":"Problema de Camion",
 	"truck_problem":[
-		"Inactivo","Ruidoso","Fuera de Ruta","Descubierto/Remolque al aire libre","Todo lo Anterior"
+		{"id":"idle", "label":"Inactivo"},
+		{"id":"noise", "label":"Ruidoso"},
+		{"id":"offRoute", "label":"Fuera de Ruta"},
+		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"}, 	
+		{"id":"all", "label":"Todo lo anterior"}
+	],
+
+	"filter_truck_problem":[
+		{"id":"idle", "label":"Inactivo"},
+		{"id":"noise", "label":"Ruidoso"},
+		{"id":"offRoute", "label":"Fuera de Ruta"},
+		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"}, 	
+		{"id":"all", "label":"Todo lo anterior"}	
 	],
 
 	"number_title":"Cantidad de Camiones",
 	"truck_number":[
-		"1","2","3","4","5+","Todo lo Anterior"
+		{"id":"1", "label":"1"},
+		{"id":"2", "label":"2"},
+		{"id":"3", "label":"3"},
+		{"id":"4", "label":"4"},
+		{"id":"5", "label":"5+"},
+		{"id":"all", "label":"Todo lo anterior"}
 	],
 
 	"duration_title":"Duración",
 	"duration":[
-		"0-5 Minutos","5-10 Minutos","10-15 Minutos","Mas de 15 Minutos","Todo lo Anterior"
+		{"id":"0-5", "label":"0-5 Minutos"},
+		{"id":"5-10", "label":"5-10 Minutos"},
+		{"id":"10-15", "label":"10-15 Minutos"},
+		{"id":"over 15", "label":"More than 15 Minutos"},
+		{"id":"all", "label":"Todo lo anterior"}
 	],
 
 	"city_title":"Ciudad",
 	"city":[
-		"Detroit","Dearborn","Todo lo Anterior"
+		{"id":"Detroit", "label":"Detroit"},
+		{"id":"Dearborn", "label":"Dearborn"},
+		{"id":"all", "label":"Todo lo Anterior"}
 	],
 
 	"text_box":{
