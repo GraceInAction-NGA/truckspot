@@ -3,8 +3,15 @@
 
 	"modal_title":"Report",
 	"modal_body":[
-		"Date","Duration","Name","Nearest Address","Description","City","Truck Amount"
+		{"label":"Date", "id":"date"},
+		{"label":"Duration", "id":"duration_range"},
+		{"label":"Name", "id":"name"},
+		{"label":"Nearest Address", "id":"nearest_address"},
+		{"label":"Description", "id":"description"},
+		{"label":"City", "id":"city"},
+		{"label":"Truck Amount", "id":"truck_amount"}
 	],
+
 	"modal_footer":"Close",
 
 	"problem_title":"Truck Problem",

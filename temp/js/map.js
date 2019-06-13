@@ -16,7 +16,7 @@ function createMap(map_text){
         [42.316513, -83.077132],
         [42.273419, -83.134356]
     ]).addTo(mymap);
-    polygon1.bindPopup(map_text[0]);
+    polygon1.bindPopup("<h4>" + map_text[0].title + "</h4><p>" + map_text[0].text + "</p>");
 
     var polygon2 = L.polygon([
         [42.31661, -83.13447],
@@ -25,7 +25,7 @@ function createMap(map_text){
         [42.30943, -83.10222],
     ]).addTo(mymap);
     // polygon2.bindPopup(map_text[1]);
-    polygon2.bindPopup("<h4>" + map_text[1].title + "</h4><p>" + map_text[0].text + "</p>");
+    polygon2.bindPopup("<h4>" + map_text[1].title + "</h4><p>" + map_text[1].text + "</p>");
     polygon2.setStyle({
         fillColor:'green',
         color:'green'
@@ -37,7 +37,7 @@ function createMap(map_text){
         [42.30643, -83.11593],
         [42.30243, -83.11267],
     ]).addTo(mymap);
-    polygon3.bindPopup(map_text[2]);
+    polygon3.bindPopup("<h4>" + map_text[2].title + "</h4><p>" + map_text[2].text + "</p>");
     polygon3.setStyle({
         fillColor:'purple',
         color:'purple'
@@ -49,7 +49,7 @@ function createMap(map_text){
         fillOpacity: 0.5,
         radius: 1050
     }).addTo(mymap);
-    circle.bindPopup(map_text[3]);
+    circle.bindPopup("<h4>" + map_text[3].title + "</h4><p>" + map_text[3].text + "</p>");
 
     var redIcon = L.icon({
         iconUrl: '../images/RedIcon.png',

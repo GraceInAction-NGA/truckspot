@@ -7,17 +7,21 @@
             </div>
             <div class="modal-body">
 
-                <div class="row">{{#each modal_body}}
+                <div class="row">
+                    {{#each modal_body}}
                     <div class="col-xs-4">
-                        <h5><b>{{this}}</b></h5>
-                        <p id="date"></p>
-                    </div>{{/each}}
+                        <h5><b>{{this.label}}</b></h5>
+                        <p id="{{this.id}}"></p>
+                    </div>
+                    {{/each}}
 
                     <div class="col-xs-12">
                         <h5><b>{{problem_title}}</b></h5>
-                        <ul id="truck_problem">{{#each truck_problem}}
+                        <ul id="truck_problem">
+                            {{#each truck_problem}}
                             <li>{{this}}</li>
-                        </ul>{{/each}}
+                            {{/each}}
+                        </ul>
                     </div>
                 </div>
             </div>

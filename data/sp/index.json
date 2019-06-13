@@ -1,4 +1,4 @@
-{
+{	
 	"coalition":{
 		"header":"Coalición de grupos comunitarios"
 	},
@@ -14,11 +14,9 @@
 		"statement":"El aire contaminado no tiene límites de donde viaja y continuará causando daños a la salud de la comunidad. Tu puedes hacer un cambio."
 	},
 
-	"submit":[
-		{"href":"report.html","text":"Reporta un Camión"},
-		{"href":"about.html","text":"Acerca"},
-		{"href":"data.html","text":"Datos"}
-	],
+	"report_button":{"href":"report.html","text":"Reporta un Camión"},
+	"about_button":{"href":"about.html","text":"Acerca"},
+	"data_button":{"href":"data.html","text":"Datos"},
 
 	"slogan": {
 		"line_1": "Mira un camión. Para un camión.",
@@ -29,5 +27,12 @@
 		{"href":"index.html","text":"Casa"},
 		{"href":"data.html","text":"Datos"},
 		{"href":"about.html","text":"Acerca"}
+	],
+
+		"map_text":[
+		{"title": "Main Focus of TruckSpot", "text": "This is where we are mainly focusing to collect truck data."},
+		{"title":"Train-Truck Intermodal", "text":"This is where several freight companies load and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
+		{"title":"Truck HotSpot", "text":"This is where a freight company loand and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
+		{"title":"Zug Island", "text":"This is a heavily industrialized island that causes a lot pollution."}
 	]
 }

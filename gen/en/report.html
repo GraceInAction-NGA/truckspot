@@ -65,7 +65,6 @@
   </header>
   <div class="container">
       <div id="text-box">
-  
           <form role="form" class="needs-validation" novalidate>
               <div class="form-row">
                   <div class="field form-group col-sm-6">
@@ -91,7 +90,8 @@
                   <label>City</label>
                   <p class="error-block">Choose a city</p>
                   <select name="city" class="field form-control col-sm-6">
-                      <option value="">Detroit</option>">Dearborn</option>
+                          <option value="Detroit">Detroit</option>
+                          <option value="Dearborn">Dearborn</option>
   
                   </select>
               </div>
@@ -100,7 +100,10 @@
                   <label for="duration">Duration</label>
                   <p class="error-block">Enter a duration</p>
                   <select name="duration_range" class="field form-control" id="duration" required>
-                      <option value="">0-5 Minutes</option>">5-10 Minutes</option>">10-15 Minutes</option>">More than 15 Minutes</option>
+                          <option value="0-5 Minutes">0-5 Minutes</option>
+                          <option value="5-10 Minutes">5-10 Minutes</option>
+                          <option value="10-15 Minutes">10-15 Minutes</option>
+                          <option value="More than 15 Minutes">More than 15 Minutes</option>
                   </select>
               </div>
   
@@ -125,31 +128,36 @@
               <div class="field form-group col-sm-6">
                   <label for="truckAmount">How many trucks are there?</label>
                   <p class="error-block">Select an amount</p>
-                  <select name="truck_amount" class="field form-control" id="truckAmount" required>
-                      <option value="">1</option>">2</option>">3</option>">4</option>">5+</option>
+                  <select name="truck_amount" class="field form-control" id="truckAxmount" required>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5+">5+</option>
                   </select>
               </div>
   
-              <div class="field form-group">
+              <div class="field form-group col-sm-6">
                   <label for="description">Description</label>
                   <p class="error-block">Enter a description</p>
                   <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
               </div>
   
-              <div class="field form-group">
-                  <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Media Upload</label>
+              <div class="field form-group col-sm-6"> 
+                  <label for="upload-media"><span class="glyphicon glyphicon-upload"></span>Media Upload</label>
                   <p class="help-block">Select or capture media from your phone</p>
-                  <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> Select or Capture Media</label>
+                  <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span>Select or Capture Media</label>
                   <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
-              </div>
+              </div> 
   
               <button type="button" class="btn btn-primary" id="video" onclick="upload()">Submit</button>
-          </form>
+          </form>             
       </div>
   </div>
+      
   <div id="loadingScreen" class="row">
       <div class="col-xs-12">
-          <h3> Uploading your information</h3>
+          <h3>Uploading your information</h3>
       </div>
       <div class="col-xs-12">
           <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>

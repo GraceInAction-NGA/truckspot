@@ -2,9 +2,16 @@
  	"filter_submit":"Someter",
 
 	"modal_title":"Reporte",
-	"modal_body":[
-		"Fecha","Duración","Nombre","Dirección Más Cercana","Descripción","Ciudad","Cantidad de Camiones"
+		"modal_body":[
+		{"label":"Fecha", "id":"date"},
+		{"label":"Duration", "id":"duration_range"},
+		{"label":"Name", "id":"name"},
+		{"label":"Nearest Address", "id":"nearest_address"},
+		{"label":"Description", "id":"description"},
+		{"label":"City", "id":"city"},
+		{"label":"Truck Amount", "id":"truck_amount"}
 	],
+
 	"modal_footer":"Cerrar",
 
 	"problem_title":"Problema de Camion",

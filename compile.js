@@ -1,6 +1,10 @@
 const fs = require('fs');
 const handlebars = require('handlebars');
 
+handlebars.registerHelper('json',function (content){
+  return JSON.stringify(content);
+});
+
 // Constants
 const TEMP_PATH = "./temp"
 const DATA_PATH = "./data"

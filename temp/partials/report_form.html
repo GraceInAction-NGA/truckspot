@@ -1,6 +1,5 @@
 <div class="container">
     <div id="text-box">
-
         <form role="form" class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="field form-group col-sm-6">
@@ -26,7 +25,9 @@
                 <label>{{city_title}}</label>
                 <p class="error-block">{{city_failure}}</p>
                 <select name="city" class="field form-control col-sm-6">
-                    <option value="{{#each city}}">{{this}}</option>{{/each}}
+                    {{#each city}}
+                        <option value="{{this}}">{{this}}</option>
+                    {{/each}}
 
                 </select>
             </div>
@@ -35,7 +36,9 @@
                 <label for="duration">{{duration_title}}</label>
                 <p class="error-block">{{duration_failure}}</p>
                 <select name="duration_range" class="field form-control" id="duration" required>
-                    <option value="{{#each duration}}">{{this}}</option>{{/each}}
+                    {{#each duration}}
+                        <option value="{{this}}">{{this}}</option>
+                    {{/each}}
                 </select>
             </div>
 
@@ -51,31 +54,34 @@
             <div class="field form-group col-sm-6">
                 <label for="truckAmount">{{amount_title}}</label>
                 <p class="error-block">{{amount_failure}}</p>
-                <select name="truck_amount" class="field form-control" id="truckAmount" required>
-                    <option value="{{#each truck_number}}">{{this}}</option>{{/each}}
+                <select name="truck_amount" class="field form-control" id="truckAxmount" required>
+                    {{#each truck_number}}
+                        <option value="{{this}}">{{this}}</option>
+                    {{/each}}
                 </select>
             </div>
 
-            <div class="field form-group">
+            <div class="field form-group col-sm-6">
                 <label for="description">{{description_title}}</label>
                 <p class="error-block">{{description_failure}}</p>
                 <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
             </div>
 
-            <div class="field form-group">
-                <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> {{media_title}}</label>
+            <div class="field form-group col-sm-6"> 
+                <label for="upload-media"><span class="glyphicon glyphicon-upload"></span>{{media_title}}</label>
                 <p class="help-block">{{media_failure}}</p>
-                <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span> {{media_upload}}</label>
+                <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span>{{media_upload}}</label>
                 <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
-            </div>
+            </div> 
 
             <button type="button" class="btn btn-primary" id="video" onclick="upload()">{{submit_button}}</button>
-        </form>
+        </form>             
     </div>
 </div>
+    
 <div id="loadingScreen" class="row">
     <div class="col-xs-12">
-        <h3> {{loading}}</h3>
+        <h3>{{loading}}</h3>
     </div>
     <div class="col-xs-12">
         <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>

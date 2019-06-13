@@ -33,7 +33,7 @@
   <script type="text/javascript" src="../js/button.js"></script>
   <script type="text/javascript" src="../js/map.js"></script>
   <script>
-    var map_text = '[{{each map_text}}\{ "title": {{this.title}}, "text": {{this.text}} \},{{/each}}]';
+    var map_text = {{{json map_text}}};
     createMap(map_text)
   </script>
 

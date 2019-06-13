@@ -101,12 +101,14 @@ function bindReportsDataToModal() {
     };
 
     $(".modal-title").text(data.nearest_address.split(",")[0]);
-    $("#date").text(data.date);
-    $("#duration_range").text(data.duration_range);
-    $("#nearest_address").text(data.nearest_address);
-    $("#name").text(name);
-    $("#description").text(data.description);
-    $("#truck_count").text(data.truck_amount);
+    $(".modal-body #date").text(data.date);
+    $(".modal-body #duration_range").text(data.duration_range);
+    $(".modal-body #nearest_address").text(data.nearest_address);
+    $(".modal-body #name").text(name);
+    $(".modal-body #description").text(data.description);
+    $(".modal-body #truck_amount").text(data.truck_amount);
+    $(".modal-body #city").text(data.city);
+    console.log(data);
 
     if (data.offRoute === undefined) {
       $("#offRoute").hide();

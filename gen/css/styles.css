@@ -602,6 +602,11 @@ h4.alert {
   color: white;
 }
 
+#report_button{
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
 @media (min-width: 576px) {
   #info img#elephant {
     width: 85px;
@@ -749,6 +754,7 @@ h4.alert {
     width: 1170px;
   }
 }
+
 
 
 

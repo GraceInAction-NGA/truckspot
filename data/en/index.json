@@ -14,11 +14,10 @@
 		"statement":"Polluted air has no boundaries of where it travels and will continue causing long term damage to people's health. You can make a change."
 	},
 
-	"submit":[
-		{"href":"report.html","text":"Report a Truck"},
-		{"href":"about.html","text":"About"},
-		{"href":"data.html","text":"Data"}
-	],
+		"report_button":{"href":"report.html","text":"Report a Truck"},
+		"about_button":{"href":"about.html","text":"About"},
+		"data_button":{"href":"data.html","text":"Data"},
+	
 
 	"slogan": {
 		"line_1": "Spot a truck. Stop a truck.",
@@ -36,5 +35,5 @@
 		{"title":"Train-Truck Intermodal", "text":"This is where several freight companies load and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
 		{"title":"Truck HotSpot", "text":"This is where a freight company loand and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
 		{"title":"Zug Island", "text":"This is a heavily industrialized island that causes a lot pollution."}
-	],
+	]
 }
