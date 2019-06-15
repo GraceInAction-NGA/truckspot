@@ -70,4 +70,3 @@ fs.readdirSync(CSS_PATH).forEach(file => copys(file, CSS_PATH, 'utf8'))
 fs.readdirSync(JS_PATH).forEach(file => copys(file, JS_PATH, 'utf8'))
 fs.readdirSync(IMAGE_PATH).forEach(file => copys(file, IMAGE_PATH, 'binary'))
 fs.readdirSync(TEMP_PATH).forEach(file => generatePage(file, data))
-
