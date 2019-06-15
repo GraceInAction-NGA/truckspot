@@ -311,7 +311,7 @@ div.card-body {
 }
 
 .home.btn-primary {
-  height: 60px;
+  /*height: 60px;*/
   font-size: 25px;
 }
 
@@ -328,7 +328,7 @@ div.card-body {
 .btn-secondary {
   color: #45A095;
   background-color: #ffffff;
-  height: 42px;
+  /*height: 42px;*/
   font-size: 18px;
 }
 
