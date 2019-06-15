@@ -59,10 +59,33 @@
         <!--slogan-->
       </div>
       <!--row-->
+      <div>
+        <select id="langSelector">
+          <option value="en">English</option>
+          <option value="sp">Espanol</option>
+        </select>
+      </div>
     </div>
     <!--#pic-->
   
   </header>
+  
+  <script>
+    $(function () {
+      $("#langSelector").change(function () {
+        const val = $(this).val();
+        const url = window.location.href.split("/");
+        const curLang = url[url.length - 2];
+        window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
+      });
+  
+      const val = $("#langSelector").val();
+      const url = window.location.href.split("/");
+      const curLang = url[url.length - 2];
+  
+      $(`#langSelector option[value='${curLang}']`).prop("selected", true);
+    })
+  </script>
   <div class="container">
       <div id="text-box">
           <form role="form" class="needs-validation" novalidate>
