@@ -11,46 +11,61 @@ var next = null;
 var prev = null;
 
 // download function
-function download(query) {
+function download(query, isFiltered = false) {
   // Clear out old reports
-  $(".reports").empty();
+  $(".reports").empty()
 
   const initialQuery = database.collection("reports")
     .orderBy("time_stamp")
     .limit(limit);
-
+  console.log("query",query);
   let localQuery = query ? query : initialQuery;
 
   database.collection("counts").get().then((queryCount) => {
     masterCount = queryCount.docs[0].data().count;
-
     localQuery.get().then((querySnapshot) => {
       $("#loading").hide();
+      
+      if (isFiltered) {
+        // Filtering does not use pagination
+        querySnapshot.forEach(doc => createReportEntry(doc));
 
-      // Set Pagination
-      const lastEntry = querySnapshot.docs[querySnapshot.docs.length - 1];
-      setNextPagination(lastEntry);
-      setPrevPagination(lastEntry);
-
-      querySnapshot.forEach(doc => createReportEntry(doc));
-
-      bindReportsDataToModal();
-
-      // Update Pagination
-      var pages = Math.round(masterCount / limit);
-      var page = Math.round(count / limit);
-      $(".pagination").text(page + " out of " + pages);
-
-      // Disables Last Button
-      if (count <= limit) {
+        bindReportsDataToModal();
         $("#lastBtn").attr("disabled", "disabled");
-      }
-
-      // Update Next Button
-      if (count >= masterCount) {
         $("#nextBtn").attr("disabled", "disabled");
+        $(".pagination").text("");
+      } else if (querySnapshot.docs.length !== 0) {
+        // Set Pagination
+        const lastEntry = querySnapshot.docs[querySnapshot.docs.length - 1];
+        setNextPagination(lastEntry);
+        setPrevPagination(lastEntry);
+
+        querySnapshot.forEach(doc => createReportEntry(doc));
+
+        bindReportsDataToModal();
+
+        // Update Pagination
+        var pages = Math.round(masterCount / limit) + (masterCount % limit !== 0);               
+        var page = Math.round(count / limit);
+        $(".pagination").text(page + " out of " + pages);
+
+        // Disables Last Button
+        if (count <= limit) {
+          $("#lastBtn").attr("disabled", "disasbled");
+        }
+
+        // Update Next Button
+        if (count >= masterCount) {
+          $("#nextBtn").attr("disabled", "disabled");
+        } else {
+          $("#nextBtn").removeAttr("disabled");
+        }
       } else {
-        $("#nextBtn").removeAttr("disabled");
+        // handle case when no results exists
+        $(".reports").append("<h5 style='text-align: center'>No Results Were Found</h5>");
+        $("#lastBtn").attr("disabled", "disasbled");
+        $("#nextBtn").attr("disabled", "disabled");
+        $(".pagination").text("");
       }
     });
   });
