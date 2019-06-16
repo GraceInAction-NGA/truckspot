@@ -7,33 +7,28 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
 </head>
 
 <body id="interior">
-    <header>
-        {{>header}}
-        <!-- pic-->
-        }
-    </header>
+    {{>header}}
 
     <div class="container">
-
-        {{>truck_reports}}
-
-        {{>filter}}
+        <div class="row">
+            {{>filter}}
+            {{>truck_reports}}
+        </div>
 
         {{>modal}}
-
-        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
-        <script type="text/javascript" src="../js/config.js"></script>
-        <script type="text/javascript" src="../js/download_v2.js"></script>
-        <script type="text/javascript" src="../js/download_filter.js"></script>
-        <script>
-            download();
-        </script>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="../js/download_v2.js"></script>
+<script type="text/javascript" src="../js/download_filter.js"></script>
+<script>
+    download();
+</script>
 
 </html>

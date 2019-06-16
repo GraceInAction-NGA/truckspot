@@ -59,11 +59,15 @@
         <!--slogan-->
       </div>
       <!--row-->
-      <div>
-        <select id="langSelector">
-          <option value="en">English</option>
-          <option value="sp">Espanol</option>
-        </select>
+      <div class="row">
+        <div class="col-xs-4 col-sm-2">
+            <div class="form-group">
+          <select id="langSelector" class="form-control">
+            <option value="en">English</option>
+            <option value="sp">Espanol</option>
+          </select>
+        </div>
+        </div>
       </div>
     </div>
     <!--#pic-->
@@ -72,16 +76,18 @@
   
   <script>
     $(function () {
+      const getLang = () => {
+        const url = window.location.href.split("/");
+        return url[url.length - 2];
+      };
+  
       $("#langSelector").change(function () {
         const val = $(this).val();
-        const url = window.location.href.split("/");
-        const curLang = url[url.length - 2];
+        const curLang = getLang();
         window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
       });
   
-      const val = $("#langSelector").val();
-      const url = window.location.href.split("/");
-      const curLang = url[url.length - 2];
+      const curLang = getLang();
   
       $(`#langSelector option[value='${curLang}']`).prop("selected", true);
     })

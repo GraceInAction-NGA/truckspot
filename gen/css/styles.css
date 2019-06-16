@@ -452,7 +452,11 @@ form input#upload-media {
   display: inline-block;
 }
 
-div#filter label{
+#filter > div {
+  margin-bottom: 1.5rem;
+}
+
+#filter label{
   color: #333;
   font-size: 15px;
   padding:2px 5px 0;
@@ -460,7 +464,16 @@ div#filter label{
   font-weight: 500;
 }
 
-input[type=checkbox]{
+#filter h4{
+  cursor: pointer;
+}
+
+#filter h4::before {
+  content: "\f13a";
+  font-family: "Font Awesome 5 Free";
+}
+
+input[type=checkbox], input[type=radio] {
   margin-left: 25px;
 }
 
