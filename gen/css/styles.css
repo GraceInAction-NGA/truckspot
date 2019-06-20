@@ -734,7 +734,11 @@ h4.alert {
   }
 }
 
+#footer{
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
 
-
-
-
+select#langSelector {
+  background-color:#91d2d0;
+}
