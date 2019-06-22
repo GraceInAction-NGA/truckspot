@@ -96,7 +96,7 @@ function createReportEntry(doc) {
 
   var address = report.nearest_address.split(",");
   var $address = '<p id="streetName">' + address[0] + '</p>';
-  var $button = '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary report" id="' + id + '"> ' + $address + ' </button></div>'
+  var $button = '<div class="col-xs-12 col-sm-6 col-md-4"><button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary report" id="' + id + '"> ' + $address + ' </button></div>'
   $(".reports").append($button);
   $('#' + id).data('data', report);
 }
