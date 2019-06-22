@@ -20,14 +20,14 @@
 		{"id":"idle", "label":"Idle"},
 		{"id":"noise", "label":"Noise"},
 		{"id":"offRoute", "label":"Off Route"},
-		{"id":"uncovered", "label":"Uncontained/Open Air Truck Trailer"}
+		{"id":"uncovered", "label":"Uncontained/Open Air Truck"}
 	],
 
 	"filter_truck_problem":[
 		{"id":"idle", "label":"Idle"},
 		{"id":"noise", "label":"Noise"},
 		{"id":"offRoute", "label":"Off Route"},
-		{"id":"uncovered", "label":"Uncontained/Open Air Truck Trailer"}, 	
+		{"id":"uncovered", "label":"Uncontained/Open Air Truck"}, 	
 		{"id":"all", "label":"All the above"}
 	],
 

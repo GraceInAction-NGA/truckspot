@@ -2,155 +2,310 @@
 <html>
 
 <head>
-  <title>Datos de Camiónes Inactivos</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
-  <meta name="mobile-web-app-capable" content="yes">
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <link rel="stylesheet" type="text/css" href="../css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <title>Truck Spot Data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,700,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body id="interior">
-  <header>
-    <div id="pic">
-      <div class="row">
-        <div class="col-lg-4 col-xl-12">
-          <div id="mobile-nav" class="btn-group">
-            <div class="dropdown hidden-lg">
-              <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menú
+    <header>
+      
+      <div id="pic" class="img-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+            <div id="mobile-nav" class="btn-group">
+              <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
+                <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menu
                 </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Home</a></li>
-                <li><a class="dropdown-item" href="data.html">Datos</a></li>
-                <li><a class="dropdown-item" href="about.html">Acerca</a></li>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="index.html">Casa</a></li>
+                  <li><a class="dropdown-item" href="data.html">Datos</a></li>
+                  <li><a class="dropdown-item" href="about.html">Acerca</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <a href="index.html">
+              <h1 id="logo">Truck Spot</h1>
+            </a>
+    
+          </div>
+    
+          <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+            <!--Jessica's menu here-->
+            <div class="dropdown">
+              <ul id=nav>
+                <li><a href="index.html">Casa</a></li>
+                <li><a href="data.html">Datos</a></li>
+                <li><a href="about.html">Acerca</a></li>
               </ul>
             </div>
+            <!-- dropdown-->
           </div>
-
-          <a href="index.html">
-            <h1 id="logo">Truck Spot</h1>
-          </a>
-
-        </div>
-
-        <div class="col-lg-8 hidden-xs hidden-sm hidden-md">
-          <!--Jessica's menu here-->
-          <div class="dropdown">
-            <ul id=nav>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="data.html">Datos</a></li>
-              <li><a href="about.html">Acerca</a></li>
-            </ul>
+          <div id="slogan">
+            <h2>Mira un camión. Para un camión.</h2>
+            <h3>Reporta ahora y has una diferencia.</h3>
           </div>
-          <!-- dropdown-->
+          <!--slogan-->
         </div>
-        <!-- pic-->
+        <!--row-->
       </div>
+      <!--#pic-->
+    
+    </header>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            <div id="text-box">
+            
+                <h3>Filtro de Reportes</h3>
+            
+                <div id="filter">
+                    <div id="first">
+                        <h4 class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Ciudad
+                        </h4>
+                        <div id="collapseOne" class="collapse" data-parent="#filter">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="city" name="city" value="Detroit">
+                                    <label class="form-check-label" id="city" for="city">Detroit</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="city" name="city" value="Dearborn">
+                                    <label class="form-check-label" id="city" for="city">Dearborn</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="city" name="city" value="all">
+                                    <label class="form-check-label" id="city" for="city">Todo lo Anterior</label>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="second">
+                        <h4 class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Duración
+                        </h4>
+                        <div id="collapseTwo" class="collapse" data-parent="#filter">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="duration" name="duration" value="0-5">
+                                    <label class="form-check-label" id="duration" for="duration">0-5 Minutos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="duration" name="duration" value="5-10">
+                                    <label class="form-check-label" id="duration" for="duration">5-10 Minutos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="duration" name="duration" value="10-15">
+                                    <label class="form-check-label" id="duration" for="duration">10-15 Minutos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="duration" name="duration" value="over 15">
+                                    <label class="form-check-label" id="duration" for="duration">More than 15 Minutos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="duration" name="duration" value="all">
+                                    <label class="form-check-label" id="duration" for="duration">Todo lo anterior</label>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="third">
+                        <h4 class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Cantidad de Camiones
+                        </h4>
+                        <div id="collapseThree" class="collapse" data-parent="#filter">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="number" name="number" value="1">
+                                    <label class="form-check-label" id="number" for="number">1</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="number" name="number" value="2">
+                                    <label class="form-check-label" id="number" for="number">2</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="number" name="number" value="3">
+                                    <label class="form-check-label" id="number" for="number">3</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="number" name="number" value="4">
+                                    <label class="form-check-label" id="number" for="number">4</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="number" name="number" value="5">
+                                    <label class="form-check-label" id="number" for="number">5+</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="number" name="number" value="all">
+                                    <label class="form-check-label" id="number" for="number">Todo lo anterior</label>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="fourth">
+                        <h4 class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Problema de Camion
+                        </h4>
+                        <div id="collapseFour" class="collapse" data-parent="#filter">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="problem" name="problem" value="idle">
+                                    <label class="form-check-label" id="problem" for="problem">Inactivo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="problem" name="problem" value="noise">
+                                    <label class="form-check-label" id="problem" for="problem">Ruidoso</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="problem" name="problem" value="offRoute">
+                                    <label class="form-check-label" id="problem" for="problem">Fuera de Ruta</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="problem" name="problem" value="uncovered">
+                                    <label class="form-check-label" id="problem" for="problem">Descubierto/Remolque al aire Libre</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="problem" name="problem" value="all">
+                                    <label class="form-check-label" id="problem" for="problem">Todo lo anterior</label>
+                                </div>
+                        </div>
+                    </div>
+                    <button id="filterSubmit" type="submit" class="btn btn-secondary">Someter</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="text-box">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h3>Reportes de Camiones</h3>
+                      <div id="loading">
+                        <img src="../images/Ellipsis-2s-200px.svg">
+                      </div>
+                      <div class="reports row">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-xs-4">
+                      <button id="lastBtn" class="btn btn-secondary" disabled>
+                        <i class="fas fa-arrow-left"></i>
+                      </button>
+                    </div>
+                    <div class="col-md-6 col-xs-4 text-center">
+                      <small class="pagination"> </small>
+                    </div>
+                    <div class="col-md-3 col-xs-4">
+                      <button id="nextBtn" class="btn btn-secondary">
+                        <i class="fas fa-arrow-right"></i> 
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                </div>        </div>
     </div>
-  </header>
 
-  <div class="container">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel report">Reporte</h4>
+                    </div>
+                    <div class="modal-body">
+        
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h5><b>Fecha</b></h5>
+                                <p id="date"></p>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><b>Duration</b></h5>
+                                <p id="duration_range"></p>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><b>Name</b></h5>
+                                <p id="name"></p>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><b>Nearest Address</b></h5>
+                                <p id="nearest_address"></p>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><b>Description</b></h5>
+                                <p id="description"></p>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><b>City</b></h5>
+                                <p id="city"></p>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><b>Truck Amount</b></h5>
+                                <p id="truck_amount"></p>
+                            </div>
+        
+                            <div class="col-xs-12">
+                                <h5><b>Problema de Camion</b></h5>
+                                <ul id="problem">
+                                    <li id="idle">Inactivo</li>
+                                    <li id="noise">Ruidoso</li>
+                                    <li id="offRoute">Fuera de Ruta</li>
+                                    <li id="uncovered">Descubierto/Remolque al aire Libre</li>
+                                    <li id="all">Todo lo anterior</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="footer">
+        	<div class="row">
+        		<div class="col-xs-4 col-sm-2">
+            		<div class="form-group">
+        	        <select id="langSelector" class="form-control">
+        	          <option value="en">English</option>
+        	          <option value="sp">Espanol</option>
+        	        </select>
+              		</div>
+            	</div>
+        	</div>
+        </div>
+        
+        <script>
+          $(function () {
+            const getLang = () => {
+              const url = window.location.href.split("/");
+              return url[url.length - 2];
+            };
+        
+            $("#langSelector").change(function () {
+              const val = $(this).val();
+              const curLang = getLang();
+              window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
+            });
+        
+            const curLang = getLang();
+        
+            $(`#langSelector option[value='${curLang}']`).prop("selected", true);
+          })
+        </script></body>
 
-    <div id="text-box">
-      <div class="row">
-        <div class="col-xs-12">
-          <h3>Datos de Camiónes Inactivos</h3>
-          <div id="loading">
-            <img src="../images/Ellipsis-2s-200px.svg">
-            <!-- https://loading.io/spinner/ellipsis/-discuss-ellipsis-preloader -->
-          </div>
-          <div class="reports row">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-xs-5">
-          <button id="lastBtn" class="btn btn-secondary" disabled>Anterior</button>
-        </div>
-        <div class="col-md-6 col-xs-2 text-center">
-          <small class="pagination"> </small>
-        </div>
-        <div class="col-md-3 col-xs-5">
-          <button id="nextBtn" class="btn btn-secondary">Siguiente</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel report">El Informe</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-xs-4">
-              <h5><b>Fecha</b></h5>
-              <p id="date"></p>
-            </div>
-            <div class="col-xs-4">
-              <h5><b>Duración</b></h5>
-              <p id="duration_range"></p>
-            </div>
-            <div class="col-xs-4">
-              <h5><b>Nombre</b></h5>
-              <p id="name"></p>
-            </div>
-            <div class="col-xs-12">
-              <h5><b>Dirección más cercana</b></h5>
-              <p id="nearest_address"></p>
-            </div>
-            <div class="col-xs-12">
-              <h5><b>Descripción</b></h5>
-              <p id="description"></p>
-            </div>
-            <div class="col-xs-12">
-              <h5><b>Problemas Causados por Camiones</b></h5>
-              <ul id="problem">
-                <p id="na">N/A</p>
-                <li id="uncovered">Descubierto/Remolque al aire libre</li>
-                <li id="offRoute">Fuera de Ruta</li>
-                <li id="idle">Inactivo</li>
-                <li id="noise">Ruidoso</li>
-              </ul>
-            </div>
-            <div class="col-xs-12">
-              <h5><b>Camiones Involucrados</b></h5>
-              <p id="truck_count"></p>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
-  <script type="text/javascript" src="../javascript/config.js"></script>
-  <script type="text/javascript" src="../javascript/download_v2.js"></script>
-  <script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="../js/download_v2.js"></script>
+<script type="text/javascript" src="../js/download_filter.js"></script>
+<script>
     download();
-  </script>
-</body>
+</script>
+
 </html>

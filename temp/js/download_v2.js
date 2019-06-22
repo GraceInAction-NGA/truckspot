@@ -18,7 +18,7 @@ function download(query, isFiltered = false) {
   const initialQuery = database.collection("reports")
     .orderBy("time_stamp")
     .limit(limit);
-  console.log("query",query);
+  
   let localQuery = query ? query : initialQuery;
 
   database.collection("counts").get().then((queryCount) => {
@@ -114,14 +114,15 @@ function bindReportsDataToModal() {
     } else {
       name = data.name
     };
-
+    
     $(".modal-title").text(data.nearest_address.split(",")[0]);
     $("#date").text(data.date);
     $("#duration_range").text(data.duration_range);
     $("#nearest_address").text(data.nearest_address);
     $("#name").text(name);
+    $("p#city").text(data.city);
     $("#description").text(data.description);
-    $("#truck_count").text(data.truck_amount);
+    $("#truck_amount").text(data.truck_amount);
 
     if (data.offRoute === undefined) {
       $("#offRoute").hide();

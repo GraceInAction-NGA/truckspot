@@ -8,7 +8,7 @@ handlebars.registerHelper('json',function (content){
 // Constants
 const TEMP_PATH = "./temp"
 const DATA_PATH = "./data"
-const GEN_PATH = "./gen"
+const GEN_PATH = "./public"
 const CSS_PATH = `${TEMP_PATH}/css`;
 const JS_PATH = `${TEMP_PATH}/js`;
 const IMAGE_PATH = `${TEMP_PATH}/images`;
