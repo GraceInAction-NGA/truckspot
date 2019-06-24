@@ -740,5 +740,6 @@ h4.alert {
 }
 
 select#langSelector {
-  background-color:#91d2d0;
+  background-color:#d9efee;
+  color: #61b2a9;
 }

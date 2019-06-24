@@ -18,7 +18,7 @@
 	"problem_title":"How is the truck problematic?",
 	"problem_failure":"Select at least one",
 	"truck_problem":[
-		"Idle","Noise","Off Route","Uncontained/Open Air Truck Trailer"
+		"Idle","Noise","Off Route","Open Air Truck Trailer"
 	],
 
 	"duration_title":"Duration",

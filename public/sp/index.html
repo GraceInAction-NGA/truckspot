@@ -60,6 +60,36 @@
         </div>
         <!--slogan-->
       </div>
+  
+          <div class="row">
+            <div class="col-xs-4 col-sm-2">
+              <div class="form-group">
+                  <select id="langSelector" class="form-control">
+                    <option value="en">English</option>
+                    <option value="sp">Espanol</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+  
+        <script>
+          $(function () {
+            const getLang = () => {
+              const url = window.location.href.split("/");
+              return url[url.length - 2];
+            };
+  
+            $("#langSelector").change(function () {
+              const val = $(this).val();
+              const curLang = getLang();
+              window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
+            });
+  
+            const curLang = getLang();
+  
+            $(`#langSelector option[value='${curLang}']`).prop("selected", true);
+          })
+        </script>
       <!--row-->
     </div>
     <!--#pic-->
@@ -67,37 +97,6 @@
   </header>
   
 
-<div class="container" id="footer">  
-  <div class="row">
-    <div class="col-xs-4 col-sm-2">
-      <div class="form-group">
-          <select id="langSelector" class="form-control">
-            <option value="en">English</option>
-            <option value="sp">Espanol</option>
-          </select>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <script>
-    $(function () {
-      const getLang = () => {
-        const url = window.location.href.split("/");
-        return url[url.length - 2];
-      };
-
-      $("#langSelector").change(function () {
-        const val = $(this).val();
-        const curLang = getLang();
-        window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
-      });
-
-      const curLang = getLang();
-
-      $(`#langSelector option[value='${curLang}']`).prop("selected", true);
-    })
-  </script>
 </header>
 
   <div class="container">

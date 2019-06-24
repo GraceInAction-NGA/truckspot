@@ -18,7 +18,7 @@
 	"problem_title":"¿Como es el camión problematico?",
 	"problem_failure":"Select at least one",
 	"truck_problem":[
-		"Inactivo","Ruidoso"," Fuera de Ruta","Descubierto/Remolque al aire libre"
+		"Inactivo","Ruidoso"," Fuera de Ruta","Remolque al aire libre"
 	],
 
 	"duration_title":"Duración",
