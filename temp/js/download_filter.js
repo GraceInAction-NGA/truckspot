@@ -18,6 +18,7 @@ function filter() {
   query = modifyQuery(query, fourth)
 
   download(query, true);
+  $(".reports").empty()
 };
 
 function modifyQuery(query, data, key) {

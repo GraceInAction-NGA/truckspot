@@ -1,0 +1,16 @@
+[debug] [2019-06-27T23:07:15.302Z] ----------------------------------------------------------------------
+[debug] [2019-06-27T23:07:15.304Z] Command:       /Users/luis/.nvm/versions/node/v10.11.0/bin/node /Users/luis/.nvm/versions/node/v10.11.0/bin/firebase deploy
+[debug] [2019-06-27T23:07:15.305Z] CLI Version:   6.7.1
+[debug] [2019-06-27T23:07:15.305Z] Platform:      darwin
+[debug] [2019-06-27T23:07:15.305Z] Node Version:  v10.11.0
+[debug] [2019-06-27T23:07:15.306Z] Time:          Thu Jun 27 2019 19:07:15 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-06-27T23:07:15.306Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-27T23:07:15.319Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-27T23:07:15.319Z] > authorizing via signed-in user
+[debug] [2019-06-27T23:07:15.319Z] [iam] checking project truckspot-gia-48209 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-27T23:07:15.321Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/truckspot-gia-48209:testIamPermissions  
+
+[debug] [2019-06-27T23:07:16.036Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-27T23:07:16.039Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/truckspot-gia-48209  
+ 
