@@ -16,7 +16,7 @@ function download(query, isFiltered = false) {
   // $(".reports").empty()
 
   const initialQuery = database.collection("reports")
-    .orderBy("time_stamp")
+    .orderBy("time_stamp", "desc")
     .limit(limit);
   
   let localQuery = query ? query : initialQuery;
@@ -174,14 +174,14 @@ function bindReportsDataToModal() {
 
 function setNextPagination(entry) {
   next = database.collection("reports")
-    .orderBy("time_stamp")
+    .orderBy("time_stamp", "desc")
     .startAfter(entry)
     .limit(limit);
 }
 
 function setPrevPagination(entry) {
   prev = database.collection("reports")
-    .orderBy("time_stamp")
+    .orderBy("time_stamp", "desc")
     .endAt(entry)
     .limit(limit);
 }

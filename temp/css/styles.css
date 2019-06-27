@@ -492,7 +492,7 @@ h4.alert {
 
 #loadingScreen {
   width: 100%;
-  height: 100%;
+  height: 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -506,6 +506,7 @@ h4.alert {
 #loading img {
   display: block;
   margin: 0 auto;
+  height: 50px;
 }
 
 .ldBar-label {
