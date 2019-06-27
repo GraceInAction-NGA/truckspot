@@ -349,6 +349,22 @@ button#filterSubmit{
   margin-top: 15px;
 }
 
+#footer{
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+select#langSelector {
+  background-color:#fea958;
+  color: #8c3030;
+  border-color: #ea9579;
+}
+
+header #lang-toggle {
+  width: 10%;
+  margin-top: 50px;
+}
+
 video {
   background: #222;
   margin: 10px auto;
@@ -606,10 +622,10 @@ h4.alert {
 
 @media (min-width: 768px) {
   header {
-    background: url(../images/app-background-image-truckL.jpg) center center no-repeat;
+    background: url(../images/app-background-image-truckL.jpg) bottom center no-repeat;
     margin-bottom: 25px;
     background-attachment: fixed;
-    min-height: 350px;
+    min-height: 525px;
     background-size: cover;
   }
   #interior header {
@@ -699,7 +715,7 @@ h4.alert {
 
     width: 750px;
     padding-right: 25px;
-    margin-right: auto;
+    margin-bottom:30px;
   }
 
 
@@ -733,14 +749,4 @@ h4.alert {
   div#pic {
     width: 1170px;
   }
-}
-
-#footer{
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-
-select#langSelector {
-  background-color:#d9efee;
-  color: #61b2a9;
 }
