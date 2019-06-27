@@ -132,14 +132,14 @@ function isFormValidated(formData) {
       isValid = false;
       $("input[name='duration_range']").parent().addClass("has-error").find(".error-block").show();
     } else if (formData[i].name == "nearest_address") {
-      var re = new RegExp("^((\\d+) (.+)), (.+), ((.+) ([\\d-]+))$");
-      if (re.test(formData[i].value)) {
-        console.log("Valid");
-      } else {
-        isValid = false;
-        $("input[name='nearest_address']").parent().addClass("has-error").find(".error-block").show();
-        $("#finding").hide();
-      }
+      // var re = new RegExp("^((\\d+) (.+)), (.+), ((.+) ([\\d-]+))$");
+      // if (re.test(formData[i].value)) {
+        // console.log("Valid");
+      // } else {
+        // isValid = false;
+        // $("input[name='nearest_address']").parent().addClass("has-error").find(".error-block").show();
+        // $("#finding").hide();
+      // }
     } else if (formData[i].name == "description" && formData[i].value == "") {
       isValid = false;
       $("textarea[name='description']").parent().addClass("has-error").find(".error-block").show();

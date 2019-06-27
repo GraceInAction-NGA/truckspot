@@ -1,0 +1,29 @@
+[debug] [2019-06-27T20:45:01.024Z] ----------------------------------------------------------------------
+[debug] [2019-06-27T20:45:01.027Z] Command:       /Users/luis/.nvm/versions/node/v10.11.0/bin/node /Users/luis/.nvm/versions/node/v10.11.0/bin/firebase serve --only hosting
+[debug] [2019-06-27T20:45:01.027Z] CLI Version:   6.7.1
+[debug] [2019-06-27T20:45:01.027Z] Platform:      darwin
+[debug] [2019-06-27T20:45:01.027Z] Node Version:  v10.11.0
+[debug] [2019-06-27T20:45:01.036Z] Time:          Thu Jun 27 2019 16:45:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-06-27T20:45:01.037Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-27T20:45:01.054Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-27T20:45:01.055Z] > authorizing via signed-in user
+[debug] [2019-06-27T20:45:01.055Z] [iam] checking project truckspot-gia-48209 for permissions ["firebase.projects.get"]
+[debug] [2019-06-27T20:45:01.057Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-27T20:45:01.057Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-27T20:45:01.833Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-27T20:45:01.841Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/truckspot-gia-48209:testIamPermissions  
+
+[debug] [2019-06-27T20:45:02.884Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-27T20:45:02.885Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/truckspot-gia-48209  
+ 
+[debug] [2019-06-27T20:45:03.123Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/luis/Desktop/gia_truckspot'...
+[info] 
+[debug] [2019-06-27T20:45:03.127Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/729839815071/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-27T20:45:04.219Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000

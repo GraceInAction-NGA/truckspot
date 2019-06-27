@@ -4,7 +4,7 @@ var database = firebase.firestore();
 // Get reference to storage
 var storage = firebase.storage();
 
-var limit = 24;
+var limit = 10;
 var count = limit;
 var masterCount = 0;
 var next = null;
@@ -13,7 +13,7 @@ var prev = null;
 // download function
 function download(query, isFiltered = false) {
   // Clear out old reports
-  $(".reports").empty()
+  // $(".reports").empty()
 
   const initialQuery = database.collection("reports")
     .orderBy("time_stamp")
@@ -48,10 +48,10 @@ function download(query, isFiltered = false) {
         var pages = Math.round(masterCount / limit) + (masterCount % limit !== 0);               
         var page = Math.round(count / limit);
         $(".pagination").text(page + " out of " + pages);
-
+        
         // Disables Last Button
         if (count <= limit) {
-          $("#lastBtn").attr("disabled", "disasbled");
+          $("#lastBtn").attr("disabled", "disabled");
         }
 
         // Update Next Button
@@ -62,10 +62,10 @@ function download(query, isFiltered = false) {
         }
       } else {
         // handle case when no results exists
-        $(".reports").append("<h5 style='text-align: center'>No Results Were Found</h5>");
-        $("#lastBtn").attr("disabled", "disasbled");
+        // $(".reports").append("<h5 style='text-align: center'>No Results Were Found</h5>");
+        $("#lastBtn").attr("disabled", "disabled");
         $("#nextBtn").attr("disabled", "disabled");
-        $(".pagination").text("");
+        // $(".pagination").text("");
       }
     });
   });
