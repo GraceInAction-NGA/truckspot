@@ -19,84 +19,75 @@
 
 <body>
   <header>
-  <header>
-    
-    <div id="pic" class="img-fluid">
-      <div class="row">
-        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
-          <div id="mobile-nav" class="btn-group">
-            <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
-              <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Casa</a></li>
-                <li><a class="dropdown-item" href="data.html">Datos</a></li>
-                <li><a class="dropdown-item" href="about.html">Acerca</a></li>
-              </ul>
-            </div>
-          </div>
-  
-          <a href="index.html">
-            <h1 id="logo">Truck Spot</h1>
-          </a>
-  
-        </div>
-  
-        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
-          <!--Jessica's menu here-->
-          <div class="dropdown">
-            <ul id=nav>
-              <li><a href="index.html">Casa</a></li>
-              <li><a href="data.html">Datos</a></li>
-              <li><a href="about.html">Acerca</a></li>
+  <div id="pic" class="img-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+        <div id="mobile-nav" class="btn-group">
+          <div class="dropdown hidden-sm hidden-md hidden-lg hidden-xl">
+            <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="index.html">Casa</a></li>
+              <li><a class="dropdown-item" href="data.html">Datos</a></li>
+              <li><a class="dropdown-item" href="about.html">Acerca</a></li>
             </ul>
           </div>
-          <!-- dropdown-->
         </div>
-        <div id="slogan">
-          <h2>Mira un camión. Para un camión.</h2>
-          <h3>Reporta ahora y has una diferencia.</h3>
-        </div>
-        <!--slogan-->
+  
+        <a href="index.html">
+          <h1 id="logo">Truck Spot</h1>
+        </a>
+  
       </div>
   
-          <div class="row">
-            <div class="col-xs-4 col-sm-2">
-              <div class="form-group">
-                  <select id="langSelector" class="form-control">
-                    <option value="en">English</option>
-                    <option value="sp">Espanol</option>
-                  </select>
-              </div>
-            </div>
-          </div>
+      <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6">
+        <!--Jessica's menu here-->
+        <div class="dropdown">
+          <ul id=nav>
+            <li><a href="index.html">Casa</a></li>
+            <li><a href="data.html">Datos</a></li>
+            <li><a href="about.html">Acerca</a></li>
+          </ul>
+        </div>
+        <!-- dropdown-->
+      </div>
+      <div id="slogan">
+        <h2>Mira un camión. Para un camión.</h2>
+        <h3>Reporta ahora y has una diferencia.</h3>
+      </div>
+    <!--slogan-->
+      <div id="lang-toggle" class="form-group">
+          <select id="langSelector" class="form-control">
+            <option value="en">English</option>
+            <option value="sp">Espanol</option>
+          </select>
+      </div>
   
-        <script>
-          $(function () {
-            const getLang = () => {
-              const url = window.location.href.split("/");
-              return url[url.length - 2];
-            };
+      <script>
+        $(function () {
+          const getLang = () => {
+            const url = window.location.href.split("/");
+            return url[url.length - 2];
+          };
   
-            $("#langSelector").change(function () {
-              const val = $(this).val();
-              const curLang = getLang();
-              window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
-            });
-  
+          $("#langSelector").change(function () {
+            const val = $(this).val();
             const curLang = getLang();
+            window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
+          });
   
-            $(`#langSelector option[value='${curLang}']`).prop("selected", true);
-          })
-        </script>
-      <!--row-->
+          const curLang = getLang();
+  
+          $(`#langSelector option[value='${curLang}']`).prop("selected", true);
+        })
+      </script>
+  
     </div>
-    <!--#pic-->
   
-  </header>
-  
-
+    <!--row-->
+  </div>
+  <!--#pic-->
 </header>
 
   <div class="container">
