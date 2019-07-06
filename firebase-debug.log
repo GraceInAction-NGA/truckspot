@@ -1,29 +1,25 @@
-[debug] [2019-07-06T12:00:46.374Z] ----------------------------------------------------------------------
-[debug] [2019-07-06T12:00:46.376Z] Command:       /Users/luis/.nvm/versions/node/v10.11.0/bin/node /Users/luis/.nvm/versions/node/v10.11.0/bin/firebase serve --only hosting
-[debug] [2019-07-06T12:00:46.376Z] CLI Version:   6.7.1
-[debug] [2019-07-06T12:00:46.376Z] Platform:      darwin
-[debug] [2019-07-06T12:00:46.376Z] Node Version:  v10.11.0
-[debug] [2019-07-06T12:00:46.388Z] Time:          Sat Jul 06 2019 08:00:46 GMT-0400 (Eastern Daylight Time)
-[debug] [2019-07-06T12:00:46.388Z] ----------------------------------------------------------------------
+[debug] [2019-07-06T18:56:33.910Z] ----------------------------------------------------------------------
+[debug] [2019-07-06T18:56:33.912Z] Command:       /Users/luis/.nvm/versions/node/v10.11.0/bin/node /Users/luis/.nvm/versions/node/v10.11.0/bin/firebase serve --only hosting
+[debug] [2019-07-06T18:56:33.912Z] CLI Version:   6.7.1
+[debug] [2019-07-06T18:56:33.912Z] Platform:      darwin
+[debug] [2019-07-06T18:56:33.913Z] Node Version:  v10.11.0
+[debug] [2019-07-06T18:56:33.913Z] Time:          Sat Jul 06 2019 14:56:33 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-07-06T18:56:33.913Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-07-06T12:00:46.406Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-07-06T12:00:46.406Z] > authorizing via signed-in user
-[debug] [2019-07-06T12:00:46.407Z] [iam] checking project truckspot-gia-48209 for permissions ["firebase.projects.get"]
-[debug] [2019-07-06T12:00:46.408Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2019-07-06T12:00:46.409Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2019-07-06T12:00:46.622Z] <<< HTTP RESPONSE 200
-[debug] [2019-07-06T12:00:46.630Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/truckspot-gia-48209:testIamPermissions  
+[debug] [2019-07-06T18:56:33.926Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-06T18:56:33.927Z] > authorizing via signed-in user
+[debug] [2019-07-06T18:56:33.927Z] [iam] checking project truckspot-gia-48209 for permissions ["firebase.projects.get"]
+[debug] [2019-07-06T18:56:33.929Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/truckspot-gia-48209:testIamPermissions  
 
-[debug] [2019-07-06T12:00:46.857Z] <<< HTTP RESPONSE 200
-[debug] [2019-07-06T12:00:46.859Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/truckspot-gia-48209  
+[debug] [2019-07-06T18:56:34.203Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-06T18:56:34.206Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/truckspot-gia-48209  
  
-[debug] [2019-07-06T12:00:47.174Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-06T18:56:34.339Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/luis/Desktop/gia_truckspot'...
 [info] 
-[debug] [2019-07-06T12:00:47.178Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/729839815071/clients/_:getWebAppConfig  
+[debug] [2019-07-06T18:56:34.342Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/729839815071/clients/_:getWebAppConfig  
  
-[debug] [2019-07-06T12:00:47.498Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-06T18:56:34.657Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000

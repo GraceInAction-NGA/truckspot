@@ -43,6 +43,7 @@
 	"address_title":"Nearest Street",
 	"adress_help":"Finding Adress",
 	"adress_failure":"Enter a valid address: Address Street",
+	"adress_placeholder":"Street Name",
 
 	"date_failre":"Enter a date",
 	"date_title":"Date",
@@ -60,6 +61,7 @@
 		{"href":"index.html","text":"Home"},
 		{"href":"data.html","text":"Data"},
 		{"href":"about.html","text":"About"}
-	]
+	],
 
+	"description_placeholder": "Try to get the name on the truck door, and other details not captured by the picture"
 }

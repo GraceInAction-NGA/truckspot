@@ -1,5 +1,8 @@
 <div class="container">
     <div id="text-box">
+        <div id="alert" class="alert alert-danger alert-dismissible" role="alert">
+            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+        </div>
         <form role="form" class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="field form-group col-sm-6">
@@ -18,7 +21,7 @@
                 <label for="nearestAddress">{{address_title}}</label>
                 <span id="finding" class="help-block">{{address_help}}</span>
                 <p class="error-block">{{address_failure}}</p>
-                <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+                <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="{{adress_placeholder}}" value="" required>
             </div>
 
             <div class="field form-group">
@@ -64,14 +67,14 @@
             <div class="field form-group col-sm-6">
                 <label for="description">{{description_title}}</label>
                 <p class="error-block">{{description_failure}}</p>
-                <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
+                <textarea rows="4" name="description" class="form-control" cols="50" placeholder="{{description_placeholder}}" id="description" required></textarea>
             </div>
 
             <div class="field form-group col-sm-6"> 
                 <label for="upload-media"><span class="glyphicon glyphicon-upload"></span>{{media_title}}</label>
                 <p class="help-block">{{media_failure}}</p>
                 <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span>{{media_upload}}</label>
-                <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
+                <input type="file" accept="image/*, video/*" style="display:none;" class="form-control-file" name="media" id="upload-media">
             </div> 
 
             <button type="button" class="btn btn-primary" id="video" onclick="upload()">{{submit_button}}</button>

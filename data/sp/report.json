@@ -43,6 +43,7 @@
 	"address_title":"Calle Más Cercana",
 	"adress_help":"Encontrando dirección",
 	"adress_failure":"Entra una dirección valida: Calle",
+	"adress_placeholder":"Calle",
 
 	"date_failre":"Entra una fecha",
 	"date_title":"Fecha",
@@ -60,6 +61,7 @@
 		{"href":"index.html","text":"Casa"},
 		{"href":"data.html","text":"Datos"},
 		{"href":"about.html","text":"Acerca"}
-	]
+	],
 
+	"description_placeholder": "Trate de poner el nombre en la puerta del camión y otros detalles que no aparecen en la imagen"
 }

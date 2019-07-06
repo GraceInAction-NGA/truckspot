@@ -67,6 +67,9 @@
 
   <div class="container">
       <div id="text-box">
+          <div id="alert" class="alert alert-danger alert-dismissible" role="alert">
+              <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+          </div>
           <form role="form" class="needs-validation" novalidate>
               <div class="form-row">
                   <div class="field form-group col-sm-6">
@@ -85,7 +88,7 @@
                   <label for="nearestAddress">Calle Más Cercana</label>
                   <span id="finding" class="help-block"></span>
                   <p class="error-block"></p>
-                  <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+                  <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Calle" value="" required>
               </div>
   
               <div class="field form-group">
@@ -142,14 +145,14 @@
               <div class="field form-group col-sm-6">
                   <label for="description">Descripción</label>
                   <p class="error-block">Entra una descripción</p>
-                  <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Try to get the name on the truck door, and other details not captured by the picture" id="description" required></textarea>
+                  <textarea rows="4" name="description" class="form-control" cols="50" placeholder="Trate de poner el nombre en la puerta del camión y otros detalles que no aparecen en la imagen" id="description" required></textarea>
               </div>
   
               <div class="field form-group col-sm-6"> 
                   <label for="upload-media"><span class="glyphicon glyphicon-upload"></span> Carga de medios</label>
                   <p class="help-block">elecciona o captura medios desde tu teléfono</p>
                   <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span>Selecciona o Captura Medios</label>
-                  <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
+                  <input type="file" accept="image/*, video/*" style="display:none;" class="form-control-file" name="media" id="upload-media">
               </div> 
   
               <button type="button" class="btn btn-primary" id="video" onclick="upload()">Someter</button>
@@ -200,7 +203,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
   <script type="text/javascript" src="../js/config.js"></script>
-  <script type="text/javascript" src="../js/upload_v2.js"></script>
+  <script type="text/javascript" src="../js/upload.js"></script>
 </body>
 
 </html>

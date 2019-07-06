@@ -32,7 +32,7 @@ const download = (query, isFiltered = false) => {
     if (hasDocs) {
       querySnapshot.forEach(doc => createReportEntry(doc));
       bindReportsDataToModal();
-    } else {
+    } else if (!next){
       $(".reports").append("<h5 style='text-align: center'>No Results Were Found</h5>");
     }
 
@@ -46,6 +46,9 @@ const download = (query, isFiltered = false) => {
     if (isFiltered || hasDocsRemaining) {
       $("#nextBtn").attr("disabled", "disabled");
     }
+  }).catch((e) => {
+    console.log("bad");
+    console.log(e);
   });
 };
 
@@ -55,7 +58,7 @@ const filter = () => {
   const third = $.map($("#third input:checked"), e => $(e).val());  
   const fourth = $.map($("#fourth input:checked"), e => $(e).val());  
   
-  let query = database.collection("reports");//.orderBy("time_stamp", "desc");
+  let query = database.collection("reports").orderBy("time_stamp", "desc");
 
   query = modifyQuery(query, first, "city");
   query = modifyQuery(query, second, "duration_range");
@@ -107,7 +110,10 @@ const bindReportsDataToModal = () => {
       storage.ref("/" + id).getDownloadURL().then((url) => {
         const media = getElementForMedia(data.media_type, url);
         $(".modal-body").append(media);
-      });
+      }).catch((e) => {
+        console.log("bad");
+        console.log(e);
+      });;
     }
   });
 }

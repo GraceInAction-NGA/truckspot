@@ -175,7 +175,7 @@ button.btn-dark {
 }
 
 #text-box {
-  padding: 0px 25px 25px;
+  padding: 25px;
   background-color: #91D2D0;
   border: 3px solid #45A095;
   text-align: left;
@@ -224,7 +224,7 @@ p#statement {
 
 #text-box h3 {
   color: #8c3030;
-  margin-top: 30px;
+  margin-top: 0px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -513,6 +513,7 @@ h4.alert {
   text-align: center;
   padding-top: 5em;
   display: none;
+  z-index: 1;
   margin: 0 auto;
 }
 
@@ -613,7 +614,6 @@ h4.alert {
 }
 
 #report_button{
-  margin-top: 25px;
   margin-bottom: 15px;
 }
 

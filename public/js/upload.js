@@ -46,10 +46,11 @@ function upload() {
   // Clear Errors
   $(".error-block").hide();
   $(".has-error").removeClass("has-error");
+  $("#alert").hide();
 
   // Get data from form
   const formData = $("form").serializeArray();
-  
+
   if (isFormValidated(formData)) {
     uploadReport(formData);
   }
@@ -63,7 +64,10 @@ function uploadReport(formData) {
   database.collection("reports")
     .add(data)
     .then((ref) => data.hasMedia ? uploadMedia(ref.id) : redirect())
-    .catch((error) => alert("Data Upload Failed"));
+    .catch((error) => {
+      $("#uploadingScreen").hide();
+      $("#alert").text("We were unable to upload your report").show();
+  });
 };
 
 function uploadMedia(refId) {
@@ -72,7 +76,10 @@ function uploadMedia(refId) {
 
   task.on("state_changed",
     (snapshot) => updateGraph(snapshot.bytesTransferred, snapshot.totalBytes),
-    (error) => alert("Media Upload Failed"),
+    (error) => {
+      $("#uploadingScreen").hide();
+      $("#alert").text("We were unable to upload your media file").show();
+  },
     redirect
   );
 }
@@ -120,6 +127,14 @@ function isFormValidated(formData) {
     }
   }
 
+  const mediaFiles = $("input[type='file']")[0].files;
+  if (mediaFiles.length > 0) {
+    const regex = RegExp('image\/.*|video\/.*');
+    if (!regex.test(mediaFiles[0].type)) {
+      isValid = false;
+    }
+  }
+
   if (!isValid) {
     $("#uploadingScreen").hide();
   } else {
@@ -132,4 +147,8 @@ function isFormValidated(formData) {
 $("#upload-media").change(function() {
   const fileName = $(this)[0].files[0].name;
   $(this).prev().html('<span class="glyphicon glyphicon-upload"></span> ' + fileName);
+});
+
+$(function() {
+  $("#alert").hide();
 });

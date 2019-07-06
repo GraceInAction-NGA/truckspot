@@ -65,6 +65,9 @@ const mapLang = (acc, path) => {
 
 // Main Program
 const data = fs.readdirSync(DATA_PATH).reduce(mapLang, {})
+if (!fs.existsSync(GEN_PATH)) {
+  fs.mkdirSync(GEN_PATH, { recursive: true});
+}
 fs.readdirSync(PARTIALS_PATH).forEach(file => registerPartial(file))
 fs.readdirSync(CSS_PATH).forEach(file => copys(file, CSS_PATH, 'utf8'))
 fs.readdirSync(JS_PATH).forEach(file => copys(file, JS_PATH, 'utf8'))

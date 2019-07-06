@@ -67,6 +67,9 @@
 
   <div class="container">
       <div id="text-box">
+          <div id="alert" class="alert alert-danger alert-dismissible" role="alert">
+              <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+          </div>
           <form role="form" class="needs-validation" novalidate>
               <div class="form-row">
                   <div class="field form-group col-sm-6">
@@ -85,7 +88,7 @@
                   <label for="nearestAddress">Nearest Street</label>
                   <span id="finding" class="help-block"></span>
                   <p class="error-block"></p>
-                  <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
+                  <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Street Name" value="" required>
               </div>
   
               <div class="field form-group">
@@ -149,7 +152,7 @@
                   <label for="upload-media"><span class="glyphicon glyphicon-upload"></span>Media Upload</label>
                   <p class="help-block">Select or capture media from your phone</p>
                   <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span>Select or Capture Media</label>
-                  <input type="file" style="display:none;" class="form-control-file" name="media" id="upload-media">
+                  <input type="file" accept="image/*, video/*" style="display:none;" class="form-control-file" name="media" id="upload-media">
               </div> 
   
               <button type="button" class="btn btn-primary" id="video" onclick="upload()">Submit</button>
@@ -200,7 +203,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
   <script type="text/javascript" src="../js/config.js"></script>
-  <script type="text/javascript" src="../js/upload_v2.js"></script>
+  <script type="text/javascript" src="../js/upload.js"></script>
 </body>
 
 </html>
