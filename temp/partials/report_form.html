@@ -36,8 +36,8 @@
                 <label for="duration">{{duration_title}}</label>
                 <p class="error-block">{{duration_failure}}</p>
                 <select name="duration_range" class="field form-control" id="duration" required>
-                    {{#each duration}}
-                        <option value="{{this}}">{{this}}</option>
+                    {{#each duration_range}}
+                        <option value="{{this.key}}">{{this.value}}</option>
                     {{/each}}
                 </select>
             </div>
@@ -46,15 +46,15 @@
                 <label for="problemTruck">{{problem_title}}</label>
                 <p class="error-block">{{problem}}</p>
                 {{#each truck_problem}}<div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
-                    <label class="form-check-label" for="idle">{{this}}</label>
+                    <input class="form-check-input" type="checkbox" id="{{this.key}}" name="{{this.key}}" value="{{this.key}}">
+                    <label class="form-check-label" for="{{this.key}}">{{this.value}}</label>
                 </div>{{/each}}
             </div>
 
             <div class="field form-group col-sm-6">
                 <label for="truckAmount">{{amount_title}}</label>
                 <p class="error-block">{{amount_failure}}</p>
-                <select name="truck_amount" class="field form-control" id="truckAxmount" required>
+                <select name="truck_amount" class="field form-control" id="truckAmount" required>
                     {{#each truck_number}}
                         <option value="{{this}}">{{this}}</option>
                     {{/each}}
@@ -79,7 +79,7 @@
     </div>
 </div>
     
-<div id="loadingScreen" class="row">
+<div id="uploadingScreen" class="row">
     <div class="col-xs-12">
         <h3>{{loading}}</h3>
     </div>

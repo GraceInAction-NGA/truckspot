@@ -4,12 +4,12 @@
 	"modal_title":"Reporte",
 		"modal_body":[
 		{"label":"Fecha", "id":"date"},
-		{"label":"Duration", "id":"duration_range"},
-		{"label":"Name", "id":"name"},
-		{"label":"Nearest Address", "id":"nearest_address"},
-		{"label":"Description", "id":"description"},
-		{"label":"City", "id":"city"},
-		{"label":"Truck Amount", "id":"truck_amount"}
+		{"label":"Duración", "id":"duration_range"},
+		{"label":"Nombre", "id":"name"},
+		{"label":"Calle Mas Cercana", "id":"nearest_address"},
+		{"label":"Descripción", "id":"description"},
+		{"label":"Ciudad", "id":"city"},
+		{"label":"Cantidad de Camiones", "id":"truck_amount"}
 	],
 
 	"modal_footer":"Cerrar",
@@ -19,8 +19,8 @@
 		{"id":"idle", "label":"Inactivo"},
 		{"id":"noise", "label":"Ruidoso"},
 		{"id":"offRoute", "label":"Fuera de Ruta"},
-		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"}, 	
-		{"id":"all", "label":"Todo lo anterior"}
+		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"},
+		{"id":"na", "label":"N/A"}	
 	],
 
 	"filter_truck_problem":[
@@ -37,7 +37,7 @@
 		{"id":"2", "label":"2"},
 		{"id":"3", "label":"3"},
 		{"id":"4", "label":"4"},
-		{"id":"5", "label":"5+"},
+		{"id":"5+", "label":"5+"},
 		{"id":"all", "label":"Todo lo anterior"}
 	],
 
@@ -46,7 +46,7 @@
 		{"id":"0-5", "label":"0-5 Minutos"},
 		{"id":"5-10", "label":"5-10 Minutos"},
 		{"id":"10-15", "label":"10-15 Minutos"},
-		{"id":"over 15", "label":"More than 15 Minutos"},
+		{"id":"15+", "label":"Mas de 15 Minutos"},
 		{"id":"all", "label":"Todo lo anterior"}
 	],
 

@@ -1,5 +1,5 @@
 // Get reference to databse
-var database = firebase.database();
+var database = firebase.firestore();
 
 // Get reference to storage
 var storage = firebase.storage();
@@ -19,131 +19,117 @@ if (isSafari) {
 }
 
 // Get Geolocation (lat, long)
-var pos = null;
 if ("geolocation" in navigator) {
   /* geolocation is available */
-  navigator.geolocation.getCurrentPosition(function (position) {
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
-    pos = position;
-    console.log(position);
-
-    // Get Address from Geolocation
-    $.getJSON('https://nominatim.openstreetmap.org/reverse', {
-      lat: position.coords.latitude,
-      lon: position.coords.longitude,
+  navigator.geolocation.getCurrentPosition(({coords}) => {
+    const request = {
+      lat: coords.latitude,
+      lon: coords.longitude,
       format: 'json',
-    }, function (result) {
-      $("#finding").text("Found! Correct if inaccurate.")
-      $("#nearestAddress").val(result.address.house_number + " " + result.address.road + ", " + result.address.city + ", " + result.address.state + " " + result.address.postcode);
-    });
+    };
 
-  }, function (position) {
-    $("#finding").text("")
-  });
+    const updateFormAddress = ({address}) => {
+      $("#finding").text("Found! Correct if inaccurate.");
+      $("#nearestAddress").val(address.house_number + " " + address.road);
+    };
+
+    $.getJSON('https://nominatim.openstreetmap.org/reverse', request, updateFormAddress);
+  }, 
+    (position) => $("#finding").text("")
+  );
 } else {
   $("#finding").text("We couldn't locate you! Please provide the address.")
 }
 
 // Upload Function
-function upload(path, redirectPath) {
-  // Get number of reports uploaded
-  firebase.database().ref('/' + path + '/count').once('value').then(function (snapshot) {
-      var count = snapshot.val();
-      // Get data from form
-      var formData = $("form").serializeArray();
+function upload() {
+  // Clear Errors
+  $(".error-block").hide();
+  $(".has-error").removeClass("has-error");
 
-      var isValid = true;
-      $(".error-block").hide();
-      $(".has-error").removeClass("has-error");
-      // Check Data
-      for (var i = 0; i < formData.length; i++) {
-        if (formData[i].name == "date" && formData[i].value == "") {
-          isValid = false;
-          $("input[name='date']").parent().addClass("has-error").find(".error-block").show();
-        } else if (formData[i].name == "duration_range" && formData[i].value == "") {
-          isValid = false;
-          $("input[name='duration_range']").parent().addClass("has-error").find(".error-block").show();
-        } else if (formData[i].name == "nearest_address") {
-          var re = new RegExp("^((\\d+) (.+)), (.+), ((.+) ([\\d-]+))$");
-          if (re.test(formData[i].value)) {
-            console.log("Valid");
-          } else {
-            isValid = false;
-            $("input[name='nearest_address']").parent().addClass("has-error").find(".error-block").show();
-            $("#finding").hide();
-          }
-      } else if (formData[i].name == "description" && formData[i].value == "") {
-        isValid = false;
-        $("textarea[name='description']").parent().addClass("has-error").find(".error-block").show();
-      }
-    }
+  // Get data from form
+  const formData = $("form").serializeArray();
+  
+  if (isFormValidated(formData)) {
+    uploadReport(formData);
+  }
+};
 
-    if (!isValid) {
-      $("#loadingScreen").hide();
-      return false;
-    } else {
-      $("#loadingScreen").show();
-    }
+function uploadReport(formData) {
+  // Prepare data to upload
+  const data = mapFormData(formData);
 
-    // Increment number of reports uploaded
-    database.ref("/" + path + "/count").set(count + 1);
+  // Upload Data
+  database.collection("reports")
+    .add(data)
+    .then((ref) => data.hasMedia ? uploadMedia(ref.id) : redirect())
+    .catch((error) => alert("Data Upload Failed"));
+};
 
-    // Prepare data to upload
-    var data = {}; $(formData).each(function (index, obj) {
-      data[obj.name] = obj.value;
-    });
+function uploadMedia(refId) {
+  const mediaFiles = $("input[type='file']")[0].files;
+  const task = storage.ref("/" + refId).put(mediaFiles[0]);
 
-    // Prepare Media for upload
-    var mediaFiles = $("input[type='file']")[0].files;
+  task.on("state_changed",
+    (snapshot) => updateGraph(snapshot.bytesTransferred, snapshot.totalBytes),
+    (error) => alert("Media Upload Failed"),
+    redirect
+  );
+}
 
-    console.log(mediaFiles);
-    var isMediaUploaded = false;
-    var isDataUploaded = false; data["time_stamp"] = firebase.database.ServerValue.TIMESTAMP
-    // Check if Media exists
-    if (mediaFiles.length != 0) {
-      // Upload Media
-      var task = storage.ref("/" + path + "/report" + count + "/" + mediaFiles[0].name).put(mediaFiles[0]);
-      data["file_name"] = mediaFiles[0].name;
-      data["file_type"] = mediaFiles[0].type;
-      task.on("state_changed", function (snapshot) {
-        var newGraph = new ldBar(".ldBar");
-        newGraph.set((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-        if (snapshot.bytesTransferred == snapshot.totalBytes) {
-          isMediaUploaded = true;
-        }
-        if (isDataUploaded && isMediaUploaded) {
-          setTimeout(function () {
-            window.location = redirectPath;
-          }, 1000);
-        }
-      });
-    } else {
-      isMediaUploaded = true;
-      var newGraph = new ldBar(".ldBar");
-      newGraph.set(100);
-    }
-    // Upload Data
-    database.ref("/" + path + "/report" + count).set(data, function (err) {
-      if (err) {
-        alert("Upload of data failed");
-      } else {
-        isDataUploaded = true;
-        if (isDataUploaded && isMediaUploaded) {
-          window.location = redirectPath;
-        }
-      }
-    });
+function redirect() {
+  updateGraph();
+  setTimeout(() => window.location = "data.html", 1000);
+}
+
+function updateGraph(bytesTransferred = 1, totalBytes = 1) {
+  var newGraph = new ldBar(".ldBar");
+  newGraph.set((bytesTransferred / totalBytes) * 100);
+}
+
+function mapFormData(formData) {
+  const mediaFiles = $("input[type='file']")[0].files;
+  const hasMedia = mediaFiles.length != 0;
+
+  let data = {};
+  $(formData).each(function (index, obj) {
+    data[obj.name] = obj.value;
   });
+
+  data["time_stamp"] = firebase.firestore.FieldValue.serverTimestamp();
+  data["hasMedia"] = hasMedia;
+  data["media_name"] = hasMedia ? mediaFiles[0].name : null;
+  data["media_type"] = hasMedia ? mediaFiles[0].type : null;
+
+  return data;
 }
 
-$("#upload-media").change(function(){
-    var fileName = $(this)[0].files[0].name;
-    console.log($(this).prev());
-    $(this).prev().html('<span class="glyphicon glyphicon-upload"></span> ' + fileName);
- });
+function isFormValidated(formData) {
+  var isValid = true;
+  // Check Data
+  for (var i = 0; i < formData.length; i++) {
+    if (formData[i].name == "date" && formData[i].value == "") {
+      isValid = false;
+      $("input[name='date']").parent().addClass("has-error").find(".error-block").show();
+    } else if (formData[i].name == "duration_range" && formData[i].value == "") {
+      isValid = false;
+      $("input[name='duration_range']").parent().addClass("has-error").find(".error-block").show();
+    } else if (formData[i].name == "description" && formData[i].value == "") {
+      isValid = false;
+      $("textarea[name='description']").parent().addClass("has-error").find(".error-block").show();
+    }
+  }
 
-/* report.html */
-function onBtnIdleFormSubmitClicked() {
-  upload("idle_truck", "data.html");
+  if (!isValid) {
+    $("#uploadingScreen").hide();
+  } else {
+    $("#uploadingScreen").show();
+  }
+
+  return isValid;
 }
+
+$("#upload-media").change(function() {
+  const fileName = $(this)[0].files[0].name;
+  $(this).prev().html('<span class="glyphicon glyphicon-upload"></span> ' + fileName);
+});

@@ -11,8 +11,8 @@
             <div id="collapseOne" class="collapse" data-parent="#filter">
                 {{#each city}}
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="city" name="city" value="{{this.id}}">
-                        <label class="form-check-label" id="city" for="city">{{this.label}}</label>
+                        <input class="form-check-input" type="radio" id="{{this.id}}" name="city" value="{{this.id}}">
+                        <label class="form-check-label" id="{{this.id}}" for="{{this.id}}">{{this.label}}</label>
                     </div>
                 {{/each}}
             </div>
@@ -24,8 +24,8 @@
             <div id="collapseTwo" class="collapse" data-parent="#filter">
                 {{#each duration}}
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="duration" name="duration" value="{{this.id}}">
-                        <label class="form-check-label" id="duration" for="duration">{{this.label}}</label>
+                        <input class="form-check-input" type="radio" id="{{this.id}}" name="duration_range" value="{{this.id}}">
+                        <label class="form-check-label" id="{{this.id}}" for="{{this.id}}">{{this.label}}</label>
                     </div>
                 {{/each}}
             </div>
@@ -37,8 +37,8 @@
             <div id="collapseThree" class="collapse" data-parent="#filter">
                 {{#each truck_number}}
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="number" name="number" value="{{this.id}}">
-                        <label class="form-check-label" id="number" for="number">{{this.label}}</label>
+                        <input class="form-check-input" type="radio" id="{{this.id}}" name="truck_amount" value="{{this.id}}">
+                        <label class="form-check-label" id="{{this.id}}" for="{{this.id}}">{{this.label}}</label>
                     </div>
                 {{/each}}
             </div>
@@ -50,8 +50,8 @@
             <div id="collapseFour" class="collapse" data-parent="#filter">
                 {{#each filter_truck_problem}}
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="problem" name="problem" value="{{this.id}}">
-                        <label class="form-check-label" id="problem" for="problem">{{this.label}}</label>
+                        <input class="form-check-input" type="checkbox" id="{{this.id}}" name="truck_problem" value="{{this.id}}">
+                        <label class="form-check-label" id="{{this.id}}" for="{{this.id}}">{{this.label}}</label>
                     </div>
                 {{/each}}
             </div>

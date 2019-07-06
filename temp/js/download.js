@@ -84,7 +84,7 @@ const bindReportsDataToModal = () => {
     const id = $(this)[0].id;
     const data = $(this).data('data');
     const hasNoTruckProblem = !data.uncovered && !data.noise && !data.idle && !data.offRoute;
-    const toggleKey = (key) => data[key] ? $(`#${key}`).show() : $(`#${key}`).hide();
+    const toggleKey = (key) => data[key] ? $(`.modal #${key}`).show() : $(`.modal #${key}`).hide();
     
     $(".modal-title").text(data.nearest_address.split(",")[0]);
     $("#date").text(data.date);

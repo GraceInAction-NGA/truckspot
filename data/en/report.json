@@ -18,13 +18,19 @@
 	"problem_title":"How is the truck problematic?",
 	"problem_failure":"Select at least one",
 	"truck_problem":[
-		"Idle","Noise","Off Route","Open Air Truck Trailer"
+		{"key": "idle", "value": "Idle"},
+		{"key": "noise", "value": "Noise"},
+		{"key": "offRoute", "value": "Off Route"},
+		{"key": "uncovered", "value": "Open Air Truck Trailer"}
 	],
 
 	"duration_title":"Duration",
 	"duration_failure":"Enter a duration",
-	"duration":[
-		"0-5 Minutes","5-10 Minutes","10-15 Minutes","More than 15 Minutes"
+	"duration_range":[
+		{"key": "0-5", "value": "0-5 Minutes"},
+		{"key": "5-10", "value": "5-10 Minutes"},
+		{"key": "10-15", "value": "10-15 Minutes"},
+		{"key": "15+", "value": "More than 15 Minutes"}
 	],
 
 
@@ -34,9 +40,9 @@
 		"Detroit","Dearborn"
 	],
 
-	"address_title":"Nearest Address",
+	"address_title":"Nearest Street",
 	"adress_help":"Finding Adress",
-	"adress_failure":"Enter a valid address: Addresse Street, City, State Zip",
+	"adress_failure":"Enter a valid address: Address Street",
 
 	"date_failre":"Enter a date",
 	"date_title":"Date",

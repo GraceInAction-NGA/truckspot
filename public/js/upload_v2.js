@@ -21,20 +21,22 @@ if (isSafari) {
 // Get Geolocation (lat, long)
 if ("geolocation" in navigator) {
   /* geolocation is available */
-  navigator.geolocation.getCurrentPosition(function (position) {
-    // Get Address from Geolocation
-    $.getJSON('https://nominatim.openstreetmap.org/reverse', {
-      lat: position.coords.latitude,
-      lon: position.coords.longitude,
+  navigator.geolocation.getCurrentPosition(({coords}) => {
+    const request = {
+      lat: coords.latitude,
+      lon: coords.longitude,
       format: 'json',
-    }, function (result) {
-      $("#finding").text("Found! Correct if inaccurate.")
-      $("#nearestAddress").val(result.address.house_number + " " + result.address.road + ", " + result.address.city + ", " + result.address.state + " " + result.address.postcode);
-    });
+    };
 
-  }, function (position) {
-    $("#finding").text("")
-  });
+    const updateFormAddress = ({address}) => {
+      $("#finding").text("Found! Correct if inaccurate.");
+      $("#nearestAddress").val(address.house_number + " " + address.road);
+    };
+
+    $.getJSON('https://nominatim.openstreetmap.org/reverse', request, updateFormAddress);
+  }, 
+    (position) => $("#finding").text("")
+  );
 } else {
   $("#finding").text("We couldn't locate you! Please provide the address.")
 }
@@ -47,61 +49,42 @@ function upload() {
 
   // Get data from form
   const formData = $("form").serializeArray();
+  
+  if (isFormValidated(formData)) {
+    uploadReport(formData);
+  }
+};
 
-  if (!isFormValidated(formData)) return;
-
+function uploadReport(formData) {
   // Prepare data to upload
   const data = mapFormData(formData);
 
   // Upload Data
   database.collection("reports")
     .add(data)
-    .then((ref) => {
-      incrementReportCount();
-      if (data.hasMedia) {
-        uploadMedia(ref.id);
-      } else {
-        redirect()
-      }
-    }).catch((error) => {
-      console.error("Error", error);
-      alert("Data Upload Failed");
-    });
+    .then((ref) => data.hasMedia ? uploadMedia(ref.id) : redirect())
+    .catch((error) => alert("Data Upload Failed"));
 };
 
-function incrementReportCount() {
-  database.collection("counts").get().then((querySnapshot) => {
-    const id = querySnapshot.doc[0].id;
-    const count = querySnapshot.doc[0].count + 1;
-    database.collection("counts").get(id).update({
-      count: count
-    });
-  });
-}
-
-function uploadMedia(ref) {
+function uploadMedia(refId) {
   const mediaFiles = $("input[type='file']")[0].files;
-  const task = storage.ref("/" + ref).put(mediaFiles[0]);
+  const task = storage.ref("/" + refId).put(mediaFiles[0]);
 
   task.on("state_changed",
-    (snapshot) => {
-      var newGraph = new ldBar(".ldBar");
-      newGraph.set((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-    },
-    (error) => {
-      console.error("Error", error);
-      alert("Media Upload Failed");
-    },
-    () => {
-      redirect();
-    }
+    (snapshot) => updateGraph(snapshot.bytesTransferred, snapshot.totalBytes),
+    (error) => alert("Media Upload Failed"),
+    redirect
   );
 }
 
 function redirect() {
-  var newGraph = new ldBar(".ldBar");
-  newGraph.set(100);
+  updateGraph();
   setTimeout(() => window.location = "data.html", 1000);
+}
+
+function updateGraph(bytesTransferred = 1, totalBytes = 1) {
+  var newGraph = new ldBar(".ldBar");
+  newGraph.set((bytesTransferred / totalBytes) * 100);
 }
 
 function mapFormData(formData) {
@@ -131,15 +114,6 @@ function isFormValidated(formData) {
     } else if (formData[i].name == "duration_range" && formData[i].value == "") {
       isValid = false;
       $("input[name='duration_range']").parent().addClass("has-error").find(".error-block").show();
-    } else if (formData[i].name == "nearest_address") {
-      // var re = new RegExp("^((\\d+) (.+)), (.+), ((.+) ([\\d-]+))$");
-      // if (re.test(formData[i].value)) {
-        // console.log("Valid");
-      // } else {
-        // isValid = false;
-        // $("input[name='nearest_address']").parent().addClass("has-error").find(".error-block").show();
-        // $("#finding").hide();
-      // }
     } else if (formData[i].name == "description" && formData[i].value == "") {
       isValid = false;
       $("textarea[name='description']").parent().addClass("has-error").find(".error-block").show();
@@ -147,15 +121,15 @@ function isFormValidated(formData) {
   }
 
   if (!isValid) {
-    $("#loadingScreen").hide();
+    $("#uploadingScreen").hide();
   } else {
-    $("#loadingScreen").show();
+    $("#uploadingScreen").show();
   }
 
   return isValid;
 }
 
-$("#upload-media").change(function () {
-  var fileName = $(this)[0].files[0].name;
+$("#upload-media").change(function() {
+  const fileName = $(this)[0].files[0].name;
   $(this).prev().html('<span class="glyphicon glyphicon-upload"></span> ' + fileName);
 });

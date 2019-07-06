@@ -10,7 +10,7 @@ function filter() {
   const third = $.map($("#third input:checked"), e => $(e).val());  
   const fourth = $.map($("#fourth input:checked"), e => $(e).val());  
   
-  let query = database.collection("reports");
+  let query = database.collection("reports");//.orderBy("time_stamp", "desc");
 
   query = modifyQuery(query, first, "city");
   query = modifyQuery(query, second, "duration_range");
@@ -18,7 +18,7 @@ function filter() {
   query = modifyQuery(query, fourth)
 
   download(query, true);
-  $(".reports").empty()
+  $(".reports").empty();
 };
 
 function modifyQuery(query, data, key) {

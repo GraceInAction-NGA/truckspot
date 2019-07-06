@@ -82,7 +82,7 @@
               </div>
   
               <div id="address" class="field form-group">
-                  <label for="nearestAddress">Dirección Más Cercana</label>
+                  <label for="nearestAddress">Calle Más Cercana</label>
                   <span id="finding" class="help-block"></span>
                   <p class="error-block"></p>
                   <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
@@ -102,10 +102,10 @@
                   <label for="duration">Duración</label>
                   <p class="error-block">Introduce una duración</p>
                   <select name="duration_range" class="field form-control" id="duration" required>
-                          <option value="0-5 Minutos">0-5 Minutos</option>
-                          <option value="5-10 Minutos">5-10 Minutos</option>
-                          <option value="10-15 Minutos">10-15 Minutos</option>
-                          <option value="Mas de 15 Minutos">Mas de 15 Minutos</option>
+                          <option value="0-5">0-5 Minutos</option>
+                          <option value="5-10">5-10 Minutos</option>
+                          <option value="10-15">10-15 Minutos</option>
+                          <option value="15+">Mas de 15 Minutos</option>
                   </select>
               </div>
   
@@ -116,21 +116,21 @@
                       <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
                       <label class="form-check-label" for="idle">Inactivo</label>
                   </div><div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
-                      <label class="form-check-label" for="idle">Ruidoso</label>
+                      <input class="form-check-input" type="checkbox" id="noise" name="noise" value="noise">
+                      <label class="form-check-label" for="noise">Ruidoso</label>
                   </div><div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
-                      <label class="form-check-label" for="idle"> Fuera de Ruta</label>
+                      <input class="form-check-input" type="checkbox" id="offRoute" name="offRoute" value="offRoute">
+                      <label class="form-check-label" for="offRoute">Fuera de Ruta</label>
                   </div><div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
-                      <label class="form-check-label" for="idle">Remolque al aire libre</label>
+                      <input class="form-check-input" type="checkbox" id="uncovered" name="uncovered" value="uncovered">
+                      <label class="form-check-label" for="uncovered">Remolque al aire libre</label>
                   </div>
               </div>
   
               <div class="field form-group col-sm-6">
                   <label for="truckAmount">¿Cuántos camiones hay?</label>
                   <p class="error-block">Seleccione una cantidad</p>
-                  <select name="truck_amount" class="field form-control" id="truckAxmount" required>
+                  <select name="truck_amount" class="field form-control" id="truckAmount" required>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -157,7 +157,7 @@
       </div>
   </div>
       
-  <div id="loadingScreen" class="row">
+  <div id="uploadingScreen" class="row">
       <div class="col-xs-12">
           <h3>Subiendo tu información</h3>
       </div>

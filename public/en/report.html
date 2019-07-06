@@ -82,7 +82,7 @@
               </div>
   
               <div id="address" class="field form-group">
-                  <label for="nearestAddress">Nearest Address</label>
+                  <label for="nearestAddress">Nearest Street</label>
                   <span id="finding" class="help-block"></span>
                   <p class="error-block"></p>
                   <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="Address" value="" required>
@@ -102,10 +102,10 @@
                   <label for="duration">Duration</label>
                   <p class="error-block">Enter a duration</p>
                   <select name="duration_range" class="field form-control" id="duration" required>
-                          <option value="0-5 Minutes">0-5 Minutes</option>
-                          <option value="5-10 Minutes">5-10 Minutes</option>
-                          <option value="10-15 Minutes">10-15 Minutes</option>
-                          <option value="More than 15 Minutes">More than 15 Minutes</option>
+                          <option value="0-5">0-5 Minutes</option>
+                          <option value="5-10">5-10 Minutes</option>
+                          <option value="10-15">10-15 Minutes</option>
+                          <option value="15+">More than 15 Minutes</option>
                   </select>
               </div>
   
@@ -116,21 +116,21 @@
                       <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
                       <label class="form-check-label" for="idle">Idle</label>
                   </div><div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
-                      <label class="form-check-label" for="idle">Noise</label>
+                      <input class="form-check-input" type="checkbox" id="noise" name="noise" value="noise">
+                      <label class="form-check-label" for="noise">Noise</label>
                   </div><div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
-                      <label class="form-check-label" for="idle">Off Route</label>
+                      <input class="form-check-input" type="checkbox" id="offRoute" name="offRoute" value="offRoute">
+                      <label class="form-check-label" for="offRoute">Off Route</label>
                   </div><div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="idle" name="idle" value="idle">
-                      <label class="form-check-label" for="idle">Open Air Truck Trailer</label>
+                      <input class="form-check-input" type="checkbox" id="uncovered" name="uncovered" value="uncovered">
+                      <label class="form-check-label" for="uncovered">Open Air Truck Trailer</label>
                   </div>
               </div>
   
               <div class="field form-group col-sm-6">
                   <label for="truckAmount">How many trucks are there?</label>
                   <p class="error-block">Select an amount</p>
-                  <select name="truck_amount" class="field form-control" id="truckAxmount" required>
+                  <select name="truck_amount" class="field form-control" id="truckAmount" required>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -157,7 +157,7 @@
       </div>
   </div>
       
-  <div id="loadingScreen" class="row">
+  <div id="uploadingScreen" class="row">
       <div class="col-xs-12">
           <h3>Uploading your information</h3>
       </div>

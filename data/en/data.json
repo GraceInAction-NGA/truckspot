@@ -6,7 +6,7 @@
 		{"label":"Date", "id":"date"},
 		{"label":"Duration", "id":"duration_range"},
 		{"label":"Name", "id":"name"},
-		{"label":"Nearest Address", "id":"nearest_address"},
+		{"label":"Nearest Street", "id":"nearest_address"},
 		{"label":"Description", "id":"description"},
 		{"label":"City", "id":"city"},
 		{"label":"Truck Amount", "id":"truck_amount"}
@@ -16,11 +16,11 @@
 
 	"problem_title":"Truck Problem",
 	"truck_problem":[
-		{"id":"na", "label":"N/A"},
 		{"id":"idle", "label":"Idle"},
 		{"id":"noise", "label":"Noise"},
 		{"id":"offRoute", "label":"Off Route"},
-		{"id":"uncovered", "label":"Uncontained/Open Air Truck"}
+		{"id":"uncovered", "label":"Uncontained/Open Air Truck"},
+		{"id":"na", "label":"N/A"}
 	],
 
 	"filter_truck_problem":[
@@ -37,7 +37,7 @@
 		{"id":"2", "label":"2"},
 		{"id":"3", "label":"3"},
 		{"id":"4", "label":"4"},
-		{"id":"5", "label":"5+"},
+		{"id":"5+", "label":"5+"},
 		{"id":"all", "label":"All the above"}
 	],
 
@@ -46,7 +46,7 @@
 		{"id":"0-5", "label":"0-5 Minutes"},
 		{"id":"5-10", "label":"5-10 Minutes"},
 		{"id":"10-15", "label":"10-15 Minutes"},
-		{"id":"over 15", "label":"More than 15 Minutes"},
+		{"id":"15+", "label":"More than 15 Minutes"},
 		{"id":"all", "label":"All the above"}
 	],
 
