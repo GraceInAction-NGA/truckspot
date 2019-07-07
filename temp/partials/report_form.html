@@ -4,17 +4,15 @@
             <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
         </div>
         <form role="form" class="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="field form-group col-sm-6">
-                    <label for="name">{{name_title}}</label>
-                    <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
-                </div>
+            <div class="field form-group">
+                <label for="name">{{name_title}}</label>
+                <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
+            </div>
 
-                <div class="field form-group col-sm-6">
-                    <label for="date">{{date_title}}</label>
-                    <p class="error-block">{{date_failure}}</p>
-                    <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
-                </div>
+            <div class="field form-group">
+                <label for="date">* {{date_title}}</label>
+                <p class="error-block">{{date_failure}}</p>
+                <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
             </div>
 
             <div id="address" class="field form-group">
@@ -25,7 +23,7 @@
             </div>
 
             <div class="field form-group">
-                <label>{{city_title}}</label>
+                <label>* {{city_title}}</label>
                 <p class="error-block">{{city_failure}}</p>
                 <select name="city" class="field form-control col-sm-6">
                     {{#each city}}
@@ -36,7 +34,7 @@
             </div>
 
             <div class="field form-group">
-                <label for="duration">{{duration_title}}</label>
+                <label for="duration">* {{duration_title}}</label>
                 <p class="error-block">{{duration_failure}}</p>
                 <select name="duration_range" class="field form-control" id="duration" required>
                     {{#each duration_range}}
@@ -45,7 +43,7 @@
                 </select>
             </div>
 
-            <div id="checkbox-group" class="field form-group col-sm-6">
+            <div id="checkbox-group" class="field form-group">
                 <label for="problemTruck">{{problem_title}}</label>
                 <p class="error-block">{{problem}}</p>
                 {{#each truck_problem}}<div class="form-check">
@@ -54,8 +52,8 @@
                 </div>{{/each}}
             </div>
 
-            <div class="field form-group col-sm-6">
-                <label for="truckAmount">{{amount_title}}</label>
+            <div class="field form-group">
+                <label for="truckAmount">* {{amount_title}}</label>
                 <p class="error-block">{{amount_failure}}</p>
                 <select name="truck_amount" class="field form-control" id="truckAmount" required>
                     {{#each truck_number}}
@@ -64,13 +62,13 @@
                 </select>
             </div>
 
-            <div class="field form-group col-sm-6">
-                <label for="description">{{description_title}}</label>
+            <div class="field form-group">
+                <label for="description">* {{description_title}}</label>
                 <p class="error-block">{{description_failure}}</p>
                 <textarea rows="4" name="description" class="form-control" cols="50" placeholder="{{description_placeholder}}" id="description" required></textarea>
             </div>
 
-            <div class="field form-group col-sm-6"> 
+            <div class="field form-group"> 
                 <label for="upload-media"><span class="glyphicon glyphicon-upload"></span>{{media_title}}</label>
                 <p class="help-block">{{media_failure}}</p>
                 <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span>{{media_upload}}</label>

@@ -468,6 +468,10 @@ form input#upload-media {
   display: inline-block;
 }
 
+#text-box.filter {
+  margin-bottom: 2rem;
+}
+
 #filter > div {
   margin-bottom: 1.5rem;
 }
