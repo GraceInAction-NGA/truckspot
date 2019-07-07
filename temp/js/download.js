@@ -73,8 +73,8 @@ const filter = () => {
 const createReportEntry = (doc) => {
   const id = doc.id;
   const report = doc.data();
-  const address = report.nearest_address.split(",");
-  const $address = '<p id="streetName">' + address[0] + '</p>';
+  const address = report.nearest_address.length > 0 ? report.nearest_address : `${report.city} ${report.date}`;
+  const $address = '<p id="streetName">' + address + '</p>';
   const $button = '<div class="col-xs-12 col-sm-6 col-md-4"><button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary report" id="' + id + '"> ' + $address + ' </button></div>'
   
   $(".reports").append($button);
@@ -92,7 +92,7 @@ const bindReportsDataToModal = () => {
     $(".modal-title").text(data.nearest_address.split(",")[0]);
     $("#date").text(data.date);
     $("#duration_range").text(data.duration_range);
-    $("#nearest_address").text(data.nearest_address);
+    $("#nearest_address").text(data.nearest_address.length > 0 ? data.nearest_address : "N/P");
     $("#name").text(data.name === "" ? "N/P" : data.name);
     $("p#city").text(data.city);
     $("#description").text(data.description);
@@ -113,6 +113,7 @@ const bindReportsDataToModal = () => {
       }).catch((e) => {
         console.log("bad");
         console.log(e);
+        $(".modal-body").append("<p> Unable to load Media </p>")
       });;
     }
   });
