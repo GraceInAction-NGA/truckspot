@@ -1,0 +1,22 @@
+{
+  "name": "TruckSpot",
+  "version": "1.0.0",
+  "description": "Web App designed to collect information on idling trucks in Southeast Michigan",
+  "main": "compile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GraceInAction-NGA/truckspot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GraceInAction-NGA/truckspot/issues"
+  },
+  "homepage": "https://github.com/GraceInAction-NGA/truckspot#readme",
+  "dependencies": {
+    "handlebars": "^4.1.2"
+  }
+}
