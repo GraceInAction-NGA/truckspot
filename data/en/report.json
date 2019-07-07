@@ -1,0 +1,67 @@
+{
+	"loading":"Uploading your information",
+	"submit_button":"Submit",
+
+	"media_title":"Media Upload",
+	"media_failure":"Select or capture media from your phone",
+	"media_upload":"Select or Capture Media",
+
+	"description_title":"Description",
+	"description_failure":"Enter a description",
+
+	"amount_title":"How many trucks are there?",
+	"amount_failure":"Select an amount",
+	"truck_number":[
+		"1","2","3","4","5+"
+	],
+
+	"problem_title":"How is the truck problematic?",
+	"problem_failure":"Select at least one",
+	"truck_problem":[
+		{"key": "idle", "value": "Idle"},
+		{"key": "noise", "value": "Noise"},
+		{"key": "offRoute", "value": "Off Route"},
+		{"key": "uncovered", "value": "Open Air Truck Trailer"}
+	],
+
+	"duration_title":"Duration",
+	"duration_failure":"Enter a duration",
+	"duration_range":[
+		{"key": "0-5", "value": "0-5 Minutes"},
+		{"key": "5-10", "value": "5-10 Minutes"},
+		{"key": "10-15", "value": "10-15 Minutes"},
+		{"key": "15+", "value": "More than 15 Minutes"}
+	],
+
+
+	"city_title":"City",
+	"city_failure":"Choose a city",
+	"city":[
+		"Detroit","Dearborn"
+	],
+
+	"address_title":"Nearest Street",
+	"adress_help":"Finding Adress",
+	"adress_failure":"Enter a valid address: Address Street",
+	"adress_placeholder":"Street Name",
+
+	"date_failre":"Enter a date",
+	"date_title":"Date",
+
+	"name_title":"Name",
+
+	"title":"Report",
+
+	"slogan": {
+		"line_1": "Spot a truck. Stop a truck.",
+		"line_2": "Report now and make a difference."
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"Home"},
+		{"href":"data.html","text":"Data"},
+		{"href":"about.html","text":"About"}
+	],
+
+	"description_placeholder": "Try to get the name on the truck door, and other details not captured by the picture"
+}

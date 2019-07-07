@@ -1,0 +1,33 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel report">{{modal_title}}</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    {{#each modal_body}}
+                    <div class="col-xs-6">
+                        <h5><b>{{this.label}}</b></h5>
+                        <p id="{{this.id}}"></p>
+                    </div>
+                    {{/each}}
+
+                    <div class="col-xs-12">
+                        <h5><b>{{problem_title}}</b></h5>
+                        <ul id="problem">
+                            {{#each truck_problem}}
+                            <li id="{{this.id}}">{{this.label}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{modal_footer}}</button>
+            </div>
+        </div>
+    </div>
+</div>

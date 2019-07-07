@@ -1,0 +1,67 @@
+{
+	"loading":"Subiendo tu información",
+	"submit_button":"Someter",
+
+	"media_title":" Carga de medios",
+	"media_failure":"elecciona o captura medios desde tu teléfono",
+	"media_upload":"Selecciona o Captura Medios",
+
+	"description_title":"Descripción",
+	"description_failure":"Entra una descripción",
+
+	"amount_title":"¿Cuántos camiones hay?",
+	"amount_failure":"Seleccione una cantidad",
+	"truck_number":[
+		"1","2","3","4","5+"
+	],
+
+	"problem_title":"¿Como es el camión problematico?",
+	"problem_failure":"Select at least one",
+	"truck_problem":[
+		{"key": "idle", "value": "Inactivo"},
+		{"key": "noise", "value": "Ruidoso"},
+		{"key": "offRoute", "value": "Fuera de Ruta"},
+		{"key": "uncovered", "value": "Remolque al aire libre"}
+	],
+
+	"duration_title":"Duración",
+	"duration_failure":"Introduce una duración",
+	"duration_range":[
+		{"key": "0-5", "value": "0-5 Minutos"},
+		{"key": "5-10", "value": "5-10 Minutos"},
+		{"key": "10-15", "value": "10-15 Minutos"},
+		{"key": "15+", "value": "Mas de 15 Minutos"}
+	],
+
+
+	"city_title":"Ciudad",
+	"city_failure":"Elige una ciudad",
+	"city":[
+		"Detroit","Dearborn"
+	],
+
+	"address_title":"Calle Más Cercana",
+	"adress_help":"Encontrando dirección",
+	"adress_failure":"Entra una dirección valida: Calle",
+	"adress_placeholder":"Calle",
+
+	"date_failre":"Entra una fecha",
+	"date_title":"Fecha",
+
+	"name_title":"Nombre",
+
+	"title":"Reporte",
+
+	"slogan": {
+		"line_1": "Encuentra un camión. Parar un camion",
+		"line_2": "Reporta ahora y haz la diferencia.."
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"Casa"},
+		{"href":"data.html","text":"Datos"},
+		{"href":"about.html","text":"Acerca"}
+	],
+
+	"description_placeholder": "Trate de poner el nombre en la puerta del camión y otros detalles que no aparecen en la imagen"
+}

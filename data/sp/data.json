@@ -1,0 +1,75 @@
+ {
+ 	"filter_submit":"Someter",
+
+	"modal_title":"Reporte",
+		"modal_body":[
+		{"label":"Fecha", "id":"date"},
+		{"label":"Duración", "id":"duration_range"},
+		{"label":"Nombre", "id":"name"},
+		{"label":"Calle Mas Cercana", "id":"nearest_address"},
+		{"label":"Descripción", "id":"description"},
+		{"label":"Ciudad", "id":"city"},
+		{"label":"Cantidad de Camiones", "id":"truck_amount"}
+	],
+
+	"modal_footer":"Cerrar",
+
+	"problem_title":"Problema de Camion",
+	"truck_problem":[
+		{"id":"idle", "label":"Inactivo"},
+		{"id":"noise", "label":"Ruidoso"},
+		{"id":"offRoute", "label":"Fuera de Ruta"},
+		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"},
+		{"id":"na", "label":"N/A"}	
+	],
+
+	"filter_truck_problem":[
+		{"id":"idle", "label":"Inactivo"},
+		{"id":"noise", "label":"Ruidoso"},
+		{"id":"offRoute", "label":"Fuera de Ruta"},
+		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"}, 	
+		{"id":"all", "label":"Todo lo anterior"}	
+	],
+
+	"number_title":"Cantidad de Camiones",
+	"truck_number":[
+		{"id":"1", "label":"1"},
+		{"id":"2", "label":"2"},
+		{"id":"3", "label":"3"},
+		{"id":"4", "label":"4"},
+		{"id":"5+", "label":"5+"},
+		{"id":"all", "label":"Todo lo anterior"}
+	],
+
+	"duration_title":"Duración",
+	"duration":[
+		{"id":"0-5", "label":"0-5 Minutos"},
+		{"id":"5-10", "label":"5-10 Minutos"},
+		{"id":"10-15", "label":"10-15 Minutos"},
+		{"id":"15+", "label":"Mas de 15 Minutos"},
+		{"id":"all", "label":"Todo lo anterior"}
+	],
+
+	"city_title":"Ciudad",
+	"city":[
+		{"id":"Detroit", "label":"Detroit"},
+		{"id":"Dearborn", "label":"Dearborn"},
+		{"id":"all", "label":"Todo lo Anterior"}
+	],
+
+	"text_box":{
+		"text_1":"Reportes de Camiones",
+		"text_2":"Filtro de Reportes"
+	},
+
+	"slogan": {
+		"line_1": "Mira un camión. Para un camión.",
+		"line_2": "Reporta ahora y has una diferencia."
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"Casa"},
+		{"href":"data.html","text":"Datos"},
+		{"href":"about.html","text":"Acerca"}
+	]
+}

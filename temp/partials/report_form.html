@@ -1,0 +1,90 @@
+<div class="container">
+    <div id="text-box">
+        <div id="alert" class="alert alert-danger alert-dismissible" role="alert">
+            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+        </div>
+        <form role="form" class="needs-validation" novalidate>
+            <div class="field form-group">
+                <label for="name">{{name_title}}</label>
+                <input type="text" class="form-control" name="name" id="name" size="35" placeholder="(Optional)" value="">
+            </div>
+
+            <div class="field form-group">
+                <label for="date">* {{date_title}}</label>
+                <p class="error-block">{{date_failure}}</p>
+                <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
+            </div>
+
+            <div id="address" class="field form-group">
+                <label for="nearestAddress">{{address_title}}</label>
+                <span id="finding" class="help-block">{{address_help}}</span>
+                <p class="error-block">{{address_failure}}</p>
+                <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="{{adress_placeholder}}" value="" required>
+            </div>
+
+            <div class="field form-group">
+                <label>* {{city_title}}</label>
+                <p class="error-block">{{city_failure}}</p>
+                <select name="city" class="field form-control col-sm-6">
+                    {{#each city}}
+                        <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+
+                </select>
+            </div>
+
+            <div class="field form-group">
+                <label for="duration">* {{duration_title}}</label>
+                <p class="error-block">{{duration_failure}}</p>
+                <select name="duration_range" class="field form-control" id="duration" required>
+                    {{#each duration_range}}
+                        <option value="{{this.key}}">{{this.value}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div id="checkbox-group" class="field form-group">
+                <label for="problemTruck">{{problem_title}}</label>
+                <p class="error-block">{{problem}}</p>
+                {{#each truck_problem}}<div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="{{this.key}}" name="{{this.key}}" value="{{this.key}}">
+                    <label class="form-check-label" for="{{this.key}}">{{this.value}}</label>
+                </div>{{/each}}
+            </div>
+
+            <div class="field form-group">
+                <label for="truckAmount">* {{amount_title}}</label>
+                <p class="error-block">{{amount_failure}}</p>
+                <select name="truck_amount" class="field form-control" id="truckAmount" required>
+                    {{#each truck_number}}
+                        <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div class="field form-group">
+                <label for="description">* {{description_title}}</label>
+                <p class="error-block">{{description_failure}}</p>
+                <textarea rows="4" name="description" class="form-control" cols="50" placeholder="{{description_placeholder}}" id="description" required></textarea>
+            </div>
+
+            <div class="field form-group"> 
+                <label for="upload-media"><span class="glyphicon glyphicon-upload"></span>{{media_title}}</label>
+                <p class="help-block">{{media_failure}}</p>
+                <label for="upload-media" class="btn btn-secondary"><span class="glyphicon glyphicon-upload"></span>{{media_upload}}</label>
+                <input type="file" accept="image/*, video/*" style="display:none;" class="form-control-file" name="media" id="upload-media">
+            </div> 
+
+            <button type="button" class="btn btn-primary" id="video" onclick="upload()">{{submit_button}}</button>
+        </form>             
+    </div>
+</div>
+    
+<div id="uploadingScreen" class="row">
+    <div class="col-xs-12">
+        <h3>{{loading}}</h3>
+    </div>
+    <div class="col-xs-12">
+        <div class="ldBar label-center" style="width:50%;height:50%;margin:auto" data-value="0" data-preset="circle" data-stroke="#91D2D0"></div>
+    </div>
+</div>

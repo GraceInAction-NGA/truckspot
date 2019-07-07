@@ -1,0 +1,38 @@
+{	
+	"coalition":{
+		"header":"Coalición de grupos comunitarios"
+	},
+
+	"map":{
+		"header":"Ubicación de interés",
+		"mapID":"Dale a las formas para saber más sobre ellas."
+	},
+
+	"body":{
+		"header":"Nos importa porque lo respiramos",
+		"about_us":"Queremos mejorar la calidad del aire en la comunidad de Detroit y con tu ayuda usando truckSPOT, tu puedes reportar incidentes de camiones en marcha en vacío que están perturbando nuestro ambiente limpio y pacífico. Con tus reportes vas a poder ver datos en vivo coleccionado por la comunidad.",
+		"statement":"El aire contaminado no tiene límites de donde viaja y continuará causando daños a la salud de la comunidad. Tu puedes hacer un cambio."
+	},
+
+	"report_button":{"href":"report.html","text":"Reporta un Camión"},
+	"about_button":{"href":"about.html","text":"Acerca"},
+	"data_button":{"href":"data.html","text":"Datos"},
+
+	"slogan": {
+		"line_1": "Mira un camión. Para un camión.",
+		"line_2": "Reporta ahora y has una diferencia."
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"Casa"},
+		{"href":"data.html","text":"Datos"},
+		{"href":"about.html","text":"Acerca"}
+	],
+
+		"map_text":[
+		{"title": "Main Focus of TruckSpot", "text": "This is where we are mainly focusing to collect truck data."},
+		{"title":"Train-Truck Intermodal", "text":"This is where several freight companies load and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
+		{"title":"Truck HotSpot", "text":"This is where a freight company loand and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
+		{"title":"Zug Island", "text":"This is a heavily industrialized island that causes a lot pollution."}
+	]
+}

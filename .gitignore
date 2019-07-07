@@ -1,3 +1,6 @@
 .DS_Store
 .brackets.json
-.firebaserc
+_DS_Store
+public
+node_modules
+.firebase

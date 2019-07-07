@@ -1,0 +1,75 @@
+ {
+ 	"filter_submit":"Submit",
+
+	"modal_title":"Report",
+	"modal_body":[
+		{"label":"Date", "id":"date"},
+		{"label":"Duration", "id":"duration_range"},
+		{"label":"Name", "id":"name"},
+		{"label":"Nearest Street", "id":"nearest_address"},
+		{"label":"Description", "id":"description"},
+		{"label":"City", "id":"city"},
+		{"label":"Truck Amount", "id":"truck_amount"}
+	],
+
+	"modal_footer":"Close",
+
+	"problem_title":"Truck Problem",
+	"truck_problem":[
+		{"id":"idle", "label":"Idle"},
+		{"id":"noise", "label":"Noise"},
+		{"id":"offRoute", "label":"Off Route"},
+		{"id":"uncovered", "label":"Uncontained/Open Air Truck"},
+		{"id":"na", "label":"N/A"}
+	],
+
+	"filter_truck_problem":[
+		{"id":"idle", "label":"Idle"},
+		{"id":"noise", "label":"Noise"},
+		{"id":"offRoute", "label":"Off Route"},
+		{"id":"uncovered", "label":"Uncontained/Open Air Truck"}, 	
+		{"id":"all", "label":"All the above"}
+	],
+
+	"number_title":"Number of Trucks",
+	"truck_number":[
+		{"id":"1", "label":"1"},
+		{"id":"2", "label":"2"},
+		{"id":"3", "label":"3"},
+		{"id":"4", "label":"4"},
+		{"id":"5+", "label":"5+"},
+		{"id":"all", "label":"All the above"}
+	],
+
+	"duration_title":"Duration",
+	"duration":[
+		{"id":"0-5", "label":"0-5 Minutes"},
+		{"id":"5-10", "label":"5-10 Minutes"},
+		{"id":"10-15", "label":"10-15 Minutes"},
+		{"id":"15+", "label":"More than 15 Minutes"},
+		{"id":"all", "label":"All the above"}
+	],
+
+	"city_title":"City",
+	"city":[
+		{"id":"Detroit", "label":"Detroit"},
+		{"id":"Dearborn", "label":"Dearborn"},
+		{"id":"all", "label":"All the above"}
+	],
+
+	"text_box":{
+		"text_1":"Truck Reports",
+		"text_2":"Reports Filter"
+	},
+
+	"slogan": {
+		"line_1": "Spot a truck. Stop a truck.",
+		"line_2": "Report now and make a difference."
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"Home"},
+		{"href":"data.html","text":"Data"},
+		{"href":"about.html","text":"About"}
+	]
+}
