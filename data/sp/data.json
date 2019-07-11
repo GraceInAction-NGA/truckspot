@@ -19,7 +19,7 @@
 		{"id":"idle", "label":"Inactivo"},
 		{"id":"noise", "label":"Ruidoso"},
 		{"id":"offRoute", "label":"Fuera de Ruta"},
-		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"},
+		{"id":"uncovered", "label":"Remolque al aire Libre"},
 		{"id":"na", "label":"N/A"}	
 	],
 
@@ -27,7 +27,7 @@
 		{"id":"idle", "label":"Inactivo"},
 		{"id":"noise", "label":"Ruidoso"},
 		{"id":"offRoute", "label":"Fuera de Ruta"},
-		{"id":"uncovered", "label":"Descubierto/Remolque al aire Libre"}, 	
+		{"id":"uncovered", "label":"Remolque al aire Libre"}, 	
 		{"id":"all", "label":"Todo lo anterior"}	
 	],
 

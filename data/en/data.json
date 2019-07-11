@@ -19,7 +19,7 @@
 		{"id":"idle", "label":"Idle"},
 		{"id":"noise", "label":"Noise"},
 		{"id":"offRoute", "label":"Off Route"},
-		{"id":"uncovered", "label":"Uncontained/Open Air Truck"},
+		{"id":"uncovered", "label":"Open Air Truck Trailer"},
 		{"id":"na", "label":"N/A"}
 	],
 
@@ -27,7 +27,7 @@
 		{"id":"idle", "label":"Idle"},
 		{"id":"noise", "label":"Noise"},
 		{"id":"offRoute", "label":"Off Route"},
-		{"id":"uncovered", "label":"Uncontained/Open Air Truck"}, 	
+		{"id":"uncovered", "label":"Open Air Truck Trailer"}, 	
 		{"id":"all", "label":"All the above"}
 	],
 
