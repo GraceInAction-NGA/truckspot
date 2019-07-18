@@ -41,7 +41,6 @@
 	],
 
 	"address_title":"Calle Más Cercana",
-	"address_success":"Encontrado! Corregir si es inexacto",
 	"adress_help":"Encontrando dirección",
 	"adress_failure":"Entra una dirección valida: Calle",
 	"adress_placeholder":"Calle",

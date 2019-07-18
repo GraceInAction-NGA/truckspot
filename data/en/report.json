@@ -41,7 +41,6 @@
 	],
 
 	"address_title":"Nearest Street",
-	"address_success":"Found! Correct if inaccurate.",
 	"adress_help":"Finding Adress",
 	"adress_failure":"Enter a valid address: Address Street",
 	"adress_placeholder":"Street Name",

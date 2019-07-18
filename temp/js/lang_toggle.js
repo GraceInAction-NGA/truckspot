@@ -1,3 +1,4 @@
+var curLang;
 $(function () {
   const getLang = () => {
     const url = window.location.href.split("/");
@@ -10,7 +11,7 @@ $(function () {
     window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
   });
 
-  var curLang = getLang();
+  curLang = getLang();
 
   $(`#langSelector option[value='${curLang}']`).prop("selected", true);
 })
