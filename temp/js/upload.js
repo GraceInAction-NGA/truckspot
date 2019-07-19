@@ -29,12 +29,13 @@ if ("geolocation" in navigator) {
     };
 
     const updateFormAddress = ({address}) => {
-     if (curLang === "en"){
-       $("#finding").text("Found! Correct if inaccurate.");
-       $("#nearestAddress").val(address.house_number + " " + address.road)};
-     if (curLang === "sp"){
-       $("#finding").text("Encontrado! Corregir si es inexacto.");
-       $("#nearestAddress").val(address.house_number + " " + address.road)};
+    // const messages = {
+    //   en: "Found! Correct if inaccurate.",
+    //   sp: "Encontrado! Corregir si es inexacto.",
+    // }
+       //$("#finding").text(messages[curLang]);
+       $("#finding").text(messages);
+       $("#nearestAddress").val(address.house_number + " " + address.road);
     };
 
     $.getJSON('https://nominatim.openstreetmap.org/reverse', request, updateFormAddress);
