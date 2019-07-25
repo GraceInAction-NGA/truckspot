@@ -24,37 +24,37 @@
 	],
 
 	"filter_truck_problem":[
-		{"id":"idle", "label":"Inactivo"},
-		{"id":"noise", "label":"Ruidoso"},
-		{"id":"offRoute", "label":"Fuera de Ruta"},
-		{"id":"uncovered", "label":"Remolque al aire Libre"}, 	
-		{"id":"all", "label":"Todo lo anterior"}	
+		{"id":"idle", "label":"Inactivo", "value":"idle"},
+		{"id":"noise", "label":"Ruidoso", "value":"noise"},
+		{"id":"offRoute", "label":"Fuera de Ruta", "value":"offRoute"},
+		{"id":"uncovered", "label":"Remolque al aire Libre", "value":"uncovered"}, 	
+		{"id":"all_problem", "label":"Todo lo anterior", "value":"all"}	
 	],
 
 	"number_title":"Cantidad de Camiones",
 	"truck_number":[
-		{"id":"1", "label":"1"},
-		{"id":"2", "label":"2"},
-		{"id":"3", "label":"3"},
-		{"id":"4", "label":"4"},
-		{"id":"5+", "label":"5+"},
-		{"id":"all", "label":"Todo lo anterior"}
+		{"id":"1", "label":"1", "value":"1"},
+		{"id":"2", "label":"2", "value":"2"},
+		{"id":"3", "label":"3", "value":"3"},
+		{"id":"4", "label":"4", "value":"4"},
+		{"id":"5+", "label":"5+", "value":"5+"},
+		{"id":"all_number", "label":"Todo lo anterior", "value":"all"}
 	],
 
 	"duration_title":"Duración",
 	"duration":[
-		{"id":"0-5", "label":"0-5 Minutos"},
-		{"id":"5-10", "label":"5-10 Minutos"},
-		{"id":"10-15", "label":"10-15 Minutos"},
-		{"id":"15+", "label":"Mas de 15 Minutos"},
-		{"id":"all", "label":"Todo lo anterior"}
+		{"id":"0-5", "label":"0-5 Minutos", "value":"0-5"},
+		{"id":"5-10", "label":"5-10 Minutos", "value":"5-10"},
+		{"id":"10-15", "label":"10-15 Minutos", "value":"10-15"},
+		{"id":"15+", "label":"Mas de 15 Minutos", "value":"15+"},
+		{"id":"all_duration", "label":"Todo lo anterior", "value":"all"}
 	],
 
 	"city_title":"Ciudad",
 	"city":[
-		{"id":"Detroit", "label":"Detroit"},
-		{"id":"Dearborn", "label":"Dearborn"},
-		{"id":"all", "label":"Todo lo Anterior"}
+		{"id":"Detroit", "label":"Detroit", "value":"Detroit"},
+		{"id":"Dearborn", "label":"Dearborn", "value":"Dearborn"},
+		{"id":"all_city", "label":"Todo lo Anterior", "value":"all"}
 	],
 
 	"text_box":{

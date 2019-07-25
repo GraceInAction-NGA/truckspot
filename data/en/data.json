@@ -24,37 +24,37 @@
 	],
 
 	"filter_truck_problem":[
-		{"id":"idle", "label":"Idle"},
-		{"id":"noise", "label":"Noise"},
-		{"id":"offRoute", "label":"Off Route"},
-		{"id":"uncovered", "label":"Open Air Truck Trailer"}, 	
-		{"id":"all", "label":"All the above"}
+		{"id":"idle", "label":"Idle", "value":"idle"},
+		{"id":"noise", "label":"Noise", "value":"noise"},
+		{"id":"offRoute", "label":"Off Route", "value":"offRoute"},
+		{"id":"uncovered", "label":"Open Air Truck Trailer", "value":"uncovered"}, 	
+		{"id":"all_problem", "label":"All the above", "value":"all"}
 	],
 
 	"number_title":"Number of Trucks",
 	"truck_number":[
-		{"id":"1", "label":"1"},
-		{"id":"2", "label":"2"},
-		{"id":"3", "label":"3"},
-		{"id":"4", "label":"4"},
-		{"id":"5+", "label":"5+"},
-		{"id":"all", "label":"All the above"}
+		{"id":"1", "label":"1", "value":"1"},
+		{"id":"2", "label":"2", "value":"2"},
+		{"id":"3", "label":"3", "value":"3"},
+		{"id":"4", "label":"4", "value":"4"},
+		{"id":"5+", "label":"5+", "value":"5+"},
+		{"id":"all_number", "label":"All the above", "value":"all"}
 	],
 
 	"duration_title":"Duration",
 	"duration":[
-		{"id":"0-5", "label":"0-5 Minutes"},
-		{"id":"5-10", "label":"5-10 Minutes"},
-		{"id":"10-15", "label":"10-15 Minutes"},
-		{"id":"15+", "label":"More than 15 Minutes"},
-		{"id":"all", "label":"All the above"}
+		{"id":"0-5", "label":"0-5 Minutes", "value":"0-5"},
+		{"id":"5-10", "label":"5-10 Minutes", "value":"5-10"},
+		{"id":"10-15", "label":"10-15 Minutes", "value":"10-15"},
+		{"id":"15+", "label":"More than 15 Minutes", "value":"15+"},
+		{"id":"all_duration", "label":"All the above", "value":"all"}
 	],
 
 	"city_title":"City",
 	"city":[
-		{"id":"Detroit", "label":"Detroit"},
-		{"id":"Dearborn", "label":"Dearborn"},
-		{"id":"all", "label":"All the above"}
+		{"id":"Detroit", "label":"Detroit", "value":"Detroit"},
+		{"id":"Dearborn", "label":"Dearborn", "value":"Dearborn"},
+		{"id":"all_city", "label":"All the above", "value":"all"}
 	],
 
 	"text_box":{
