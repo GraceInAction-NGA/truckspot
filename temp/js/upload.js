@@ -29,11 +29,6 @@ if ("geolocation" in navigator) {
     };
 
     const updateFormAddress = ({address}) => {
-    // const messages = {
-    //   en: "Found! Correct if inaccurate.",
-    //   sp: "Encontrado! Corregir si es inexacto.",
-    // }
-       //$("#finding").text(messages[curLang]);
        $("#finding").text(messages);
        $("#nearestAddress").val(address.house_number + " " + address.road);
     };
