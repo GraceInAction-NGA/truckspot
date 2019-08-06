@@ -54,21 +54,21 @@ function createMap(map_text){
     var redIcon = L.icon({
         iconUrl: '../images/RedIcon.png',
         iconSize:     [32, 45],
-        iconAnchor:   [22, 94],})
+        iconAnchor:   [15, 45],})
     var redIconMarker = L.marker([42.305597, -83.130343], {icon: redIcon}).addTo(mymap);
     redIconMarker.bindPopup("Grace In Action");
 
     var greenIcon = L.icon({
         iconUrl: '../images/Greenicon.png',
         iconSize:     [32, 45],
-        iconAnchor:   [22, 94],})
+        iconAnchor:   [15, 45],})
     var greenMarker = L.marker([42.326561, -83.063704], {icon: greenIcon}).addTo(mymap);
     greenMarker.bindPopup("Detroit Hispanic Development Corporation");
 
     var blueIcon = L.icon({
         iconUrl: '../images/BlueIcon.png',
         iconSize:     [32, 45],
-        iconAnchor:   [22, 94],})
+        iconAnchor:   [15, 45],})
     var marker = L.marker([42.290376, -83.128845], {icon: blueIcon}).addTo(mymap);
     marker.bindPopup("Southwest Detroit Community Benefits Coalition");
     var popup = L.popup();

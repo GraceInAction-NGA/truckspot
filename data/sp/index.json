@@ -29,10 +29,10 @@
 		{"href":"about.html","text":"Acerca"}
 	],
 
-		"map_text":[
-		{"title": "Main Focus of TruckSpot", "text": "This is where we are mainly focusing to collect truck data."},
-		{"title":"Train-Truck Intermodal", "text":"This is where several freight companies load and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
-		{"title":"Truck HotSpot", "text":"This is where a freight company loand and unload cargo from train to truck and viceversa. As well as the main area that is affected by the pollution this creates."},
-		{"title":"Zug Island", "text":"This is a heavily industrialized island that causes a lot pollution."}
+	"map_text":[
+		{"title": "Foco Principal de TruckSpot", "text": "Aquí es donde principalmente nos concentramos en recopilar datos de camiones."},
+		{"title":"Tren-Camion Intermodal", "text":"Aquí es donde varias compañías de carga cargan y descargan cargamentos de tren a camión y viceversa. Tambien es el área principal que se ve afectada por la contaminación que esto crea."},
+		{"title":"HotSpot de Camiones", "text":"Aquí es donde varias compañías de carga cargan y descargan cargamentos de tren a camión y viceversa. Tambien es el área principal que se ve afectada por la contaminación que esto crea."},
+		{"title":"Isla Zug", "text":"Esta es una isla muy industrializada que causa mucha contaminación."}
 	]
 }

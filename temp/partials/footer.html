@@ -4,28 +4,9 @@
     		<div class="form-group">
 	        <select id="langSelector" class="form-control">
 	          <option value="en">English</option>
-	          <option value="sp">Espanol</option>
+	          <option value="sp">Español</option>
 	        </select>
       		</div>
     	</div>
 	</div>
 </div>
-
-<script>
-  $(function () {
-    const getLang = () => {
-      const url = window.location.href.split("/");
-      return url[url.length - 2];
-    };
-
-    $("#langSelector").change(function () {
-      const val = $(this).val();
-      const curLang = getLang();
-      window.location.href = window.location.href.replace(`/${curLang}/`, `/${val}/`);
-    });
-
-    const curLang = getLang();
-
-    $(`#langSelector option[value='${curLang}']`).prop("selected", true);
-  })
-</script>

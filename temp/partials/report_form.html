@@ -10,20 +10,21 @@
             </div>
 
             <div class="field form-group">
-                <label for="date">* {{date_title}}</label>
+                <label for="date">{{date_title}} *</label>
                 <p class="error-block">{{date_failure}}</p>
                 <input type="date" class="form-control" data-clear-btn="false" name="date" id="date" placeholder="MM/DD/YYYY" value="" required>
             </div>
 
             <div id="address" class="field form-group">
                 <label for="nearestAddress">{{address_title}}</label>
+                <span id="found" class="help-block"></span>
                 <span id="finding" class="help-block">{{address_help}}</span>
                 <p class="error-block">{{address_failure}}</p>
                 <input type="text" class="form-control" name="nearest_address" id="nearestAddress" placeholder="{{adress_placeholder}}" value="" required>
             </div>
 
             <div class="field form-group">
-                <label>* {{city_title}}</label>
+                <label>{{city_title}} *</label>
                 <p class="error-block">{{city_failure}}</p>
                 <select name="city" class="field form-control col-sm-6">
                     {{#each city}}
@@ -34,7 +35,7 @@
             </div>
 
             <div class="field form-group">
-                <label for="duration">* {{duration_title}}</label>
+                <label for="duration">{{duration_title}} *</label>
                 <p class="error-block">{{duration_failure}}</p>
                 <select name="duration_range" class="field form-control" id="duration" required>
                     {{#each duration_range}}
@@ -53,7 +54,7 @@
             </div>
 
             <div class="field form-group">
-                <label for="truckAmount">* {{amount_title}}</label>
+                <label for="truckAmount">{{amount_title}} *</label>
                 <p class="error-block">{{amount_failure}}</p>
                 <select name="truck_amount" class="field form-control" id="truckAmount" required>
                     {{#each truck_number}}
@@ -63,7 +64,7 @@
             </div>
 
             <div class="field form-group">
-                <label for="description">* {{description_title}}</label>
+                <label for="description">{{description_title}} *</label>
                 <p class="error-block">{{description_failure}}</p>
                 <textarea rows="4" name="description" class="form-control" cols="50" placeholder="{{description_placeholder}}" id="description" required></textarea>
             </div>
