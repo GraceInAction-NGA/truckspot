@@ -468,6 +468,10 @@ form input#upload-media {
   display: inline-block;
 }
 
+#mobile-only {
+  margin-bottom: 2rem;
+}
+
 #text-box.filter {
   margin-bottom: 2rem;
 }

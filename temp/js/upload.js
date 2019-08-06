@@ -29,8 +29,8 @@ if ("geolocation" in navigator) {
     };
 
     const updateFormAddress = ({address}) => {
-      $("#finding").text("Found! Correct if inaccurate.");
-      $("#nearestAddress").val(address.house_number + " " + address.road);
+       $("#finding").text(messages);
+       $("#nearestAddress").val(address.house_number + " " + address.road);
     };
 
     $.getJSON('https://nominatim.openstreetmap.org/reverse', request, updateFormAddress);
