@@ -24,11 +24,11 @@ const registerPartial = file => {
 const copys = (file, PATH, encoding) => {
   const base = PATH.split('/')[2];
   const path = `${GEN_PATH}/${base}`;
-  
+
   if (!fs.existsSync(path)) {
     fs.mkdirSync(path, { recursive: true});
   }
-  
+
   const readFile = fs.readFileSync(`${PATH}/${file}`, encoding);
   fs.writeFileSync(`${path}/${file}`, readFile, encoding);
 }
@@ -36,7 +36,7 @@ const copys = (file, PATH, encoding) => {
 const generatePage = (file, data) => {
   if (file.includes('.html')) {
     const template = handlebars.compile( fs.readFileSync(`${TEMP_PATH}/${file}`, 'utf8') );
-    
+
     for (let lang in data) {
       const path = `${GEN_PATH}/${lang}`;
       if (!fs.existsSync(path)) {

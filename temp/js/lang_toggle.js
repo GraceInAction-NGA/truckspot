@@ -14,4 +14,9 @@ $(function () {
   curLang = getLang();
 
   $(`#langSelector option[value='${curLang}']`).prop("selected", true);
+
+
+    if (curLang == 'ar') {
+      $('body').toggleClass('arabic');
+    }
 })

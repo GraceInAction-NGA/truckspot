@@ -1,0 +1,75 @@
+ {
+ 	"filter_submit":"Submit",
+
+	"modal_title":"Report",
+	"modal_body":[
+		{"label":"Date", "id":"date"},
+		{"label":"المدة الزمنية", "id":"duration_range"},
+		{"label":"Name", "id":"name"},
+		{"label":"أقرب عنوان", "id":"nearest_address"},
+		{"label":"وصف", "id":"description"},
+		{"label":"مدينة", "id":"city"},
+		{"label":"Truck Amount", "id":"truck_amount"}
+	],
+
+	"modal_footer":"Close",
+
+	"problem_title":"Truck Problem",
+	"truck_problem":[
+		{"id":"idle", "label":"خامل"},
+		{"id":"noise", "label":"ضوضاء"},
+		{"id":"offRoute", "label":"خارج الطريق"},
+		{"id":"uncovered", "label":"غير محتوي / شاحنة مقطورة في الهواء الطلق"},
+		{"id":"na", "label":"N/A"}
+	],
+
+	"filter_truck_problem":[
+		{"id":"idle", "label":"خامل", "value":"idle"},
+		{"id":"noise", "label":"ضوضاء", "value":"noise"},
+		{"id":"offRoute", "label":"خارج الطريق", "value":"offRoute"},
+		{"id":"uncovered", "label":"شاحنة مقطورة في الهواء الطلق", "value":"uncovered"},
+		{"id":"all_problem", "label":"All the above", "value":"all"}
+	],
+
+	"number_title":"Number of Trucks",
+	"truck_number":[
+		{"id":"1", "label":"1", "value":"1"},
+		{"id":"2", "label":"2", "value":"2"},
+		{"id":"3", "label":"3", "value":"3"},
+		{"id":"4", "label":"4", "value":"4"},
+		{"id":"5+", "label":"5+", "value":"5+"},
+		{"id":"all_number", "label":"All the above", "value":"all"}
+	],
+
+	"duration_title":"المدة الزمنية",
+	"duration":[
+		{"id":"0-5", "label":"0-5 دقائق", "value":"0-5"},
+		{"id":"5-10", "label":"5-10 دقائق", "value":"5-10"},
+		{"id":"10-15", "label":"10-15 دقائق", "value":"10-15"},
+		{"id":"15+", "label":"More than 15 دقائق", "value":"15+"},
+		{"id":"all_duration", "label":"All the above", "value":"all"}
+	],
+
+	"city_title":"مدينة",
+	"city":[
+		{"id":"Detroit", "label":"ديترويت", "value":"Detroit"},
+		{"id":"Dearborn", "label":"Dearborn", "value":"Dearborn"},
+		{"id":"all_city", "label":"All the above", "value":"all"}
+	],
+
+	"text_box":{
+		"text_1":"Truck Reports",
+		"text_2":"Reports Filter"
+	},
+
+	"slogan": {
+		"line_1": "قم بتعيين الشاحنة . قم بايقاف الشاحنة",
+		"line_2": "قم بالتبليغ الآن وإحدث فرق"
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"البيت"},
+		{"href":"data.html","text":"البيانات"},
+		{"href":"about.html","text":"حول"}
+	]
+}

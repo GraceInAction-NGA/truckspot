@@ -3,6 +3,14 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.arabic p#aboutus, .arabic #text-box h3, .arabic .leaflet-popup-content, .arabic #text-box h4, .arabic p {
+  text-align: right;
+}
+
+.arabic .reports p#streetName {
+  text-align: center;
+}
+
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
@@ -238,7 +246,7 @@ p#statement {
   text-align: left;
 }
 
-[data-toggle="collapse"] .fa:before{  
+[data-toggle="collapse"] .fa:before{
   content: "\f139";
 }
 

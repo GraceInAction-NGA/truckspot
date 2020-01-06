@@ -1,0 +1,68 @@
+{
+	"loading":"Uploading your information",
+	"submit_button":"قدم",
+
+	"media_title":"تحميل الوسائط",
+	"media_failure":"حدد أو التقط الوسائط من هاتفك",
+	"media_upload":"حدد أو التقط الوسائط",
+
+	"description_title":"وصف",
+	"description_failure":"Enter a description",
+
+	"amount_title":"كم عدد الشاحنات؟",
+	"amount_failure":"Select an amount",
+	"truck_number":[
+		"1","2","3","4","5+"
+	],
+
+	"problem_title":"كيف تعتبر هذه الشاحنة إشكالية؟",
+	"problem_failure":"Select at least one",
+	"truck_problem":[
+		{"key": "idle", "value": "خامل"},
+		{"key": "noise", "value": "ضوضاء"},
+		{"key": "offRoute", "value": "خارج الطريق"},
+		{"key": "uncovered", "value": "غير محتوي / شاحنة مقطورة في الهواء الطلق"}
+	],
+
+	"duration_title":"المدة الزمنية",
+	"duration_failure":"Enter a duration",
+	"duration_range":[
+		{"key": "0-5", "value": "0-5 دقائق"},
+		{"key": "5-10", "value": "5-10 دقائق"},
+		{"key": "10-15", "value": "10-15 دقائق"},
+		{"key": "15+", "value": "More than 15 Minutes"}
+	],
+
+
+	"city_title":"مدينة",
+	"city_failure":"Choose a city",
+	"city":[
+		"ديترويت","Dearborn"
+	],
+
+	"address_title":"أقرب عنوان",
+	"adress_help":"Finding Adress",
+	"address_success":"Found! Correct if inaccurate.",
+	"adress_failure":"Enter a valid address: Address Street",
+	"adress_placeholder":"Street Name",
+
+	"date_failre":"Enter a date",
+	"date_title":"Date",
+
+	"name_title":"الأسم",
+
+	"title":"Report",
+
+	"slogan": {
+		"line_1": "قم بتعيين الشاحنة . قم بايقاف الشاحنة",
+		"line_2": "قم بالتبليغ الآن وإحدث فرق"
+	},
+
+	"menu_items":[
+		{"href":"index.html","text":"البيت"},
+		{"href":"data.html","text":"البيانات"},
+		{"href":"about.html","text":"حول"}
+	],
+
+	"description_placeholder": "حاول الحصول على الاسم الموجود على باب الشاحنة ، والتفاصيل الأخرى التي لم تلتقطها الصورة"
+}
