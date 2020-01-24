@@ -7,16 +7,16 @@
 	"media_upload":"حدد أو التقط الوسائط",
 
 	"description_title":"وصف",
-	"description_failure":"Enter a description",
+	"description_failure":"أدخل وصفا",
 
 	"amount_title":"كم عدد الشاحنات؟",
-	"amount_failure":"Select an amount",
+	"amount_failure":"اختر المبلغ",
 	"truck_number":[
 		"1","2","3","4","5+"
 	],
 
 	"problem_title":"كيف تعتبر هذه الشاحنة إشكالية؟",
-	"problem_failure":"Select at least one",
+	"problem_failure":"اختر واحدة على الأقل",
 	"truck_problem":[
 		{"key": "idle", "value": "خامل"},
 		{"key": "noise", "value": "ضوضاء"},
@@ -25,19 +25,19 @@
 	],
 
 	"duration_title":"المدة الزمنية",
-	"duration_failure":"Enter a duration",
+	"duration_failure":"أدخل مدة",
 	"duration_range":[
 		{"key": "0-5", "value": "0-5 دقائق"},
 		{"key": "5-10", "value": "5-10 دقائق"},
 		{"key": "10-15", "value": "10-15 دقائق"},
-		{"key": "15+", "value": "More than 15 Minutes"}
+		{"key": "15+", "value": "أكثر من 15 دقيقة"}
 	],
 
 
 	"city_title":"مدينة",
-	"city_failure":"Choose a city",
+	"city_failure":"اختر مدينة",
 	"city":[
-		"ديترويت","Dearborn"
+		"ديترويت","ديربون"
 	],
 
 	"address_title":"أقرب عنوان",
@@ -47,11 +47,11 @@
 	"adress_placeholder":"Street Name",
 
 	"date_failre":"Enter a date",
-	"date_title":"Date",
+	"date_title":"التاريخ",
 
 	"name_title":"الأسم",
 
-	"title":"Report",
+	"title":"تقرير",
 
 	"slogan": {
 		"line_1": "قم بتعيين الشاحنة . قم بايقاف الشاحنة",

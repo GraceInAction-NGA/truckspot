@@ -1,26 +1,26 @@
  {
  	"filter_submit":"Submit",
 
-	"modal_title":"Report",
+	"modal_title":"تقرير",
 	"modal_body":[
 		{"label":"Date", "id":"date"},
 		{"label":"المدة الزمنية", "id":"duration_range"},
-		{"label":"Name", "id":"name"},
+		{"label":"الأسم", "id":"name"},
 		{"label":"أقرب عنوان", "id":"nearest_address"},
 		{"label":"وصف", "id":"description"},
 		{"label":"مدينة", "id":"city"},
-		{"label":"Truck Amount", "id":"truck_amount"}
+		{"label":"مبلغ الشاحنة", "id":"truck_amount"}
 	],
 
 	"modal_footer":"Close",
 
-	"problem_title":"Truck Problem",
+	"problem_title":"مشكلة الشاحنة",
 	"truck_problem":[
 		{"id":"idle", "label":"خامل"},
 		{"id":"noise", "label":"ضوضاء"},
 		{"id":"offRoute", "label":"خارج الطريق"},
 		{"id":"uncovered", "label":"غير محتوي / شاحنة مقطورة في الهواء الطلق"},
-		{"id":"na", "label":"N/A"}
+		{"id":"na", "label":"لاينطبق"}
 	],
 
 	"filter_truck_problem":[
@@ -28,7 +28,7 @@
 		{"id":"noise", "label":"ضوضاء", "value":"noise"},
 		{"id":"offRoute", "label":"خارج الطريق", "value":"offRoute"},
 		{"id":"uncovered", "label":"شاحنة مقطورة في الهواء الطلق", "value":"uncovered"},
-		{"id":"all_problem", "label":"All the above", "value":"all"}
+		{"id":"all_problem", "label":"كل ما سبق", "value":"all"}
 	],
 
 	"number_title":"Number of Trucks",
@@ -38,7 +38,7 @@
 		{"id":"3", "label":"3", "value":"3"},
 		{"id":"4", "label":"4", "value":"4"},
 		{"id":"5+", "label":"5+", "value":"5+"},
-		{"id":"all_number", "label":"All the above", "value":"all"}
+		{"id":"all_number", "label":"كل ما سبق", "value":"all"}
 	],
 
 	"duration_title":"المدة الزمنية",
@@ -46,20 +46,20 @@
 		{"id":"0-5", "label":"0-5 دقائق", "value":"0-5"},
 		{"id":"5-10", "label":"5-10 دقائق", "value":"5-10"},
 		{"id":"10-15", "label":"10-15 دقائق", "value":"10-15"},
-		{"id":"15+", "label":"More than 15 دقائق", "value":"15+"},
-		{"id":"all_duration", "label":"All the above", "value":"all"}
+		{"id":"15+", "label":"اكثر من 15 دقائق", "value":"15+"},
+		{"id":"all_duration", "label":"كل ما سبق", "value":"all"}
 	],
 
 	"city_title":"مدينة",
 	"city":[
 		{"id":"Detroit", "label":"ديترويت", "value":"Detroit"},
-		{"id":"Dearborn", "label":"Dearborn", "value":"Dearborn"},
-		{"id":"all_city", "label":"All the above", "value":"all"}
+		{"id":"Dearborn", "label":"ديربون", "value":"Dearborn"},
+		{"id":"all_city", "label":"كل ما سبق", "value":"all"}
 	],
 
 	"text_box":{
-		"text_1":"Truck Reports",
-		"text_2":"Reports Filter"
+		"text_1":"تقارير الشاحنات",
+		"text_2":"مرشحات التقارير"
 	},
 
 	"slogan": {
