@@ -5,6 +5,7 @@ body {
 
 .arabic p#aboutus, .arabic #text-box h3, .arabic .leaflet-popup-content, .arabic #text-box h4, .arabic p {
   text-align: right;
+  direction: rtl;
 }
 
 .arabic .reports p#streetName {
