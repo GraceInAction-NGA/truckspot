@@ -71,5 +71,7 @@
 		{"href":"index.html","text":"Casa"},
 		{"href":"data.html","text":"Datos"},
 		{"href":"about.html","text":"Acerca"}
-	]
+	],
+	"report_button":{"href":"report.html","text":"Reporta un Camión"}
+
 }

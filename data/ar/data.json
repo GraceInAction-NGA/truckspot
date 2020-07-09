@@ -31,7 +31,7 @@
 		{"id":"all_problem", "label":"كل ما سبق", "value":"all"}
 	],
 
-	"number_title":"Number of Trucks",
+	"number_title":"مبلغ الشاحنة",
 	"truck_number":[
 		{"id":"1", "label":"1", "value":"1"},
 		{"id":"2", "label":"2", "value":"2"},
@@ -71,5 +71,7 @@
 		{"href":"index.html","text":"البيت"},
 		{"href":"data.html","text":"البيانات"},
 		{"href":"about.html","text":"حول"}
-	]
+	],
+	"report_button":{"href":"report.html","text":"الإبلاغ عن شاحنة"}
+
 }

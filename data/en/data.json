@@ -71,5 +71,6 @@
 		{"href":"index.html","text":"Home"},
 		{"href":"data.html","text":"Data"},
 		{"href":"about.html","text":"About"}
-	]
+	],
+	"report_button":{"href":"report.html","text":"Report a Truck"}
 }
